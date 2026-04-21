@@ -50,11 +50,11 @@ PRENX_TravelAgencySource/
 
 ### Opción 1: Abrir Knowledge Base Existente
 
-Si ya tienes la KB creada en `C:\Modelos_Next\PRENX_TravelAgency`:
+Si ya tienes la KB creada:
 
 ```bash
 # Abrir la KB con GeneXus Next MCP
-gxnext open-knowledge-base --directory "C:\Modelos_Next\PRENX_TravelAgency"
+gxnext open-knowledge-base --directory "<ruta-a-tu-kb>"
 ```
 
 ### Opción 2: Importar desde Texto
@@ -138,21 +138,9 @@ gxnext run --object-name "TravelAgencyMaster"
 - Integración con APIs meteorológicas
 - Información de clima para destinos turísticos
 
-## 🤝 Contribuir
-
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Realiza tus cambios en GeneXus
-4. Exporta los objetos modificados a texto
-5. Commit los cambios (`git commit -m 'Agregar nueva funcionalidad'`)
-6. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-7. Abre un Pull Request
-
 ## 📄 Información de la Knowledge Base
 
 - **Nombre:** PRENX_TravelAgency
-- **Ubicación local:** `C:\Modelos_Next\PRENX_TravelAgency`
-- **Repositorio fuente:** `C:\Modelos_Next\PRENX_TravelAgencySource`
 - **Formato de exportación:** GeneXus Object Text Format
 
 ## 📚 Documentación Adicional
@@ -160,14 +148,6 @@ gxnext run --object-name "TravelAgencyMaster"
 - [GeneXus Wiki](https://wiki.genexus.com)
 - [GeneXus Next Documentation](https://next.genexus.com)
 - [GeneXus Unanimo Design System](https://unanimo.genexus.com)
-
-## 📝 Licencia
-
-[Especificar licencia del proyecto]
-
-## 👥 Autores
-
-[Especificar autores y contacto]
 
 ---
 
