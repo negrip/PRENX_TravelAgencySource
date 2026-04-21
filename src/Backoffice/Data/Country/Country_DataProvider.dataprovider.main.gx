@@ -1,0 +1,128 @@
+DataProvider Country_DataProvider
+{
+	CountryCollection{
+		Country
+		where find(CountryId, CountryName="Brazil",0) = 0
+		{
+			CountryName = "Brazil"
+				City
+				{
+						CityId = 1
+						CityName =  "Rio de Janeiro"
+				}
+				City
+				{
+						CityId = 2
+						CityName = "Sao Paulo"
+				}
+		}
+	
+		Country
+		where find(CountryId, CountryName="France",0) = 0
+		{
+			CountryName = "France"
+				City
+				{
+						CityId = 1
+						CityName = "Paris"
+				}
+				City
+				{
+						CityId = 2
+						CityName = "Nice"
+				}
+		}
+	
+		Country
+		where find(CountryId, CountryName="China",0) = 0
+		{
+			CountryName = "China"
+				City
+				{
+						CityId = 1
+						CityName = "Beijing"
+				}
+				City
+				{
+						CityId = 2
+						CityName = "Shanghai"
+				}
+				City
+				{
+						CityId = 3
+						CityName = "Hong Kong"
+				}
+		}
+	
+		Country
+		where find(CountryId, CountryName="United States",0) = 0
+		{
+			CountryName = "United States"
+				City
+				{
+						CityId = 1
+						CityName = "New York"
+				}
+				City
+				{
+						CityId = 2
+						CityName = "Washington"
+				}
+		}
+	
+		Country
+		where find(CountryId, CountryName="Japan",0) = 0
+		{
+			CountryName = "Japan"
+				City
+				{
+						CityId = 1
+						CityName = "Tokyo"
+				}
+				City
+				{
+						CityId = 2
+						CityName = "Kyoto"
+				}
+		}
+	
+		Country
+		where find(CountryId, CountryName="Italy",0) = 0
+		{
+			CountryName = "Italy"
+				City
+				{
+						CityId = 1
+						CityName = "Rome"
+				}
+				City
+				{
+						CityId = 2
+						CityName = "Venice"
+				}
+		}
+	
+		Country
+		where find(CountryId, CountryName="Egypt",0) = 0
+		{
+			CountryName = "Egypt"
+				City
+				{
+						CityId = 1
+						CityName = "Cairo"
+				}
+				City
+				{
+						CityId = 2
+						CityName = "Luxor"
+				}
+		}
+	}
+
+	#Properties
+		Name = "Country_DataProvider"
+
+		MainProgram = "True"
+	#End
+
+}

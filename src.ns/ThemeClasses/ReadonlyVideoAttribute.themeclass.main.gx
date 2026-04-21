@@ -1,0 +1,7 @@
+ThemeClass ReadonlyVideoAttribute
+{
+	#Properties
+		Name = "ReadonlyVideoAttribute"
+	#End
+
+}

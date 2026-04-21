@@ -1,0 +1,19 @@
+ExternalObject ChatGlobalEvents
+{
+	#ExternalEvents
+		ChatClose
+	#End
+
+	#Properties
+		Name = "ChatGlobalEvents"
+
+		Description = "ChatGlobalEvents"
+
+		IosExternalName = "GXEOGlobalEvents"
+
+		AndroidExternalName = "GlobalEvents"
+
+		ExternalPackageName = "com.genexus.android.api"
+	#End
+
+}

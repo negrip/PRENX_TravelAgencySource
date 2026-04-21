@@ -1,0 +1,85 @@
+ExternalObject Calendar
+{
+	#ExternalMethods
+		Schedule
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Title
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				StartDate
+
+					[
+
+						Type = 'Date'
+
+					]
+
+		
+
+				EndDate
+
+					[
+
+						Type = 'Date'
+
+					]
+
+		
+
+				StartTime
+
+					[
+
+						BasedOn = 'Time, GeneXus'
+
+					]
+
+		
+
+				EndTime
+
+					[
+
+						BasedOn = 'Time, GeneXus'
+
+					]
+
+		
+
+				Place
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Calendar"
+	#End
+
+}

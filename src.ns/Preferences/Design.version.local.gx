@@ -1,0 +1,11 @@
+Version Design
+{
+	#Properties.Local
+		CurrentEnvironment = "AngularNetPostgresql"
+	#End
+
+	#Properties
+		RemoteVersion = "TravelAgency"
+	#End
+
+}

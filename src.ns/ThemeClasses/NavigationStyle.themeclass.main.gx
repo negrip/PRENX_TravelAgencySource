@@ -1,0 +1,7 @@
+ThemeClass NavigationStyle
+{
+	#Properties
+		Name = "NavigationStyle"
+	#End
+
+}

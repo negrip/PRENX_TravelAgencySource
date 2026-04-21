@@ -1,0 +1,20 @@
+Table Country
+{
+		CountryId*
+
+		CountryName
+
+		CountryLastCityId
+
+	#Indexes
+		ICountry
+		UCountry
+	#End
+
+	#Properties
+		Name = "Country"
+
+		Description = "Country"
+	#End
+
+}

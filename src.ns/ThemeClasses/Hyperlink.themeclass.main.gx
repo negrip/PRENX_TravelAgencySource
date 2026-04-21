@@ -1,0 +1,7 @@
+ThemeClass Hyperlink
+{
+	#Properties
+		Name = "Hyperlink"
+	#End
+
+}

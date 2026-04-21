@@ -1,0 +1,309 @@
+WorkWith WorkWithWebAttraction
+{
+	updateTransaction: Apply WW Style
+
+	instanceProperties:
+
+	- KBLanguage: English
+
+	  Version: 1.2
+
+	transaction:
+
+	- transaction: 1db606f2-af09-4cf9-a3b5-b481519d28f6-Attraction
+
+	level:
+
+	- id: 0fef2fdd-24bc-454a-a160-4c8005aa4a95:1
+
+	  name: Attraction
+
+	  descriptionAttribute:
+
+	  - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionName
+
+	    description: Name
+
+	  selection:
+
+	  - description: Attractions
+
+	    page: <default>
+
+	    modes:
+
+	    - {}
+
+	    attributes:
+
+	    - attribute:
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionId
+
+	        description: Id
+
+	        autolink: True
+
+	        visible: False
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionName
+
+	        description: Name
+
+	        autolink: True
+
+	        visible: True
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionDescription
+
+	        description: Description
+
+	        autolink: True
+
+	        visible: True
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionEmbedding
+
+	        description: Embedding
+
+	        autolink: True
+
+	        visible: False
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionPhoto
+
+	        description: Photo
+
+	        autolink: True
+
+	        visible: True
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryId
+
+	        description: Category Id
+
+	        autolink: True
+
+	        visible: False
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryName
+
+	        description: Category Name
+
+	        autolink: True
+
+	        visible: True
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryId
+
+	        description: Country Id
+
+	        autolink: True
+
+	        visible: False
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	        description: Country Name
+
+	        autolink: True
+
+	        visible: True
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityId
+
+	        description: City Id
+
+	        autolink: True
+
+	        visible: False
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityName
+
+	        description: City Name
+
+	        autolink: True
+
+	        visible: True
+
+	    orders:
+
+	    - order:
+
+	      - name: Name
+
+	        attribute:
+
+	        - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionName
+
+	          description: Attraction Name
+
+	    filter:
+
+	    - attributes:
+
+	      - filterAttribute:
+
+	        - name: AttractionName
+
+	          description: Name
+
+	          default: ''
+
+	      conditions:
+
+	      - condition:
+
+	        - value: AttractionName.ToLower() like &AttractionName.ToLower() when not &AttractionName.IsEmpty()
+
+	  view:
+
+	  - caption: AttractionName.ToString()
+
+	    description: Attraction Information
+
+	    backToSelection: True
+
+	    masterPage: <default>
+
+	    parameters:
+
+	    - parameter:
+
+	      - name: AttractionId
+
+	        null: True
+
+	    fixedData:
+
+	    - attributes:
+
+	      - attribute:
+
+	        - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionName
+
+	          description: Name
+
+	          autolink: True
+
+	          visible: True
+
+	    tabs:
+
+	    - tab:
+
+	      - name: General
+
+	        code: General
+
+	        description: Attraction Info
+
+	        type: Tabular
+
+	        wcname: AttractionGeneral
+
+	        attributes:
+
+	        - attribute:
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionId
+
+	            description: Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionName
+
+	            description: Name
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionDescription
+
+	            description: Description
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionEmbedding
+
+	            description: Embedding
+
+	            autolink: True
+
+	            visible: False
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionPhoto
+
+	            description: Photo
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryId
+
+	            description: Category Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryName
+
+	            description: Category Name
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryId
+
+	            description: Country Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	            description: Country Name
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityId
+
+	            description: City Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityName
+
+	            description: City Name
+
+	            autolink: True
+
+	            visible: True
+
+	        actions:
+
+	        - action:
+
+	          - name: Update
+
+	          - name: Delete
+
+	#Properties
+		Name = "WorkWithWebAttraction"
+	#End
+
+}

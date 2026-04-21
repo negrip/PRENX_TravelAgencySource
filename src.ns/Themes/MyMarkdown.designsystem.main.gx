@@ -1,0 +1,22 @@
+DesignSystem MyMarkdown
+{
+	#DesignStyles
+		styles MyMarkdown { 
+		
+		@import GeneXusUnanimo.Markdown;
+		
+		img {
+		        width: 100%;
+		        max-width: 250px;
+		    }
+		
+		}
+	#End
+
+	#Properties
+		Name = "MyMarkdown"
+
+		Description = "MyMarkdown"
+	#End
+
+}

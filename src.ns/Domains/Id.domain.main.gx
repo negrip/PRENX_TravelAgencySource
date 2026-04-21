@@ -1,0 +1,11 @@
+Domain Id
+{
+	#Properties
+		Name = "Id"
+
+		DataType = "Numeric(4.0)"
+
+		Autonumber = "True"
+	#End
+
+}

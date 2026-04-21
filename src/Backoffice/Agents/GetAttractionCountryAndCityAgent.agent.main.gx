@@ -1,0 +1,24 @@
+Agent GetAttractionCountryAndCityAgent
+{
+	#AgentSourcePart
+		"{{Document:GetAttractionCountryAndCity_prompt}}"
+	#End
+
+	#Rules
+		parm(in:&AttractionName, out:&answer);
+		context(GetCountries());
+	#End
+
+	#Variables
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			answer [ DataType = 'VarChar(512)' ]
+	#End
+
+	#Properties
+		Name = "GetAttractionCountryAndCityAgent"
+
+		Description = "GetAttractionCountryAndCityAgent"
+	#End
+
+}

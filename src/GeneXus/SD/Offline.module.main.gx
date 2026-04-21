@@ -1,0 +1,7 @@
+Module Offline
+{
+	#Properties
+		Name = "Offline"
+	#End
+
+}

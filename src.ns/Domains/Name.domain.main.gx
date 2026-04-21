@@ -1,0 +1,9 @@
+Domain Name
+{
+	#Properties
+		Name = "Name"
+
+		DataType = "VarChar(40)"
+	#End
+
+}

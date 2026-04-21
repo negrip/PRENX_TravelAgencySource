@@ -1,0 +1,7 @@
+ThemeClass ErrorViewer
+{
+	#Properties
+		Name = "ErrorViewer"
+	#End
+
+}

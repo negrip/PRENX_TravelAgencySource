@@ -1,0 +1,15 @@
+SDT ScannedBarcodes
+{
+		ScannedBarcodes [ Collection = 'True', CollectionItemName = 'Item' ]	{
+
+			Barcode [ DataType = 'VarChar(200)' ]
+
+		}
+
+	#Properties
+		Name = "ScannedBarcodes"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

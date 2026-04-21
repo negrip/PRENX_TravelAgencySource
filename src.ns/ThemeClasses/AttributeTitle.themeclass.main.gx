@@ -1,0 +1,7 @@
+ThemeClass AttributeTitle
+{
+	#Properties
+		Name = "AttributeTitle"
+	#End
+
+}

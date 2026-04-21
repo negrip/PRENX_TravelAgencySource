@@ -1,0 +1,47 @@
+Procedure GetAttractionPhoto
+{
+	// Configure HTTP client                                                    													                         
+	&HTTPClient.AddHeader("User-Agent", "GeneXusPIA/1.0") 
+	&HTTPClient.AddHeader("Accept", "application/json")        
+	&httpclient.Secure = 1
+	&httpclient.Host = !"en.wikipedia.org" //This site provides images free for commercial use
+	&HTTPClient.BaseUrl = !"/api/rest_v1/page/summary/"
+	&HTTPClient.Execute("GET", &AttractionName)  //API URL: "https://en.wikipedia.org/api/rest_v1/page/summary/Estadio%20Centenario")
+	
+	// Process response                                                         
+	If &HTTPClient.StatusCode = 200                                             
+		&Answer = &HTTPClient.ToString() 
+		&PhotoProperties.FromJson(&Answer)
+		&OriginalImageProperties.FromJson(&PhotoProperties.Get(!"originalimage"))
+		&AttractionPhotoURL = &OriginalImageProperties.Get(!"source")	//IMAGE URL: "https://upload.wikimedia.org/wikipedia/commons/9/98/Estadio_Centenario_2021.jpg")																
+	else 
+		msg(&HTTPClient.ErrDescription,status)
+	EndIf
+
+	#Rules
+		Parm(in:&AttractionName, out:&AttractionPhotoURL);
+	#End
+
+	#Variables
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			AttractionPhotoURL [ DataType = 'Attribute:AttractionPhotoURL' ]
+
+			AttractionNameURL [ DataType = 'Url, GeneXus' ]
+
+			HttpClient [ DataType = 'HttpClient' ]
+
+			Answer [ DataType = 'LongVarChar(2M)' ]
+
+			PhotoProperties [ DataType = 'Properties' ]
+
+			OriginalImageProperties [ DataType = 'Properties' ]
+	#End
+
+	#Properties
+		Name = "GetAttractionPhoto"
+
+		Description = "GetAttractionPhoto"
+	#End
+
+}

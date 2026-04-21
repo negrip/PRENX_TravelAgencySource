@@ -1,0 +1,7 @@
+ThemeClass ImageDragging
+{
+	#Properties
+		Name = "ImageDragging"
+	#End
+
+}

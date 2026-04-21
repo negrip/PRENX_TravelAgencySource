@@ -1,0 +1,7 @@
+ThemeClass ToggleButtonGroup
+{
+	#Properties
+		Name = "ToggleButtonGroup"
+	#End
+
+}

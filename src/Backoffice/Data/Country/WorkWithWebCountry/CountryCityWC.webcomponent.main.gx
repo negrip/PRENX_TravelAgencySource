@@ -1,0 +1,66 @@
+WebComponent CountryCityWC
+{
+	#Rules
+		parm(in:&CountryId);
+	#End
+
+	#Events
+		Event Start
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			Grid.Rows = 10
+			CountryId.Visible = False
+		
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Grid.Load
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = True
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Country"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"CountryId"
+			&TrnContextAtt.AttributeValue = &CountryId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+	#End
+
+	#Conditions
+		CountryId = &CountryId;
+	#End
+
+	#Variables
+			IsAuthorized [ DataType = 'Boolean' ]
+
+			CountryId [ DataType = 'Attribute:CountryId' ]
+
+			Session [ DataType = 'WebSession' ]
+
+			HTTPRequest [ DataType = 'HttpRequest' ]
+
+			GridState [ DataType = 'GridState, GeneXus.Common' ]
+
+			TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+			TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+			ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+	#End
+
+	#Properties
+		Name = "CountryCityWC"
+
+		Type = "Component"
+	#End
+
+}

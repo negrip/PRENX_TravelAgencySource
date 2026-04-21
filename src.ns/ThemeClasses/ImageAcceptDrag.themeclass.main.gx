@@ -1,0 +1,7 @@
+ThemeClass ImageAcceptDrag
+{
+	#Properties
+		Name = "ImageAcceptDrag"
+	#End
+
+}

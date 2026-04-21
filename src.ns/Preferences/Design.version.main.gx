@@ -1,0 +1,13 @@
+Version Design
+{
+	#Environments
+		AngularNetPostgresql
+	#End
+
+	#Properties
+		DefaultStyle = "TravelAgencyNextSample"
+
+		EnableNationalLanguageSupport = "Yes"
+	#End
+
+}

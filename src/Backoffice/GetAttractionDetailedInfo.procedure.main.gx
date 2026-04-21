@@ -1,0 +1,59 @@
+Procedure GetAttractionDetailedInfo
+{
+	&AttractionDetailedInfoJSON = &WebSession.Get(&AttractionName)
+	if &AttractionDetailedInfoJSON.IsEmpty()
+		//Use an AI agent to get an attraction description
+		&AttractionDetailedInfo.AttractionDescription = GetAttractionDescriptionAgent(&AttractionName,&ChatMessages,&CallResult)
+	
+		//Format AttractionName into an URL text to include it as a parameter for the photo search in Internet
+		//&AttractionNameURL = &AttractionName.RemoveDiacritics()
+		//&AttractionNameURL = UrlEncode(&AttractionNameURL)
+		//Use an AI agent to get the URL of an attraction's photo.
+		//&answer = GetAttractionPhotoAgent(&AttractionName,&AttractionNameURL,&ChatMessages,&CallResult)
+		//&PhotoProperties.FromJson(&answer)
+		//&PhotoURL = &PhotoProperties.Get(!"image_url")
+		&PhotoURL = GetAttractionPhoto(&AttractionName)
+	
+		&AttractionDetailedInfo.AttractionPhotoURL = &PhotoURL 
+		
+		&WebSession.Set(&AttractionName,&AttractionDetailedInfo.ToJson())
+	else
+		&AttractionDetailedInfo = New()
+		&WebSession.Clear()
+	endif
+
+	#Rules
+		parm(in:&AttractionName, out:&AttractionDetailedInfo);
+	#End
+
+	#Variables
+			PhotoProperties [ DataType = 'Properties' ]
+
+			PhotoUrl [ DataType = 'Url, GeneXus' ]
+
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			answer [ DataType = 'LongVarChar(2M)' ]
+
+			CallResult [ DataType = 'CallResult, GeneXus.Common' ]
+
+			ChatMessages [ DataType = 'ChatMessage, GeneXus.ArtificialIntelligence', Collection = 'True' ]
+
+			uri [ DataType = 'VarChar(1000)' ]
+
+			AttractionDetailedInfo [ DataType = 'AttractionDetailedInfo' ]
+
+			WebSession [ DataType = 'WebSession' ]
+
+			AttractionDetailedInfoJSON [ DataType = 'VarChar(1000)' ]
+
+			AttractionNameURL [ DataType = 'VarChar(1000)', AverageLength = '0', Collection = 'False', ControlType = 'Edit' ]
+	#End
+
+	#Properties
+		Name = "GetAttractionDetailedInfo"
+
+		Description = "GetAttractionDetailedInfo"
+	#End
+
+}

@@ -1,0 +1,23 @@
+SDT CityWeather
+{
+		CityWeather	{
+
+			WeatherCondition [ DataType = 'WeatherCondition', Collection = 'False', ControlType = 'Combo Box' ]
+
+			Temperature [ DataType = 'Character(4)' ]
+
+			WeatherIconURL [ DataType = 'VarChar(1000)', AverageLength = '0', Collection = 'False', ControlType = 'Edit' ]
+
+			WeatherText [ DataType = 'VarChar(40)' ]
+
+			Wind [ DataType = 'Character(4)' ]
+
+		}
+
+	#Properties
+		Name = "CityWeather"
+
+		Description = "CityWeather"
+	#End
+
+}

@@ -1,0 +1,9 @@
+Domain Component
+{
+	#Properties
+		Name = "Component"
+
+		BasedOn = "Url, GeneXus"
+	#End
+
+}

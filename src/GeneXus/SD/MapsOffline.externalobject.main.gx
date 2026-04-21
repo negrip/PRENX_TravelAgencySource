@@ -1,0 +1,301 @@
+ExternalObject MapsOffline
+{
+	#ExternalProperties
+		IsOfflineGeographicDataSupported
+
+			[
+
+				PropertyType = 'Read',
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'isOfflineGeographicDataSupported',
+
+				AndroidExternalGetMethod = 'isOfflineGeographicDataSupported'
+
+			]
+
+		
+
+		DownloadedRegions
+
+			[
+
+				PropertyType = 'Read',
+
+				Type = 'VarChar',
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'getDownloadedRegions',
+
+				AndroidExternalGetMethod = 'getDownloadedRegions'
+
+			]
+
+		
+
+		Size
+
+			[
+
+				PropertyType = 'Read',
+
+				Type = 'Numeric',
+
+				IsStatic = 'True',
+
+				AndroidExternalGetMethod = 'getSize'
+
+			]
+	#End
+
+	#ExternalMethods
+		DownloadRegion
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'downloadRegion'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				RegionName
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				NorthEast
+
+					[
+
+						Type = 'GeoPoint'
+
+					]
+
+		
+
+				SouthWest
+
+					[
+
+						Type = 'GeoPoint'
+
+					]
+
+		
+
+				MinZoom
+
+					[
+
+						Type = 'Numeric'
+
+					]
+
+		
+
+				MaxZoom
+
+					[
+
+						Type = 'Numeric'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ClearRegion
+
+			[
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'clearRegion'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				RegionName
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ClearRegions
+
+			[
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'clearRegions'
+
+			]
+
+		
+
+		GetRegionStatus
+
+			[
+
+				Type = 'MapRegion, GeneXus.SD',
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'getRegionStatus'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				RegionName
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		CancelRegionDownload
+
+			[
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'cancelDownload'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				RegionName
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		PauseRegionDownload
+
+			[
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'pauseDownload'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				RegionName
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#ExternalEvents
+		RegionDownloadEnded
+
+		{
+
+			Parameters
+
+			{
+
+				RegionName
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				Messages
+
+					[
+
+						Type = 'Messages, GeneXus.Common'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "MapsOffline"
+
+		AndroidExternalName = "MapsOfflineAPIOffline"
+
+		ExternalPackageName = "com.genexus.android.location"
+	#End
+
+}

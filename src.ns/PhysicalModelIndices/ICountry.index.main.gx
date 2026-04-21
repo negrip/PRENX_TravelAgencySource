@@ -1,0 +1,15 @@
+Index ICountry
+{
+	CountryId
+
+	#Index
+		Source = "Automatic"
+
+		Type = "Unique"
+	#End
+
+	#Properties
+		Name = "ICountry"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass ButtonDragging
+{
+	#Properties
+		Name = "ButtonDragging"
+	#End
+
+}

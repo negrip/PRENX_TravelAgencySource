@@ -1,0 +1,7 @@
+ThemeClass MenuItem
+{
+	#Properties
+		Name = "MenuItem"
+	#End
+
+}

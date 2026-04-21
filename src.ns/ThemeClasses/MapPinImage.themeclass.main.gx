@@ -1,0 +1,7 @@
+ThemeClass MapPinImage
+{
+	#Properties
+		Name = "MapPinImage"
+	#End
+
+}

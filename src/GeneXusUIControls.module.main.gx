@@ -1,0 +1,1755 @@
+Module GeneXusUIControls
+{
+	<ExportFile><Objects><Object parentGuid="45218f18-ebad-44af-9aa3-705ed3309379" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2023-03-24T16:15:43.0000000Z" checksum="da605e114c5de0af44d9b8e7ee7ac756" server_checksum="5b2fad2ee9865dedc82c9995f55579e4" fullyQualifiedName="GeneXusUIControls.IntersectionObserver.IntersectionObserver" moduleGuid="45218f18-ebad-44af-9aa3-705ed3309379" guid="ec25a4f3-1047-4b63-ae72-bdb815d055ec" name="IntersectionObserver" type="562f4793-aabe-449f-8821-fc77e550698e" description="Intersection Observer" parent="GeneXusUIControls.IntersectionObserver" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Part type="3dd92fe7-b095-44d3-9fa0-8488fa3f0c67"><Source>{{=&lt;% %&gt;=}}
+
+	&lt;ch-intersection-observer
+
+	  [bottomMargin]="BottomRootMargin"
+
+	  [leftMargin]="LeftRootMargin"
+
+	  [rightMargin]="RightRootMargin"
+
+	  [threshold]="Threshold"
+
+	  [topMargin]="TopRootMargin"
+
+	  (intersectionUpdate)="
+
+	    IntersectionRatio = $event.detail.intersectionRatio * 100; handleIntersectionUpdate($event)
+
+	  "
+
+	&gt;
+
+	  &lt;slot name="content"/&gt;
+
+	&lt;/ch-intersection-observer&gt;
+
+	
+
+	&lt;style&gt;
+
+	  :host {
+
+	    display: contents;
+
+	  }
+
+	&lt;/style&gt;</Source><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="8e9e4a7c-a4d3-4c36-8e8e-fb6702402f63"><Source>&lt;Definition auto="false" target="Angular"&gt;
+
+		&lt;Property Name="TopRootMargin" Type="string" Scope="DesignTime" Default="0dip"/&gt;
+
+	
+
+		&lt;Property Name="RightRootMargin" Type="string" Scope="DesignTime" Default="0dip"/&gt;
+
+	
+
+		&lt;Property Name="BottomRootMargin" Type="string" Scope="DesignTime" Default="0dip"/&gt;
+
+	
+
+		&lt;Property Name="LeftRootMargin" Type="string" Scope="DesignTime" Default="0dip"/&gt;
+
+	
+
+		&lt;Property Name="Threshold" Type="string" Scope="DesignTime"/&gt;
+
+	
+
+		&lt;Property Name="IntersectionRatio" Type="numeric" Scope="RunTime" Default="0"/&gt;
+
+	
+
+		&lt;Event Name="IntersectionUpdate" On="intersectionUpdate" /&gt;
+
+	&lt;/Definition&gt;</Source><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml>&lt;H1 class=page-title&gt;Intersection Observer&lt;/H1&gt;&lt;/HEADER&gt;
+
+	&lt;DIV class=page-body&gt;&lt;FIGURE id=76979060-f539-49b4-856f-3a0cd192161d class="block-color-gray_background callout" style="WHITE-SPACE: pre-wrap; DISPLAY: flex"&gt;
+
+	&lt;DIV style="FONT-SIZE: 1.5em"&gt;&lt;SPAN class=icon&gt;💡&lt;/SPAN&gt;&lt;/DIV&gt;
+
+	&lt;DIV style="WIDTH: 100%"&gt;This control allows the user to wrap another component and use the Javascript Intersection Observer on it.&lt;/DIV&gt;&lt;/FIGURE&gt;
+
+	&lt;H2 id=c491e685-09bb-42db-9027-f3d11512285a&gt;Properties:&lt;/H2&gt;
+
+	&lt;UL id=6514cfdc-450b-40d7-b1bc-f25e3ad12ee8 class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;Root:&lt;/STRONG&gt;&lt;/MARK&gt; String: Set the ID of the component that is used as the viewport, default is the browser.&lt;/LI&gt;&lt;/UL&gt;
+
+	&lt;H3 id=22efe259-70c4-4335-8818-133f7bb685a3&gt;Root Margin&lt;/H3&gt;
+
+	&lt;P id=7ce80f29-9f97-4f66-b8cf-c675bbbf2540&gt;Margin around the root. The values can be percentages or dip, default value is zero. 
+
+	&lt;DIV class=indented&gt;
+
+	&lt;UL id=357e73e6-919c-4a1d-a018-2736be624cfd class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;TopRootMargin: &lt;/STRONG&gt;&lt;/MARK&gt;Top margin around the root&lt;/LI&gt;&lt;/UL&gt;
+
+	&lt;UL id=d062796e-85d8-44b3-ba35-aa92b64a60c5 class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;/MARK&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;LeftRootMargin: &lt;/STRONG&gt;&lt;/MARK&gt;Left margin around the root&lt;/LI&gt;&lt;/UL&gt;
+
+	&lt;UL id=ddeec778-03b2-4beb-b0b4-c449abc4833d class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;/MARK&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;BottomRootMargin: &lt;/STRONG&gt;&lt;/MARK&gt;Bottom margin around the root&lt;/LI&gt;&lt;/UL&gt;
+
+	&lt;UL id=383fc262-a0b4-4e7c-9d96-c0fd688964d8 class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;/MARK&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;RightRootMargin: &lt;/STRONG&gt;&lt;/MARK&gt;Right margin around the root&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;
+
+	&lt;P&gt;&lt;/P&gt;
+
+	&lt;UL id=5d470360-803f-4d21-bd16-1d39e64c8de2 class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;Threshold:&lt;/STRONG&gt;&lt;/MARK&gt; An string of colon separated&amp;nbsp;percentage values&amp;nbsp;which indicate at what percentage of the target's visibility the observer's callback should be executed, default is [0]. Example "10%,50%"&lt;/LI&gt;&lt;/UL&gt;
+
+	&lt;UL id=36308b4f-5a91-43c5-8e68-7f87584f6ec8 class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;IntersectionRatio:&lt;/STRONG&gt;&lt;/MARK&gt; The degree of intersection between the target element and its root, its a read-only property that change its value when the &lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;IntersectionUpdate&lt;/STRONG&gt;&lt;/MARK&gt; event its triggered. Default value is zero.&lt;/LI&gt;&lt;/UL&gt;
+
+	&lt;H2 id=d2439906-c7c5-4481-b0f4-e8e8ba8e6a7c&gt;Events:&lt;/H2&gt;
+
+	&lt;UL id=96ec6739-87d5-4806-a583-7c1a145547ea class=bulleted-list&gt;
+
+	&lt;LI style="LIST-STYLE-TYPE: disc"&gt;&lt;MARK class=highlight-gray_background&gt;&lt;STRONG&gt;IntersectionUpdate:&lt;/STRONG&gt;&lt;/MARK&gt; This event is triggered when the page load, and every time that an intercepton occurs.&lt;/LI&gt;&lt;/UL&gt;
+
+	&lt;P id=7f9b875d-670b-42d9-b507-0c7faf0aea9c&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/ARTICLE&gt;</InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>IntersectionObserver</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="ab5f1405-0a35-4384-ada7-5398890b865e" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2023-03-24T16:15:21.0000000Z" checksum="7596b32c33061788ea70448728bc7153" server_checksum="2184c825d48784de76a9e25d6008bca3" fullyQualifiedName="GeneXusUIControls.IntersectionObserver" moduleGuid="ab5f1405-0a35-4384-ada7-5398890b865e" guid="45218f18-ebad-44af-9aa3-705ed3309379" name="IntersectionObserver" type="c88fffcd-b6f8-0000-8fec-00b5497e2117" description="Intersection Observer" parent="GeneXusUIControls" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117" PackagedModuleName="IntersectionObserver" moduleVersion="1.0"><Part type="ed1b7b1c-2aaf-46eb-9ec5-db348f6fa3fc"><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>IntersectionObserver</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2025-08-18T16:46:22.0000000Z" checksum="638dc54db6ba3b538319ff4204bc1a8b" server_checksum="380ada5e680c8169e6d69dfd022ccd12" fullyQualifiedName="GeneXusUIControls.Chat.TranslationsProvider" moduleGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" guid="a821b114-e394-4236-bd1a-3ab86bcc3d19" name="TranslationsProvider" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Translations Provider" parent="GeneXusUIControls.Chat" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534"><Source></Source><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47"><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>TranslationsProvider</Value></Property><Property><Name>OutputSDT</Name><Value>447527b5-9210-4523-898b-5dccb17be60a-GeneXusUIControls.Chat.Translations</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2025-08-12T19:35:44.0000000Z" checksum="c99bdc906eea621b49c147650301d0ac" server_checksum="fca7baeb02c31d455092277ca16d5754" fullyQualifiedName="GeneXusUIControls.Chat.MessageStatus" moduleGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" guid="5a079e3c-6957-48cc-9871-421413b654b8" name="MessageStatus" type="00972a17-9975-449e-aab1-d26165d51393" description="Message Role" parent="GeneXusUIControls.Chat" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>MessageStatus</Value></Property><Property><Name>Description</Name><Value>Message Role</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>20</Value></Property><Property><Name>AttMaxLen</Name><Value>20</Value></Property><Property><Name>IDEnumDefinedValues</Name><Value>complete, COMPLETE, Complete; waiting, WAITING, Waiting; streaming, STREAMING, Streaming</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2025-08-12T19:31:59.0000000Z" checksum="ced8f5786bd96fc79e3310befa919035" server_checksum="85dab5f6b3932294962f7eef0caa5711" fullyQualifiedName="GeneXusUIControls.Chat.MessageRole" moduleGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" guid="c202c31c-698c-41f0-b404-8de3d91996a3" name="MessageRole" type="00972a17-9975-449e-aab1-d26165d51393" description="Message Role" parent="GeneXusUIControls.Chat" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>MessageRole</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>20</Value></Property><Property><Name>AttMaxLen</Name><Value>20</Value></Property><Property><Name>IDEnumDefinedValues</Name><Value>system, SYSTEM, System; user, USER, User; assistant, AGENT, Agent; error, ERROR, Error</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2025-08-18T16:46:21.0000000Z" checksum="21716261e36d14e53ba6f6b318e6a7b8" server_checksum="d076ed9a016e6ad4ea21bd91e0dc806c" fullyQualifiedName="GeneXusUIControls.Chat.Translations" moduleGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" guid="7b5d2351-2d4e-4021-bd4b-40714b1a5e54" name="Translations" type="447527b5-9210-4523-898b-5dccb17be60a" description="Translations" parent="GeneXusUIControls.Chat" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a"><Level Name="Translations"><LevelInfo guid="23e422be-950d-4f32-a9ac-594ceaed91d5" name="Translations" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Translations" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>Translations</Value></Property></Properties></LevelInfo><Level Name="accessibleName"><LevelInfo guid="cb565c78-4f67-4d1a-9a53-7d9b3fd05524" name="accessibleName" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="accessible Name" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>accessibleName</Value></Property></Properties></LevelInfo><Item guid="ee1f087d-b0fd-45a1-bb05-a78b84b0392c" name="sendInput" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="send Input" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>sendInput</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item><Item guid="c2fc9893-2464-4ed1-b60a-1e4a679c7e49" name="sendButton" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="send Button" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>sendButton</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item><Item guid="0ef1c168-c2f2-48b0-be15-330a8a0c7961" name="stopResponseButton" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="stop Response Button" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>stopResponseButton</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item></Level><Level Name="placeholder"><LevelInfo guid="2b6774b8-c24d-4c4f-9812-389784f311fa" name="placeholder" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="placeholder" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>placeholder</Value></Property></Properties></LevelInfo><Item guid="2bd30034-bb1a-4bc1-8937-5afb3234df24" name="sendInput" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="send Input" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>sendInput</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item></Level><Level Name="text"><LevelInfo guid="2ff4df99-325b-4070-8840-ac661e2397df" name="text" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="text" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>text</Value></Property></Properties></LevelInfo><Item guid="a8d46849-3a1a-4ac7-817d-003292e0296e" name="processing" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="processing" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>processing</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item><Item guid="4e3eb439-f2e8-451f-a082-ee623709e1cf" name="stopped" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="stopped" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>stopped</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item><Item guid="22a51044-70de-47b6-a347-66c081d56db3" name="stopResponseButton" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="stop Response Button" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>stopResponseButton</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item><Item guid="0cbb33af-6691-4633-8142-2597984f7a24" name="error" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="error" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>error</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>100</Value></Property><Property><Name>AttMaxLen</Name><Value>100</Value></Property></Properties></Item><Item guid="464c7759-5995-4860-a625-87e8aa47610b" name="sourceFiles" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="source Files" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>sourceFiles</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property><Property><Name>Length</Name><Value>50</Value></Property><Property><Name>AttMaxLen</Name><Value>50</Value></Property></Properties></Item></Level></Level><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>Translations</Value></Property><Property><Name>ExternalNamespace</Name><Value>GeneXus</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2025-08-15T19:49:34.0000000Z" checksum="3f8fd25a8559d305fce35d7eb3893fd5" server_checksum="7e23fd1ce7b114c88de29ca5f11c8a3b" fullyQualifiedName="GeneXusUIControls.Chat.MessageUI" moduleGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" guid="a97cac02-81f0-4086-ba08-495130957cb4" name="MessageUI" type="447527b5-9210-4523-898b-5dccb17be60a" description="Message UI" parent="GeneXusUIControls.Chat" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a"><Level Name="MessageUI"><LevelInfo guid="1b52c288-99b9-4483-8e7e-d036b79734dd" name="MessageUI" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Message UI" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>MessageUI</Value></Property></Properties></LevelInfo><Item guid="8724777a-2d10-4d43-9f71-911f3bad975f" name="id" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="id" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>id</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:Character</Value></Property></Properties></Item><Item guid="aba341c4-0809-4fae-82a4-97a6d980799e" name="role" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="role" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>role</Value></Property><Property><Name>idBasedOn</Name><Value>Domain:MessageRole, GeneXusUIControls.Chat</Value></Property></Properties></Item><Item guid="457e0baa-7bcd-436d-abd7-b3de1b7b53a9" name="content" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="content" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>content</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:Character</Value></Property></Properties></Item><Level Name="sources"><LevelInfo guid="79ffb4c7-a6d2-40ec-9640-16a7c51aff7b" name="sources" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="sources" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>sources</Value></Property><Property><Name>AttCollection</Name><Value>True</Value></Property><Property><Name>idCollectionItemName</Name><Value>source</Value></Property></Properties></LevelInfo><Item guid="1253c021-0aa9-412c-a402-0c367cd8b743" name="url" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="url" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>url</Value></Property><Property><Name>idBasedOn</Name><Value>Domain:Url, GeneXus</Value></Property></Properties></Item><Item guid="83c293d7-b205-4086-8313-10019a1c6440" name="caption" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="caption" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>caption</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:Character</Value></Property></Properties></Item><Item guid="88674d6d-218b-41de-89bd-c1a08651d6f8" name="accessibleName" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="accessible Name" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>accessibleName</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:Character</Value></Property></Properties></Item></Level><Item guid="f3131ba9-12a0-488a-b89e-ff44f3d69bad" name="status" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="status" user="gxms-0001\root"><Properties><Property><Name>Name</Name><Value>status</Value></Property><Property><Name>idBasedOn</Name><Value>Domain:MessageStatus, GeneXusUIControls.Chat</Value></Property></Properties></Item></Level><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>MessageUI</Value></Property><Property><Name>ExternalNamespace</Name><Value>GeneXus</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2025-08-21T17:41:42.0000000Z" checksum="79b6c132006d49e2e93247c2d0842e5a" server_checksum="f38547af3aee65ceff467b13a4aac93a" fullyQualifiedName="GeneXusUIControls.Chat.Chat" moduleGuid="42e3315c-dc6e-4b3d-8803-0853b8963f10" guid="10475910-0549-4a75-b157-1adb280b0c83" name="Chat" type="562f4793-aabe-449f-8821-fc77e550698e" description="Chat" parent="GeneXusUIControls.Chat" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Part type="3dd92fe7-b095-44d3-9fa0-8488fa3f0c67"><Source>
+
+	Sub-Template Angular
+
+		{{=&lt;% %&gt;=}}
+
+		@defer (when translationsReady) {
+
+			&lt;ch-theme
+
+				[avoidFlashOfUnstyledContent]="false"
+
+				[model]="themeModel"
+
+			&gt;
+
+			&lt;/ch-theme&gt;
+
+			&lt;ch-chat
+
+				##chatComponent
+
+				[class]="Class" 
+
+				[translations]="Translations"
+
+				[items]="itemsProxy"
+
+				[loadingState] = "'all-records-loaded'"
+
+				[waitingResponse] = "WaitingResponse"
+
+				[sendButtonDisabled] = "WaitingResponse"
+
+				[showAdditionalContent]="ShowAdditionalContent"
+
+				[autoScroll]="AutoScroll"
+
+				[newUserMessageAlignment]="NewUserMessageAlignment"
+
+				[newUserMessageScrollBehavior]="NewUserMessageScrollBehavior"
+
+				[callbacks]="callbacks"
+
+				[sendContainerLayout]="sendContainerLayout"
+
+				[markdownTheme]="markdownTheme"
+
+			&gt;
+
+				&lt;%#ShowEmptyChatContent%&gt;
+
+				&lt;div slot="empty-chat"&gt;
+
+					&lt;slot name="EmptyChat" /&gt;
+
+				&lt;/div&gt;
+
+				&lt;%/ShowEmptyChatContent%&gt;
+
+				&lt;%#ShowAdditionalContent%&gt;
+
+				&lt;div slot="additional-content"&gt;
+
+					&lt;slot name="AdditionalContent" /&gt;
+
+				&lt;/div&gt;
+
+				&lt;%/ShowAdditionalContent%&gt;
+
+			&lt;/ch-chat&gt;
+
+		}
+
+	EndSub
+
+	
+
+	Sub-Template Web
+
+		&lt;ch-theme avoid-flash-of-unstyled-content="false"&gt;&lt;/ch-theme&gt;
+
+		&lt;ch-chat
+
+			class="{{Class}}" 
+
+			show-additional-content="{{ShowAdditionalContent}}"
+
+			auto-scroll="{{AutoScroll}}"
+
+			new-user-message-alignment="{{NewUserMessageAlignment}}"
+
+			new-user-message-scroll-behavior="{{NewUserMessageScrollBehavior}}"
+
+		&gt;
+
+			{{#ShowEmptyChatContent}}
+
+			&lt;div slot="empty-chat"&gt;
+
+				&lt;slot name="EmptyChat" /&gt;
+
+			&lt;/div&gt;
+
+			{{/ShowEmptyChatContent}}
+
+			{{#ShowAdditionalContent}}
+
+			&lt;div slot="additional-content"&gt;
+
+				&lt;slot name="AdditionalContent" /&gt;
+
+			&lt;/div&gt;
+
+			{{/ShowAdditionalContent}}
+
+		&lt;/ch-chat&gt;
+
+	EndSub</Source><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="8e9e4a7c-a4d3-4c36-8e8e-fb6702402f63"><Source>&lt;Definition version="2.0"&gt;
+
+		&lt;Properties&gt;
+
+			&lt;Properties Name="Appearance"&gt;
+
+				&lt;Property Name="Class" Type="class" Default="chat" /&gt;
+
+				&lt;Property Name="MarkdownStyle" Type="KBObject" FilterType="DesignSystem" /&gt;
+
+				&lt;Property Name="ShowEmptyChatContent" Type="boolean" Default="true" Scope="DesignTime" /&gt;
+
+				&lt;Property Name="ShowAdditionalContent" Type="boolean" Default="false" Scope="DesignTime" /&gt;
+
+			&lt;/Properties&gt;
+
+			
+
+			&lt;Properties Name="Behavior"&gt;
+
+				&lt;Property Name="WaitingResponse" Type="boolean" Default="false" Scope="Runtime" /&gt;
+
+			
+
+				&lt;Property Name="AutoScroll" Type="string" Default="never"&gt;
+
+					&lt;Values&gt;
+
+						&lt;Value Description="Never"&gt;never&lt;/Value&gt;
+
+						&lt;Value Description="At scroll end"&gt;at-scroll-end&lt;/Value&gt;
+
+					&lt;/Values&gt;
+
+				&lt;/Property&gt;
+
+				
+
+				&lt;Property Name="NewUserMessageAlignment" Type="string" Default="start"&gt;
+
+					&lt;Values&gt;
+
+						&lt;Value Description="Start"&gt;start&lt;/Value&gt;
+
+						&lt;Value Description="End"&gt;end&lt;/Value&gt;
+
+					&lt;/Values&gt;
+
+				&lt;/Property&gt;
+
+				
+
+				&lt;Property Name="NewUserMessageScrollBehavior" Type="string" Default="smooth"&gt;
+
+					&lt;Values&gt;
+
+						&lt;Value Description="Instant"&gt;instant&lt;/Value&gt;
+
+						&lt;Value Description="Smooth"&gt;smooth&lt;/Value&gt;
+
+					&lt;/Values&gt;
+
+				&lt;/Property&gt;
+
+			&lt;/Properties&gt;
+
+			
+
+			&lt;Properties Name="Data Binding"&gt;
+
+				&lt;Property Name="Messages" Type="variable" FilterType="UIControls.Chat.ChatMessageUI" /&gt;
+
+				&lt;Property Name="Translations" Type="variable" FilterType="UIControls.Chat.Translations" /&gt;
+
+			&lt;/Properties&gt;
+
+	
+
+			&lt;Properties Name="Handlers"&gt;
+
+				&lt;Property Name="SendHistoryMessages" Type="boolean" Default="true" /&gt;
+
+				&lt;Property Name="SendMessageHandlerUrl" Type="string" Scope="Runtime" /&gt;
+
+				&lt;Property Name="SendMessageHandlerObject" Type="KBObject" FilterType="Procedure" /&gt;
+
+			&lt;/Properties&gt;
+
+		&lt;/Properties&gt;
+
+	
+
+		&lt;Methods&gt;
+
+			&lt;Method Name="Send"&gt;
+
+				&lt;Parameters&gt;
+
+					&lt;Parameter Name="content" Type="string" /&gt;
+
+				&lt;/Parameters&gt;
+
+			&lt;/Method&gt;
+
+			&lt;Method Name="StopResponse" /&gt;
+
+	
+
+			&lt;Method Name="AddNewMessage"&gt;
+
+				&lt;Parameters&gt;
+
+					&lt;Parameter Name="message" Type="sdt" /&gt;
+
+				&lt;/Parameters&gt;
+
+			&lt;/Method&gt;
+
+			&lt;Method Name="UpdateLastMessage"&gt;
+
+				&lt;Parameters&gt;
+
+					&lt;Parameter Name="message" Type="sdt" /&gt;
+
+					&lt;Parameter Name="mode" Type="string" Optional="true" Description="'replace' | 'concat'" /&gt;
+
+				&lt;/Parameters&gt;
+
+			&lt;/Method&gt;
+
+		&lt;/Methods&gt;
+
+		
+
+	  	&lt;Events&gt;
+
+			&lt;Event Name="SendMessage" /&gt;
+
+			&lt;Event Name="MessageSent" /&gt;
+
+			&lt;Event Name="ResponseCompleted" /&gt;
+
+			&lt;Event Name="ResponseStopped" /&gt;
+
+			&lt;Event Name="ResponseError" /&gt;
+
+			&lt;Event Name="ConnectionFailed" /&gt;
+
+		&lt;/Events&gt;
+
+	  
+
+		&lt;Settings&gt;
+
+			&lt;Toolbox&gt;
+
+				&lt;Name&gt;Chat&lt;/Name&gt;
+
+				&lt;Categories&gt;
+
+					&lt;Category&gt;GeneXusUIControls&lt;/Category&gt;
+
+				&lt;/Categories&gt;
+
+			&lt;/Toolbox&gt;
+
+					
+
+			&lt;Variables&gt;
+
+				&lt;Variable
+
+					Name="chatMessages"
+
+					Type="MessageUI, GeneXusUIControls.Chat"
+
+					Collection="true"
+
+					SetProperty="Messages"
+
+				/&gt;
+
+				&lt;Variable
+
+					Name="chatTranslations"
+
+					Type="Translations, GeneXusUIControls.Chat"
+
+					SetProperty="Translations"
+
+				/&gt;
+
+			&lt;/Variables&gt;
+
+			
+
+			&lt;Properties&gt;
+
+				&lt;Property Name="MarkdownStyle" Value="GeneXusUnanimo.Markdown" /&gt;
+
+			&lt;/Properties&gt;
+
+			
+
+			&lt;Sources&gt;
+
+				&lt;Script type="code-snippet"&gt;
+
+					//Sub 'StartChat'
+
+					//	&amp;chatTranslations = GeneXusUIControls.Chat.TranslationsProvider()
+
+					//EndSub
+
+				&lt;/Script&gt;		
+
+			&lt;/Sources&gt;
+
+		&lt;/Settings&gt;
+
+		
+
+	 	&lt;Platforms&gt;
+
+			&lt;Platform Name="Angular"&gt;
+
+				&lt;ScreenTemplate Name="Angular" /&gt;
+
+				
+
+				&lt;Dependencies&gt;
+
+					&lt;Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" /&gt;
+
+				&lt;/Dependencies&gt;
+
+			
+
+				&lt;Sources&gt;
+
+					&lt;Script Type="ng-component-import" Name="Imports"&gt;
+
+						import { ViewChild, ElementRef, SimpleChanges} from "@angular/core";
+
+						import { GeneXusSDNetwork } from '@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/network';
+
+						import { ChangeDetectorRef, inject} from "@angular/core";
+
+					&lt;/Script&gt;
+
+					
+
+					&lt;Script Type="ng-component-classbody" Name="Body"&gt;
+
+						@ViewChild('chatComponent', { static: false }) chatRef?: ElementRef;
+
+						protected cdr = inject(ChangeDetectorRef);
+
+						themeModel: any;
+
+						itemsProxy: any;
+
+						callbacks: any;
+
+						sendContainerLayout: any;
+
+						markdownTheme: string = null;
+
+						fetchController: AbortController; 
+
+						get translationsReady(): boolean {
+
+							return (
+
+								this.Translations.text &amp;&amp; 
+
+								this.Translations.placeholder &amp;&amp; 
+
+								this.Translations.accessibleName
+
+							);
+
+						}
+
+						
+
+						ngOnChanges(changes: SimpleChanges) {
+
+							if (changes['Messages'] &amp;&amp; this.Messages) {
+
+								this.itemsProxy = this.#createProxy();
+
+							}
+
+						}
+
+						
+
+						##sendChat = () =&gt; {
+
+							if (this.SendMessageHandlerUrl) {
+
+								this.#sendChatHandler();
+
+							} else {
+
+								this.#sendChatEvent();
+
+							}
+
+						}
+
+						
+
+						##sendChatEvent = () =&gt; {
+
+							this.SendMessage();
+
+						}
+
+						
+
+						##sendChatHandler = async () =&gt; {
+
+							const messages = [...this.Messages];
+
+							const assistantMessage = {
+
+								id: messages.length.toString(),
+
+								role: "assistant",
+
+								status: "waiting",
+
+								content: this.Translations.text.processing
+
+							};
+
+							
+
+							this.WaitingResponse = true;
+
+							
+
+							await this.chatRef.nativeElement.addNewMessage(assistantMessage);
+
+							
+
+							this.fetchController = new AbortController();
+
+							const data = this.SendHistoryMessages ? messages : [messages.at(-1)];			
+
+							
+
+							try {
+
+								fetch(this.SendMessageHandlerUrl, {
+
+									method: 'POST',
+
+									headers: {
+
+										'Content-Type': 'application/json'
+
+									},
+
+									body: JSON.stringify(data),
+
+									signal: this.fetchController.signal
+
+								})
+
+								.then(async (response) =&gt; {
+
+									
+
+									if (!response.ok) {
+
+										throw new Error(`HTTP error! Status: ${response.status}`);
+
+									}
+
+									
+
+									await this.#sendChatHandlerResponse(assistantMessage, response);
+
+									
+
+									this.WaitingResponse = false;
+
+									
+
+									if (assistantMessage.role === 'error' &amp;&amp; this.ResponseError) {
+
+										this.ResponseError();
+
+									} else if (this.ResponseCompleted) {
+
+										this.ResponseCompleted();
+
+									}
+
+								})
+
+								.catch(error =&gt; {
+
+									if (error.name !== 'AbortError') {
+
+										this.#error();
+
+									}
+
+								})
+
+								.finally(() =&gt; {
+
+									this.cdr.markForCheck();
+
+								});
+
+								
+
+								if (this.MessageSent) {
+
+									this.MessageSent();
+
+								}
+
+							} catch {
+
+								this.#error();
+
+							} finally {
+
+								this.cdr.markForCheck();
+
+							}
+
+						}
+
+						
+
+						##sendChatHandlerResponse = async (assistantMessage, response) =&gt; {
+
+							const reader = response.body.getReader();
+
+							const decoder = new TextDecoder();
+
+							let responseComplete = false;
+
+							let buffer = '';
+
+							
+
+							assistantMessage.content = "";
+
+							assistantMessage.status = "streaming"
+
+							this.chatRef.nativeElement.updateLastMessage(assistantMessage, "replace");
+
+						
+
+							do {
+
+								const { done, value } = await reader.read();
+
+								
+
+								buffer += decoder.decode(value, { stream: true });
+
+								
+
+								let boundary = this.#getNextBoundary(buffer, done);
+
+								while (buffer.length &gt; 0 &amp;&amp; boundary !== -1) {
+
+									const chunk = buffer.slice(0, boundary);
+
+									const jsonStartIndex = chunk.indexOf('{');
+
+									const jsonText = jsonStartIndex &gt;= 0
+
+										? chunk.slice(jsonStartIndex)
+
+										: null;
+
+										
+
+									let chatResponse = null;
+
+									if (jsonText) {
+
+										try {
+
+											chatResponse = JSON.parse(jsonText);
+
+										} catch (e) {
+
+											chatResponse = null;
+
+										}
+
+									}
+
+								
+
+									const deltaMessage = this.#chatResponseToMessage(chatResponse);
+
+									if (deltaMessage) {
+
+										this.chatRef.nativeElement.updateLastMessage(
+
+											this.#updateAssistantMessage(assistantMessage, deltaMessage),
+
+											"replace"
+
+										);
+
+									}
+
+									
+
+									buffer = buffer.slice(boundary + 1);
+
+									boundary = this.#getNextBoundary(buffer, done);
+
+								}
+
+								
+
+								responseComplete = done;
+
+							} while (!responseComplete);
+
+								
+
+							assistantMessage.status = "complete"
+
+							this.chatRef.nativeElement.updateLastMessage(assistantMessage, "replace");
+
+						}
+
+		
+
+						##getNextBoundary = (str, done) =&gt; {
+
+							const index = str.indexOf('\n');
+
+							return index !== -1 ? index : (done ? str.length : -1);
+
+						}
+
+		
+
+						##chatResponseToMessage = (chatResponse) =&gt; {
+
+	
+
+							if (chatResponse &amp;&amp; 'content' in chatResponse) {
+
+								return chatResponse;
+
+							}
+
+					
+
+							if (chatResponse?.choices || chatResponse?.data) {
+
+								const choice = chatResponse.choices?.at(0);
+
+								const content = choice?.delta?.content || choice?.message?.content;
+
+								const documents = chatResponse.data?.documents;
+
+								
+
+								return {
+
+									content,
+
+									sources: documents?.map(doc =&gt; {
+
+										let page = "";
+
+						
+
+										if (doc.metadata["loc.pageNumber"] &amp;&amp; documents.filter(item =&gt; item.metadata.id === doc.metadata.id).length &gt; 1) {
+
+											page = `#${doc.metadata["loc.pageNumber"]}`;
+
+										}
+
+									
+
+										return {
+
+											caption: `${doc.metadata.name}.${doc.metadata.extension}${page}`,
+
+											url:doc.metadata.source
+
+										};
+
+									})
+
+								};			
+
+							}
+
+						}
+
+						
+
+						##updateAssistantMessage = (assistant, delta) =&gt; {
+
+							assistant.content += delta.content ?? "";
+
+							(assistant.sources ??= []).push(...(delta.sources ?? []));
+
+							
+
+							if (delta.role === 'error') {
+
+								assistant.role = 'error';
+
+							}
+
+							if (delta.status) {
+
+								assistant.status = delta.status;
+
+							}
+
+	
+
+							return assistant;
+
+						}
+
+		
+
+						##stop = () =&gt; {
+
+							this.fetchController.abort();
+
+							this.WaitingResponse = false;
+
+							this.chatRef.nativeElement.updateLastMessage(
+
+								{
+
+									role: "assistant",
+
+									content: "",
+
+									status: "complete"
+
+								},
+
+								this.Messages.at(-1).status === "waiting" ? "replace" : "concat"
+
+							);
+
+							
+
+							if (this.ResponseStopped) {
+
+								this.ResponseStopped();
+
+							}
+
+						}
+
+						
+
+						##error = () =&gt; {
+
+							this.WaitingResponse = false;
+
+							this.chatRef.nativeElement.updateLastMessage(
+
+								{
+
+									role: "error",
+
+									content: this.Translations.text.error,
+
+									status: "complete"
+
+								},
+
+								"replace"
+
+							);
+
+							
+
+							if (this.ConnectionFailed) {
+
+								this.ConnectionFailed();
+
+							}
+
+						}
+
+							
+
+						##createProxy = () =&gt; {
+
+							return new Proxy(
+
+								this.Messages,
+
+								{
+
+									get(target, prop, receiver) {
+
+										const message = Reflect.get(target, prop, receiver);
+
+										
+
+										if (typeof prop !== "symbol" &amp;&amp; Number.isInteger(Number(prop))) {
+
+											return {
+
+												id: message.id ? message.id : `auto-id-${prop}`,
+
+												role: message.role,
+
+												content: message.role === 'assistant' &amp;&amp; message.sources ? 
+
+													{ message: message.content, sources: message.sources }
+
+													: message.content,
+
+												status: message.status ? message.status : 'complete'
+
+											}
+
+										}
+
+									
+
+										return message;
+
+									}
+
+								}
+
+							);
+
+						}
+
+					&lt;/Script&gt;
+
+					
+
+					&lt;Script Type="before-show" Name="init"&gt;
+
+						this.Messages ??= [];
+
+						this.itemsProxy = this.#createProxy();
+
+						
+
+						this.callbacks = {
+
+							sendChatMessages: this.#sendChat,
+
+							stopResponse: this.#stop
+
+						};
+
+						
+
+						if (this.SendMessageHandlerObject &amp;&amp; !this.SendMessageHandlerUrl) {
+
+							this.SendMessageHandlerUrl =
+
+								GeneXusSDNetwork.applicationServerURL() + 
+
+								this.SendMessageHandlerObject
+
+									.slice(37)
+
+									.split('.')
+
+									.map((v, i, a) =&gt; i === a.length - 1 ? 'a' + v : v)
+
+									.join('.');
+
+						}
+
+						
+
+						this.themeModel = this.MarkdownStyle &amp;&amp; {
+
+							name: "GeneXusUIControls.Chat.MarkdownStyle",
+
+							url: this.MarkdownStyle.substring(37) + ".css",
+
+							attachStyleSheet: false
+
+						};
+
+						this.markdownTheme = this.themeModel?.name ?? null;
+
+						this.sendContainerLayout = {
+
+							sendContainerBefore: ["stop-response-button"],
+
+							sendContainerAfter: ["send-button"]
+
+						};
+
+					&lt;/Script&gt;
+
+					
+
+					&lt;Script Type="method" Name="send" Async="true"&gt;
+
+						await this.chatRef.nativeElement.sendChatMessage({
+
+							id: "",
+
+							role: "user",
+
+							status: "complete",
+
+							content
+
+						});
+
+					&lt;/Script&gt;
+
+					&lt;Script Type="method" Name="stopResponse"&gt;
+
+						if (this.WaitingResponse) {
+
+							this.#stop();
+
+						}
+
+					&lt;/Script&gt;
+
+					
+
+					&lt;Script Type="method" Name="addNewMessage" Async="true"&gt;
+
+						await this.chatRef.nativeElement.addNewMessage(message);
+
+					&lt;/Script&gt;
+
+					&lt;Script Type="method" Name="updateLastMessage" Async="true"&gt;
+
+						const normalizedMessage = this.#chatResponseToMessage(message);
+
+						if (normalizedMessage) {
+
+							if (mode === "concat") {
+
+								await this.chatRef.nativeElement.updateLastMessage(
+
+									this.#updateAssistantMessage(this.Messages.at(-1), normalizedMessage),
+
+									"replace"
+
+								);					
+
+							} else {
+
+								await this.chatRef.nativeElement.updateLastMessage(normalizedMessage, "replace");
+
+							}						
+
+						}
+
+					&lt;/Script&gt;
+
+				&lt;/Sources&gt;
+
+			&lt;/Platform&gt;
+
+			
+
+			&lt;Platform Name="Web"&gt;
+
+				&lt;ScreenTemplate Name="Web" /&gt;
+
+				
+
+				&lt;Dependencies&gt;
+
+					&lt;Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" /&gt;
+
+					&lt;Dependency Type="shared-module" source="chameleon/chameleon.esm.js" /&gt;
+
+				&lt;/Dependencies&gt;
+
+				
+
+				&lt;Sources&gt;
+
+					&lt;Script Type="method" Name="Send"&gt;
+
+						this.chatRef.addNewMessage({
+
+							id: "",
+
+							role: "user",
+
+							status: "complete",
+
+							content
+
+						}).then(() =&gt; {
+
+							this.sendChat();
+
+						});
+
+					&lt;/Script&gt;
+
+					&lt;Script Type="method" Name="StopResponse"&gt;
+
+						if (this.chatRef.waitingResponse) {
+
+							this.stop();
+
+						}
+
+					&lt;/Script&gt;
+
+					&lt;Script Type="method" Name="AddNewMessage"&gt;
+
+						this.chatRef.addNewMessage(message);
+
+					&lt;/Script&gt;
+
+					&lt;Script Type="method" Name="UpdateLastMessage"&gt;
+
+						const normalizedMessage = this.chatResponseToMessage(message);
+
+						if (normalizedMessage) {
+
+							if (mode === "concat") {
+
+								this.chatRef.updateLastMessage(
+
+									this.updateAssistantMessage(this.Messages.at(-1), normalizedMessage),
+
+									"replace"
+
+								);					
+
+							} else {
+
+								this.chatRef.updateLastMessage(normalizedMessage, "replace");
+
+							}						
+
+						}
+
+					&lt;/Script&gt;
+
+					
+
+					&lt;Script Type="before-show" Name="methods"&gt;
+
+						this.sendChat = () =&gt; {
+
+							if (this.SendMessageHandlerUrl) {
+
+								this.sendChatHandler();
+
+							} else {
+
+								this.sendChatEvent();
+
+							}
+
+						}
+
+						
+
+						this.sendChatEvent = () =&gt; {
+
+							if (this.SendMessage) {
+
+								this.SendMessage();
+
+							}
+
+						}
+
+						
+
+						this.sendChatHandler = () =&gt; {
+
+							const messages = [...this.Messages];
+
+							const assistantMessage = {
+
+								id: messages.length.toString(),
+
+								role: "assistant",
+
+								status: "waiting",
+
+								content: this.Translations.text.processing
+
+							};
+
+							
+
+							this.chatRef.waitingResponse = true;
+
+							this.chatRef.sendButtonDisabled = true;
+
+							this.chatRef.addNewMessage(assistantMessage);
+
+							
+
+							this.fetchController = new AbortController();
+
+							const data = this.SendHistoryMessages ? messages : [messages.at(-1)];			
+
+							
+
+							try {						
+
+								fetch(this.SendMessageHandlerUrl, {
+
+									method: 'POST',
+
+									headers: {
+
+										'Content-Type': 'application/json'
+
+									},
+
+									body: JSON.stringify(data),
+
+									signal: this.fetchController.signal
+
+								})
+
+								.then(async (response) =&gt; {
+
+									
+
+									if (!response.ok) {
+
+										throw new Error(`HTTP error! Status: ${response.status}`);
+
+									}
+
+									
+
+									await this.sendChatResponse(assistantMessage, response);
+
+									
+
+									this.chatRef.waitingResponse = false;
+
+									this.chatRef.sendButtonDisabled = false;
+
+									
+
+									if (assistantMessage.role === 'error' &amp;&amp; this.ResponseError) {
+
+										this.ResponseError();
+
+										} else if (this.ResponseCompleted) {
+
+										this.ResponseCompleted();
+
+									}
+
+								})
+
+								.catch(error =&gt; {
+
+									if (error.name !== 'AbortError') {
+
+										this.error();
+
+									}
+
+								});
+
+								
+
+								if (this.MessageSent) {
+
+									this.MessageSent();
+
+								}
+
+								
+
+							} catch {
+
+								this.error();
+
+							}
+
+						}
+
+					
+
+						this.sendChatResponse = async (assistantMessage, response) =&gt; {
+
+							const reader = response.body.getReader();
+
+							const decoder = new TextDecoder();
+
+							let responseComplete = false;
+
+							let buffer = '';
+
+							
+
+							assistantMessage.content = "";
+
+							assistantMessage.status = "streaming"
+
+							this.chatRef.updateLastMessage(assistantMessage, "replace");
+
+						
+
+							do {
+
+								const { done, value } = await reader.read();
+
+								
+
+								buffer += decoder.decode(value, { stream: true });
+
+								
+
+								let boundary = this.getNextBoundary(buffer, done);
+
+								while (buffer.length &gt; 0 &amp;&amp; boundary !== -1) {
+
+									const chunk = buffer.slice(0, boundary);
+
+									const jsonStartIndex = chunk.indexOf('{');
+
+									const jsonText = jsonStartIndex &gt;= 0
+
+										? chunk.slice(jsonStartIndex)
+
+										: null;
+
+										
+
+									let chatResponse = null;
+
+									if (jsonText) {
+
+										try {
+
+											chatResponse = JSON.parse(jsonText);
+
+										} catch (e) {
+
+											chatResponse = null;
+
+										}
+
+									}
+
+								
+
+									const deltaMessage = this.chatResponseToMessage(chatResponse);
+
+									if (deltaMessage) {
+
+										this.chatRef.updateLastMessage(
+
+											this.updateAssistantMessage(assistantMessage, deltaMessage),
+
+											"replace"
+
+										);					
+
+									}
+
+									
+
+									buffer = buffer.slice(boundary + 1);
+
+									boundary = this.getNextBoundary(buffer, done);
+
+								}
+
+								
+
+								responseComplete = done;
+
+							} while (!responseComplete);
+
+								
+
+							assistantMessage.status = "complete"
+
+							this.chatRef.updateLastMessage(assistantMessage, "replace");
+
+						}
+
+					
+
+						this.getNextBoundary = (str, done) =&gt; {
+
+							const index = str.indexOf('\n');
+
+							return index !== -1 ? index : (done ? str.length : -1);
+
+						}
+
+					
+
+						this.chatResponseToMessage = (chatResponse) =&gt; {
+
+					
+
+							if (chatResponse &amp;&amp; 'content' in chatResponse) {
+
+								return chatResponse;
+
+							}
+
+					
+
+							if (chatResponse?.choices || chatResponse?.data) {
+
+								const choice = chatResponse.choices?.at(0);
+
+								const content = choice?.delta?.content || choice?.message?.content;
+
+								const documents = chatResponse.data?.documents;
+
+								
+
+								return {
+
+									content,
+
+									sources: documents?.map(doc =&gt; {
+
+										let page = "";
+
+						
+
+										if (doc.metadata["loc.pageNumber"] &amp;&amp; documents.filter(item =&gt; item.metadata.id === doc.metadata.id).length &gt; 1) {
+
+											page = `#${doc.metadata["loc.pageNumber"]}`;
+
+										}
+
+									
+
+										return {
+
+											caption: `${doc.metadata.name}.${doc.metadata.extension}${page}`,
+
+											url:doc.metadata.source
+
+										};
+
+									})
+
+								};			
+
+							}
+
+						}
+
+					
+
+						this.updateAssistantMessage = (assistant, delta) =&gt; {	
+
+							assistant.content += delta.content ?? "";
+
+							(assistant.sources ??= []).push(...(delta.sources ?? []));
+
+							
+
+							if (delta.role === 'error') {
+
+								assistant.role = 'error';
+
+							}
+
+							if (delta.status) {
+
+								assistant.status = delta.status;
+
+							}
+
+							
+
+							return assistant;
+
+						}
+
+					
+
+						this.stop = () =&gt; {
+
+							this.fetchController.abort();
+
+							this.chatRef.waitingResponse = false;
+
+							this.chatRef.sendButtonDisabled = false;
+
+							this.chatRef.updateLastMessage(
+
+								{
+
+									role: "assistant",
+
+									content: "",
+
+									status: "complete"
+
+								},
+
+								this.Messages.at(-1).status === "waiting" ? "replace" : "concat"
+
+							);
+
+							
+
+							if (this.ResponseStopped) {
+
+								this.ResponseStopped();
+
+							}
+
+						}
+
+					
+
+						this.error = () =&gt; {
+
+							this.chatRef.waitingResponse = false;
+
+							this.chatRef.sendButtonDisabled = false;
+
+							this.chatRef.updateLastMessage(
+
+								{
+
+									role: "error",
+
+									content: this.Translations.text.error,
+
+									status: "complete"
+
+								},
+
+								"replace"
+
+							);
+
+							
+
+							if (this.ConnectionFailed) {
+
+								this.ConnectionFailed();
+
+							}
+
+						}
+
+					&lt;/Script&gt;
+
+					
+
+					&lt;Script Type="after-show" Name="constructor"&gt;
+
+						const container = document.querySelector(`#${this.ContainerName}`);
+
+						const handlerObject = gx.fn.getHidden(`${this.ControlName.toUpperCase()}_Sendmessagehandlerobject`);
+
+						const markdownStyle = gx.fn.getHidden(`${this.ControlName.toUpperCase()}_Markdownstyle`);
+
+						
+
+						if (handlerObject &amp;&amp; !this.SendMessageHandlerUrl) {
+
+							this.SendMessageHandlerUrl = gx.absoluteurl(handlerObject);
+
+						}
+
+						
+
+						this.themeRef = container.querySelector("ch-theme");
+
+						this.chatRef = container.querySelector("ch-chat");
+
+						
+
+						this.themeRef.model = markdownStyle &amp;&amp; {
+
+							name: "GeneXusUIControls.Chat.MarkdownStyle",
+
+							url: gx.getThemeElement().href.replace(/[^/]+$/, `${markdownStyle}.css`),
+
+							attachStyleSheet: false
+
+						};
+
+						
+
+						this.chatRef.callbacks = {
+
+							sendChatMessages: this.sendChat,
+
+							stopResponse: this.stop
+
+						};
+
+						this.chatRef.waitingResponse = false;
+
+						this.chatRef.loadingState = "all-records-loaded";
+
+						this.chatRef.markdownTheme = this.themeRef.model?.name ?? null;
+
+						this.chatRef.items = new Proxy(
+
+							this.Messages,
+
+							{
+
+								get(target, prop, receiver) {
+
+									const message = Reflect.get(target, prop, receiver);
+
+									
+
+									if (typeof prop !== "symbol" &amp;&amp; Number.isInteger(Number(prop))) {
+
+										return {
+
+											id: message.id ? message.id : `auto-id-${prop}`,
+
+											role: message.role,
+
+											content: message.role === 'assistant' &amp;&amp; message.sources ? 
+
+												{ message: message.content, sources: message.sources }
+
+												: message.content,
+
+											status: message.status ? message.status : 'complete'
+
+										}
+
+									}
+
+								
+
+									return message;
+
+								}
+
+							}
+
+						);
+
+						this.chatRef.translations = this.Translations;
+
+						this.chatRef.sendContainerLayout = {
+
+							sendContainerBefore: ["stop-response-button"],
+
+							sendContainerAfter: ["send-button"]
+
+						};
+
+						
+
+						container.appendChild(this.chatRef);
+
+					&lt;/Script&gt;
+
+				&lt;/Sources&gt;
+
+			&lt;/Platform&gt;
+
+		&lt;/Platforms&gt;
+
+	&lt;/Definition&gt;</Source><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>Chat</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object><Object parentGuid="ab5f1405-0a35-4384-ada7-5398890b865e" user="GeneXus" versionDate="2025-10-06T15:27:57.0000000Z" lastUpdate="2025-08-08T21:03:32.0000000Z" checksum="460b538db6e282e23959b2459786ad31" server_checksum="c72ab5714b84f5c16ac0ab478bfc7b29" fullyQualifiedName="GeneXusUIControls.Chat" moduleGuid="ab5f1405-0a35-4384-ada7-5398890b865e" guid="42e3315c-dc6e-4b3d-8803-0853b8963f10" name="Chat" type="c88fffcd-b6f8-0000-8fec-00b5497e2117" description="Chat" parent="GeneXusUIControls" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117" PackagedModuleName="Chat" moduleVersion="1.0"><Part type="ed1b7b1c-2aaf-46eb-9ec5-db348f6fa3fc"><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Part type="babf62c5-0111-49e9-a1c3-cc004d90900a"><InnerHtml></InnerHtml><Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Part><Properties><Property><Name>Name</Name><Value>Chat</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties></Object></Objects><Dependencies><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="562f4793-aabe-449f-8821-fc77e550698e"><Properties Name="User Control" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="3dd92fe7-b095-44d3-9fa0-8488fa3f0c67"><Properties Name="Screen Template" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="8e9e4a7c-a4d3-4c36-8e8e-fb6702402f63"><Properties Name="Properties" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="babf62c5-0111-49e9-a1c3-cc004d90900a"><Properties Name="Documentation" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="c88fffcd-b6f8-0000-8fec-00b5497e2117"><Properties Name="Module" PackageName="Artech.Architecture" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="ed1b7b1c-2aaf-46eb-9ec5-db348f6fa3fc"><Properties Name="Content" PackageName="Artech.Architecture" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="a5e6a251-2df0-44d8-adab-1da237574326"><Properties Name="Diagram" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="2a9e9aba-d2de-4801-ae7f-5e3819222daf"><Properties Name="Data Provider" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="1d8aeb5a-6e98-45a7-92d2-d8de7384e432"><Properties Name="Source" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="9b0a32a3-de6d-4be1-a4dd-1b85d3741534"><Properties Name="Rules" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="e4c4ade7-53f0-4a56-bdfd-843735b66f47"><Properties Name="Variables" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="ad3ca970-19d0-44e1-a7b7-db05556e820c"><Properties Name="Help" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="00972a17-9975-449e-aab1-d26165d51393"><Properties Name="Domain" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="447527b5-9210-4523-898b-5dccb17be60a"><Properties Name="Structured Data Type" PackageName="GenexusBL" /></Reference><Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a"><Properties Name="Structure" PackageName="GenexusBL" /></Reference><Reference Package="97f76383-a91a-48e4-aef7-14c3bed9ba8d" Type="Module" Id="4f454e73-7d8f-4a0f-908a-1a355f3634a5"><Properties Name="GeneXus" Version="5.0.5" MinimumVersion="5.0.5" MaximumVersion="" Expose="True" /></Reference></Dependencies></ExportFile>
+
+	#Properties
+		PackageName = "GeneXusUIControls"
+
+		ModuleVersion = "3.0.5"
+
+		ModuleDescription = "The GeneXusUIControls module provides a library of UserControls to simplify the creation of interactive and consistent user interfaces"
+
+		ModuleAuthor = "GeneXus"
+
+		ModuleLicenseUrl = ""
+
+		ModuleProjectUrl = ""
+
+		ModuleServerUrl = ""
+
+		ModuleTags = ""
+
+		ModuleOwner = "GeneXus"
+
+		Name = "GeneXusUIControls"
+	#End
+
+}

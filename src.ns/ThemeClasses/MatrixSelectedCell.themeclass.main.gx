@@ -1,0 +1,7 @@
+ThemeClass MatrixSelectedCell
+{
+	#Properties
+		Name = "MatrixSelectedCell"
+	#End
+
+}

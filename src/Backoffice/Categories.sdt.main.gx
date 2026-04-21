@@ -1,0 +1,17 @@
+SDT Categories
+{
+		Categories [ Collection = 'True' ]	{
+
+			Id [ DataType = 'Id' ]
+
+			Name [ DataType = 'Name' ]
+
+		}
+
+	#Properties
+		Name = "Categories"
+
+		Description = "Categories"
+	#End
+
+}

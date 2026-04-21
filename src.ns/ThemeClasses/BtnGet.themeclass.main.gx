@@ -1,0 +1,7 @@
+ThemeClass BtnGet
+{
+	#Properties
+		Name = "BtnGet"
+	#End
+
+}

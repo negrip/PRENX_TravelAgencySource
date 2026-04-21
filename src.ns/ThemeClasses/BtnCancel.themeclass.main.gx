@@ -1,0 +1,7 @@
+ThemeClass BtnCancel
+{
+	#Properties
+		Name = "BtnCancel"
+	#End
+
+}

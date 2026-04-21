@@ -1,0 +1,111 @@
+SDT WeatherResponse
+{
+		WeatherResponse	{
+
+			location [ Collection = 'False' ]		{
+
+				name [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+				region [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+				country [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+				lat [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				lon [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				tz_id [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+				localtime_epoch [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				localtime [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+			}
+
+	
+
+			current [ Collection = 'False' ]		{
+
+				last_updated_epoch [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				last_updated [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+				temp_c [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				temp_f [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				is_day [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				condition [ Collection = 'False' ]			{
+
+					text [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+					icon [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+					code [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				}
+
+	
+
+				wind_mph [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				wind_kph [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				wind_degree [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				wind_dir [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+				pressure_mb [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				pressure_in [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				precip_mm [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				precip_in [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				humidity [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				cloud [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				feelslike_c [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				feelslike_f [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				windchill_c [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				windchill_f [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				heatindex_c [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				heatindex_f [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				dewpoint_c [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				dewpoint_f [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				vis_km [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				vis_miles [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				uv [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				gust_mph [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+				gust_kph [ DataType = 'Numeric(10.5)', Collection = 'False' ]
+
+			}
+
+	
+
+			infoLink [ DataType = 'VarChar(100)', AverageLength = '0', Collection = 'False' ]
+
+		}
+
+	#Properties
+		Name = "WeatherResponse"
+
+		Description = "Weather Response"
+	#End
+
+}

@@ -1,0 +1,77 @@
+Environment AngularNetPostgresql
+{
+	#Backend
+			Generators
+
+			{
+
+				Default
+
+					[
+
+						Generator = '.NET',
+
+						GenerateOpenAPIInterface = 'Yes',
+
+						LogLevel = 'All',
+
+						UserLogLevel = 'All',
+
+						AiProviderAddress = 'https://api.saia.ai',
+
+						DefaultAgentsAiModel = 'openai/gpt-4.1'
+
+					]
+
+		
+
+			}
+
+		
+
+			DataStores
+
+			{
+
+				Default
+
+					[
+
+						Dbms = 'PostgreSQL'
+
+					]
+
+		
+
+			}
+	#End
+
+	#Frontend
+			Frontend
+
+				[
+
+					GenerateAndroid = 'False',
+
+					GenerateApple = 'False',
+
+					GenerateAngular = 'True'
+
+				]
+	#End
+
+	#Properties
+		UserInterface = "Web"
+
+		Language = ".NET"
+
+		DataSource = "PostgreSQL"
+
+		TargetPath = "NetModel"
+
+		StartupObject = "Attractions"
+
+		Name = "AngularNetPostgresql"
+	#End
+
+}

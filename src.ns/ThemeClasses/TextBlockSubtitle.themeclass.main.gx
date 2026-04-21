@@ -1,0 +1,7 @@
+ThemeClass TextBlockSubtitle
+{
+	#Properties
+		Name = "TextBlockSubtitle"
+	#End
+
+}

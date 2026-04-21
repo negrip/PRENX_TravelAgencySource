@@ -1,0 +1,51 @@
+ExternalObject ChatResult
+{
+	#ExternalMethods
+		HasMoreData
+
+			[
+
+				Type = 'Boolean',
+
+				NetFrameworkExternalName = 'HasMoreData',
+
+				NetFrameworkExternalType = 'bool',
+
+				JavaExternalName = 'hasMoreData',
+
+				JavaExternalType = 'boolean'
+
+			]
+
+		
+
+		GetMoreData
+
+			[
+
+				Type = 'Character',
+
+				NetFrameworkExternalName = 'GetMoreData',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalName = 'getMoreData',
+
+				JavaExternalType = 'String'
+
+			]
+	#End
+
+	#Properties
+		Name = "ChatResult"
+
+		Description = "ChatResult"
+
+		NetFrameworkExternalName = "GeneXus.AI.Chat.ChatResult"
+
+		JavaExternalName = "ChatResult"
+
+		ExternalPackageName = "com.genexus.util"
+	#End
+
+}

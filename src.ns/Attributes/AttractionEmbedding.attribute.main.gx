@@ -1,0 +1,9 @@
+Attribute AttractionEmbedding
+{
+	#Properties
+		Name = "AttractionEmbedding"
+
+		DataType = "Embedding"
+	#End
+
+}

@@ -1,0 +1,44 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="MainContainer" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[{&quot;width&quot;:17},{&quot;width&quot;:100}]]}]">
+			<row>
+				<cell class="">
+					<table name="Header" class="HeaderContainer ContainerFluid" tableType="Flex" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:17},{&quot;width&quot;:67},{&quot;width&quot;:17}]]}]" alignItems="Center">
+						<row>
+							<cell flexGrow="0" alignSelf="Center" flexHeight="24">
+								<image name="Image2" image="GeneXusUnanimo.list_view_white" class="sidebar__toggle-ico" />
+							</cell>
+							<cell horizontalAlignment="Left" flexGrow="0" minHeight="20">
+								<image name="Image1" image="GeneXusUnanimo.genexus_logo" class="header__logo" />
+							</cell>
+							<cell horizontalAlignment="Center" minHeight="20">
+								<label name="ApplicationHeader" caption="Travel Agency Backoffice" class="header__title" />
+							</cell>
+						</row>
+					</table>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<responsive name="TableSidebarContainer">
+						<row>
+							<cell>
+								<geneXusUnanimoSidebarMenu controlName="SidebarMenu" SidebarItems="&amp;sidebarItems" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+				<cell>
+					<responsive name="Content" class="expandible-container" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]">
+						<row>
+							<cell>
+								<contentholder name="ContentHolder" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups />
+	</view>
+</layout>

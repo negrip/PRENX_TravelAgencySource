@@ -1,0 +1,7 @@
+ThemeClass ActionGroup
+{
+	#Properties
+		Name = "ActionGroup"
+	#End
+
+}

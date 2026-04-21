@@ -1,0 +1,7 @@
+ThemeClass Button
+{
+	#Properties
+		Name = "Button"
+	#End
+
+}

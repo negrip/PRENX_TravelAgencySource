@@ -1,0 +1,9 @@
+Attribute AttractionAuxImage
+{
+	#Properties
+		Name = "AttractionAuxImage"
+
+		DataType = "Image"
+	#End
+
+}

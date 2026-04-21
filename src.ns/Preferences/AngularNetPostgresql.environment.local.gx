@@ -1,0 +1,23 @@
+Environment AngularNetPostgresql
+{
+	#Backend.Local
+			DataStores
+
+			{
+
+				Default
+
+					[
+
+						DatabaseName = 'DB_0511e0c7_cc92_489c_be60_e7bf78df8d4f_PRENX_TravelAgency',
+
+						ServerName = 'AP-ARBAS-L1906\\SQLEXPRESS01'
+
+					]
+
+		
+
+			}
+	#End
+
+}

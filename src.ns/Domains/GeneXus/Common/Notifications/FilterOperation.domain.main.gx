@@ -1,0 +1,11 @@
+Domain FilterOperation
+{
+	#Properties
+		Name = "FilterOperation"
+
+		DataType = "Numeric(4.0)"
+
+		EnumValues = "OR, OR, 1; AND, AND, 2"
+	#End
+
+}

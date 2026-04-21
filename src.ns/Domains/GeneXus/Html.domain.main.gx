@@ -1,0 +1,11 @@
+Domain Html
+{
+	#Properties
+		Name = "Html"
+
+		DataType = "LongVarChar(2M)"
+
+		Format = "HTML"
+	#End
+
+}

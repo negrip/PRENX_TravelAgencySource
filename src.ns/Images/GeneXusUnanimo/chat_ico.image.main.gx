@@ -1,0 +1,19 @@
+Image chat_ico
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem>
+
+	    <ThemeReference>GeneXusUnanimo.Unanimo</ThemeReference><Properties><Property><Name>Name</Name><Value>chat_ico.svg</Value></Property><Property><Name>Description</Name><Value>chat_ico.svg</Value></Property><Property><Name>ThemeReference</Name><Value>78b3fa0e-174c-4b2b-8716-718167a428b5-2</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>D:\Unanimo\Resources\Images\chat_ico.svg</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "chat_ico"
+
+		Description = "chat_ico"
+	#End
+
+}

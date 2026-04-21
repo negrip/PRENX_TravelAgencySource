@@ -1,0 +1,175 @@
+ExternalObject Facebook
+{
+	#ExternalProperties
+		AccessToken
+
+			[
+
+				PropertyType = 'Read',
+
+				Description = 'Access Token for interacting with FB Graph API',
+
+				Type = 'FacebookAccessToken, GeneXus.Social',
+
+				IsStatic = 'True'
+
+			]
+	#End
+
+	#ExternalMethods
+		PostToWall
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				name
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				caption
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				description
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				link
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				picture
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShareLink
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				link
+
+					[
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShareImage
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				image
+
+					[
+
+						Type = 'Image'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShareVideo
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				video
+
+					[
+
+						Type = 'Video'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Facebook"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass ResponsiveSlide
+{
+	#Properties
+		Name = "ResponsiveSlide"
+	#End
+
+}

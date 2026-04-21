@@ -1,0 +1,54 @@
+MasterPage MasterUnanimoSidebar
+{
+	#Events
+		Event Start
+			&currentTheme = GetTheme()
+		   if not &currentTheme = !"TravelAgencyNextSample"
+		      &result = SetTheme(!"TravelAgencyNextSample")
+		   endif
+		EndEvent
+		
+		Event Load
+			//init sidebar properties
+			SidebarMenu.Title = !""
+			SidebarMenu.DistanceToTop = 60
+			&sidebarItems = General.UI.SidebarItemsDP()
+		EndEvent
+		
+		Event SidebarMenu.ItemClick
+			&target = SidebarMenu.SelectedItemTarget
+			Link(&target)
+		EndEvent
+		
+		Event SidebarMenu.GetState
+			if SidebarMenu.isCollapsed
+				Content.Class = !"expandible-container" + !" expanded"
+			else
+				Content.Class = !"expandible-container"
+			endif
+		EndEvent
+		
+		event header.click
+			Home()
+		EndEvent
+	#End
+
+	#Variables
+			sidebarItems [ DataType = 'SidebarItems, GeneXusUnanimo' ]
+
+			target [ DataType = 'Url, GeneXus' ]
+
+			currentTheme [ DataType = 'Character(10)' ]
+
+			result [ DataType = 'Numeric(10.0)' ]
+	#End
+
+	#Properties
+		Name = "MasterUnanimoSidebar"
+
+		Description = "Master Unanimo Sidebar"
+
+		Type = "Master Page"
+	#End
+
+}

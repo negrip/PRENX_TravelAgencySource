@@ -1,0 +1,7 @@
+ThemeClass MatrixSelectedRowTable
+{
+	#Properties
+		Name = "MatrixSelectedRowTable"
+	#End
+
+}

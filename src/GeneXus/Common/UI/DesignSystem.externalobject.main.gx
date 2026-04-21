@@ -1,0 +1,79 @@
+ExternalObject DesignSystem
+{
+	#ExternalMethods
+		SetOption
+
+			[
+
+				IsStatic = 'True',
+
+				JavascriptExternalName = 'setOption'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Name
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				Value
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ClearOption
+
+			[
+
+				IsStatic = 'True',
+
+				JavascriptExternalName = 'clearOption'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Name
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "DesignSystem"
+
+		JavascriptExternalName = "gx.core.ds"
+	#End
+
+}

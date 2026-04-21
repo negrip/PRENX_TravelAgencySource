@@ -1,0 +1,7 @@
+ThemeClass GridNoAcceptDrag
+{
+	#Properties
+		Name = "GridNoAcceptDrag"
+	#End
+
+}

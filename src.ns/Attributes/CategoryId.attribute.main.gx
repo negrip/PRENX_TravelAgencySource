@@ -1,0 +1,23 @@
+Attribute CategoryId
+{
+	#Properties
+		Name = "CategoryId"
+
+		BasedOn = "Id"
+
+		Collection = "False"
+
+		AutonumberStart = "1"
+
+		AutonumberStep = "1"
+
+		AutonumberForReplication = "True"
+
+		ControlType = "Edit"
+
+		ItemDescriptions = "CategoryName"
+
+		EmptyItem = "True"
+	#End
+
+}

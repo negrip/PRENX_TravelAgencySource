@@ -1,0 +1,13 @@
+Attribute CityTemperature
+{
+	#Properties
+		Name = "CityTemperature"
+
+		DataType = "Character(4)"
+
+		Length = "4"
+
+		MaximumLength = "4"
+	#End
+
+}

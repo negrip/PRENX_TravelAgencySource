@@ -1,0 +1,417 @@
+DataProvider Attraction_DataProvider
+{
+	AttractionCollection{
+	
+		Attraction
+		where find(AttractionId, AttractionName="Louvre Museum",0) = 0
+		{
+			AttractionName = "Louvre Museum"
+			AttractionDescription = "The Louvre in Paris is the world's largest art museum. It's home to the Mona Lisa, the Venus de Milo, and many other masterpieces."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "France")
+			CityId = find(CityId, CityName = "Paris")
+			AttractionPhoto = LouvreMuseum.Link()
+		}
+	
+	
+		Attraction
+		where find(AttractionId, AttractionName="The Great Wall",0) = 0
+		{
+			AttractionName = "The Great Wall"
+			AttractionDescription = "The Great Wall of China is a vast ancient structure stretching over 21,000 km, symbolizing China's rich history and defense legacy."
+			//AttractionEmbedding = AttractionEmbedding.GenerateEmbedding(AttractionName + ' ' + AttractionDescription + ' ' + CategoryName + ' ' + CountryName + ' ' + CityName, &Messages)
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "China")
+			CityId = find(CityId, CityName = "Beijing")    
+			AttractionPhoto = GreatWall.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Eiffel Tower",0) = 0
+		{
+			AttractionName = "Eiffel Tower"
+			AttractionDescription = "The Eiffel Tower is an iconic iron structure in Paris, offering panoramic views and symbolizing France's culture and history."
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "France")
+			CityId = find(CityId, CityName = "Paris")
+			AttractionPhoto = EiffelTower.Link()
+		}    
+	
+		Attraction
+		where find(AttractionId, AttractionName="Christ the Redeemer",0) = 0
+		{
+			AttractionName = "Christ the Redeemer"
+			AttractionDescription = "A 30-meter tall statue of Jesus in Rio, symbolizing peace. It stands atop Mount Corcovado and is a key symbol of Brazil."
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "Brazil")
+			CityId = find(CityId, CityName = "Rio de Janeiro")
+			AttractionPhoto = ChristTheRedeemer.Link()
+		}    
+	
+	
+		Attraction
+		where find(AttractionId, AttractionName="Matisse Museum",0) = 0
+		{
+			AttractionName = "Matisse Museum"
+			AttractionDescription = "Located in Nice, France, this museum displays artworks and personal items of Henri Matisse, housed in a 17th-century villa."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "France")
+			CityId = find(CityId, CityName = "Nice")
+			AttractionPhoto = MatisseMuseum.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Central Park",0) = 0
+		{
+			AttractionName = "Central Park"
+			AttractionDescription = "An 843-acre park in New York City with lakes, trails, and cultural spots. A favorite place to relax, walk, or enjoy outdoor events."
+			CategoryId = find(CategoryId, CategoryName = "Landmark")
+			CountryId = find(CountryId, CountryName = "United States")
+			CityId = find(CityId, CityName = "New York")
+			AttractionPhoto = CentralPark.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Musée d'Orsay",0) = 0
+		{
+			AttractionName = "Musée d'Orsay"
+			AttractionDescription = "Paris museum in a former train station. Hosts top Impressionist art by Monet, Van Gogh, Renoir, and more from 1848–1914."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "France")
+			CityId = find(CityId, CityName = "Paris")
+			AttractionPhoto = MuseeDOrsay.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Palace of Versailles",0) = 0
+		{
+			AttractionName = "Palace of Versailles"
+			AttractionDescription = "A grand royal palace near Paris, famous for its gardens, the Hall of Mirrors, and its role in French royal history."
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "France")
+			CityId = find(CityId, CityName = "Paris")
+			AttractionPhoto = PalaceOfVersailles.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Mont Saint-Michel",0) = 0
+		{
+			AttractionName = "Mont Saint-Michel"
+			AttractionDescription = "A medieval island commune in Normandy with an abbey, narrow streets, and stunning sea views. A magical French landmark."
+			CategoryId = find(CategoryId, CategoryName = "Landmark")
+			CountryId = find(CountryId, CountryName = "France")
+			CityId = find(CityId, CityName = "Nice")
+			AttractionPhoto = MontSaintMichel.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="São Paulo Museum of Art (MASP)",0) = 0
+		{
+			AttractionName = "São Paulo Museum of Art (MASP)"
+			AttractionDescription = "MASP is a modernist museum in São Paulo, suspended on red pillars, with Western, Brazilian, and Latin American artworks."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "Brazil")
+			CityId = find(CityId, CityName = "Sao Paulo")
+			AttractionPhoto = MASP.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Sugarloaf Mountain",0) = 0
+		{
+			AttractionName = "Sugarloaf Mountain"
+			AttractionDescription = "A granite peak in Rio with stunning city views. It's accessed by cable car and is a natural symbol of Brazil."
+			CategoryId = find(CategoryId, CategoryName = "Landmark")
+			CountryId = find(CountryId, CountryName = "Brazil")
+			CityId = find(CityId, CityName = "Rio de Janeiro")
+			AttractionPhoto = SugarloafMountain.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="National Museum of China",0) = 0
+		{
+			AttractionName = "National Museum of China"
+			AttractionDescription = "On Tiananmen Square, this museum displays China's history and heritage, from ancient artifacts to modern culture."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "China")
+			CityId = find(CityId, CityName = "Beijing")
+			AttractionPhoto = NationalMuseumOfChina.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="The Bund",0) = 0
+		{
+			AttractionName = "The Bund"
+			AttractionDescription = "Historic waterfront in Shanghai with colonial buildings and skyline views. A symbol of the city's East-West blend."
+			CategoryId = find(CategoryId, CategoryName = "Landmark")
+			CountryId = find(CountryId, CountryName = "China")
+			CityId = find(CityId, CityName = "Shanghai")
+			AttractionPhoto = TheBund.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="The Metropolitan Museum of Art",0) = 0
+		{
+			AttractionName = "The Metropolitan Museum of Art"
+			AttractionDescription = "The Met is a massive museum in NYC with global art from ancient to modern. One of the world's premier art institutions."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "United States")
+			CityId = find(CityId, CityName = "New York")
+			AttractionPhoto = TheMet.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Independence Hall",0) = 0
+		{
+			AttractionName = "Independence Hall"
+			AttractionDescription = "Historic building in Philadelphia where the Declaration of Independence and the Constitution were signed."
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "United States")
+			CityId = find(CityId, CityName = "Washington")
+			AttractionPhoto = IndependenceHall.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Statue of Liberty",0) = 0
+		{
+			AttractionName = "Statue of Liberty"
+			AttractionDescription = "An iconic 93-meter statue in New York Harbor, symbolizing freedom. A gift from France to the U.S. in 1886."
+			CategoryId = find(CategoryId, CategoryName = "Landmark")
+			CountryId = find(CountryId, CountryName = "United States")
+			CityId = find(CityId, CityName = "New York")
+			AttractionPhoto = StatueOfLiberty.Link()
+		}
+	
+	
+		Attraction
+		where find(AttractionId, AttractionName="Mount Fuji",0) = 0
+		{
+			AttractionName = "Mount Fuji"
+			AttractionDescription = "Japan’s tallest mountain, a sacred natural wonder with iconic snow-capped peak, visible from Tokyo on clear days."
+			CategoryId = find(CategoryId, CategoryName = "Natural Wonder")
+			CountryId = find(CountryId, CountryName = "Japan")
+			CityId = find(CityId, CityName = "Tokyo")
+			AttractionPhoto = MountFuji.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Arashiyama Bamboo Grove",0) = 0
+		{
+			AttractionName = "Arashiyama Bamboo Grove"
+			AttractionDescription = "A serene bamboo forest in Kyoto, Japan, known for its towering green stalks and peaceful walking paths."
+			CategoryId = find(CategoryId, CategoryName = "Natural Wonder")
+			CountryId = find(CountryId, CountryName = "Japan")
+			CityId = find(CityId, CityName = "Kyoto")
+			AttractionPhoto = ArashiyamaBambooGrove.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Tokyo Disneyland",0) = 0
+		{
+			AttractionName = "Tokyo Disneyland"
+			AttractionDescription = "A major Disney theme park in Tokyo, offering classic attractions, parades, and character experiences."
+			CategoryId = find(CategoryId, CategoryName = "Theme Park")
+			CountryId = find(CountryId, CountryName = "Japan")
+			CityId = find(CityId, CityName = "Tokyo")
+			AttractionPhoto = TokyoDisneyland.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Universal Studios Japan",0) = 0
+		{
+			AttractionName = "Universal Studios Japan"
+			AttractionDescription = "Theme park in Osaka with movie-themed rides and attractions. Famous for Harry Potter and Super Nintendo World."
+			CategoryId = find(CategoryId, CategoryName = "Theme Park")
+			CountryId = find(CountryId, CountryName = "Japan")
+			CityId = find(CityId, CityName = "Kyoto")
+			AttractionPhoto = UniversalStudiosJapan.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Blue Grotto",0) = 0
+		{
+			AttractionName = "Blue Grotto"
+			AttractionDescription = "A sea cave on Capri island, Italy, known for its glowing blue water and surreal atmosphere. Accessible by boat."
+			CategoryId = find(CategoryId, CategoryName = "Natural Wonder")
+			CountryId = find(CountryId, CountryName = "Italy")
+			CityId = find(CityId, CityName = "Rome")
+			AttractionPhoto = BlueGrotto.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Dolomites",0) = 0
+		{
+			AttractionName = "Dolomites"
+			AttractionDescription = "A stunning mountain range in northern Italy, popular for hiking, skiing, and breathtaking alpine views."
+			CategoryId = find(CategoryId, CategoryName = "Natural Wonder")
+			CountryId = find(CountryId, CountryName = "Italy")
+			CityId = find(CityId, CityName = "Venice")
+			AttractionPhoto = Dolomites.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Gardaland",0) = 0
+		{
+			AttractionName = "Gardaland"
+			AttractionDescription = "Italy's top amusement park near Lake Garda, featuring roller coasters, themed areas, and family attractions."
+			CategoryId = find(CategoryId, CategoryName = "Theme Park")
+			CountryId = find(CountryId, CountryName = "Italy")
+			CityId = find(CityId, CityName = "Venice")
+			AttractionPhoto = Gardaland.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Cinecittà World",0) = 0
+		{
+			AttractionName = "Cinecittà World"
+			AttractionDescription = "A movie-themed amusement park in Rome, Italy, offering rides and shows inspired by Italian cinema."
+			CategoryId = find(CategoryId, CategoryName = "Theme Park")
+			CountryId = find(CountryId, CountryName = "Italy")
+			CityId = find(CityId, CityName = "Rome")
+			AttractionPhoto = CinecittaWorld.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Nile River",0) = 0
+		{
+			AttractionName = "Nile River"
+			AttractionDescription = "The Nile River flows through Luxor and is central to Egyptian history. Cruises reveal temples and scenic beauty."
+			CategoryId = find(CategoryId, CategoryName = "Natural Wonder")
+			CountryId = find(CountryId, CountryName = "Egypt")
+			CityId = find(CityId, CityName = "Luxor")
+			AttractionPhoto = NileRiver.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="White Desert",0) = 0
+		{
+			AttractionName = "White Desert"
+			AttractionDescription = "An alien-like desert near Cairo with chalk rock formations shaped by wind. Known for white landscapes and safaris."
+			CategoryId = find(CategoryId, CategoryName = "Natural Wonder")
+			CountryId = find(CountryId, CountryName = "Egypt")
+			CityId = find(CityId, CityName = "Cairo")
+			AttractionPhoto = WhiteDesert.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Magic Galaxy",0) = 0
+		{
+			AttractionName = "Magic Galaxy"
+			AttractionDescription = "Indoor amusement park in Cairo Mall of Arabia, offering rides and games for children and families."
+			CategoryId = find(CategoryId, CategoryName = "Theme Park")
+			CountryId = find(CountryId, CountryName = "Egypt")
+			CityId = find(CityId, CityName = "Cairo")
+			AttractionPhoto = MagicGalaxy.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Dream Park",0) = 0
+		{
+			AttractionName = "Dream Park"
+			AttractionDescription = "One of Egypt's largest amusement parks, located near Cairo, with roller coasters and family-friendly rides."
+			CategoryId = find(CategoryId, CategoryName = "Theme Park")
+			CountryId = find(CountryId, CountryName = "Egypt")
+			CityId = find(CityId, CityName = "Cairo")
+			AttractionPhoto = DreamPark.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Fushimi Inari Shrine",0) = 0
+		{
+			AttractionName = "Fushimi Inari Shrine"
+			AttractionDescription = "Kyoto’s famous shrine known for its thousands of red torii gates leading up a forested mountain trail."
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "Japan")
+			CityId = find(CityId, CityName = "Kyoto")
+			AttractionPhoto = FushimiInariShrine.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Odaiba Seaside Park",0) = 0
+		{
+			AttractionName = "Odaiba Seaside Park"
+			AttractionDescription = "A waterfront park in Tokyo Bay offering views of the skyline and Rainbow Bridge, plus artificial beach areas."
+			CategoryId = find(CategoryId, CategoryName = "Natural Wonder")
+			CountryId = find(CountryId, CountryName = "Japan")
+			CityId = find(CityId, CityName = "Tokyo")
+			AttractionPhoto = OdaibaSeasidePark.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Vatican Museums",0) = 0
+		{
+			AttractionName = "Vatican Museums"
+			AttractionDescription = "Museums in Vatican City (Rome) with vast art collections, including the Sistine Chapel and works by Raphael."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "Italy")
+			CityId = find(CityId, CityName = "Rome")
+			AttractionPhoto = VaticanMuseums.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="St. Mark's Basilica",0) = 0
+		{
+			AttractionName = "St. Mark's Basilica"
+			AttractionDescription = "Iconic cathedral in Venice known for golden mosaics, domes, and its location in Piazza San Marco."
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "Italy")
+			CityId = find(CityId, CityName = "Venice")
+			AttractionPhoto = StMarksBasilica.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Karnak Temple",0) = 0
+		{
+			AttractionName = "Karnak Temple"
+			AttractionDescription = "Vast ancient temple complex in Luxor, Egypt, with monumental pillars, statues, and hieroglyphics."
+			CategoryId = find(CategoryId, CategoryName = "Historical Site")
+			CountryId = find(CountryId, CountryName = "Egypt")
+			CityId = find(CityId, CityName = "Luxor")
+			AttractionPhoto = KarnakTemple.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Egyptian Museum",0) = 0
+		{
+			AttractionName = "Egyptian Museum"
+			AttractionDescription = "Located in Cairo, the museum houses ancient Egyptian treasures including Tutankhamun's artifacts."
+			CategoryId = find(CategoryId, CategoryName = "Museum")
+			CountryId = find(CountryId, CountryName = "Egypt")
+			CityId = find(CityId, CityName = "Cairo")
+			AttractionPhoto = EgyptianMuseum.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Trevi Fountain",0) = 0
+		{
+			AttractionName = "Trevi Fountain"
+			AttractionDescription = "Famous baroque fountain in Rome, Italy, where visitors toss coins for good luck and a return to the city."
+			CategoryId = find(CategoryId, CategoryName = "Landmark")
+			CountryId = find(CountryId, CountryName = "Italy")
+			CityId = find(CityId, CityName = "Rome")
+			AttractionPhoto = TreviFountain.Link()
+		}
+	
+		Attraction
+		where find(AttractionId, AttractionName="Tokyo Skytree",0) = 0
+		{
+			AttractionName = "Tokyo Skytree"
+			AttractionDescription = "A 634-meter tower in Tokyo with observation decks offering views of the city and Mount Fuji on clear days."
+			CategoryId = find(CategoryId, CategoryName = "Landmark")
+			CountryId = find(CountryId, CountryName = "Japan")
+			CityId = find(CityId, CityName = "Tokyo")
+			AttractionPhoto = TokyoSkytree.Link()
+		}	
+	
+	}
+
+	#Variables
+			Messages [ DataType = 'Messages, GeneXus.Common' ]
+	#End
+
+	#Properties
+		Name = "Attraction_DataProvider"
+
+		MainProgram = "True"
+	#End
+
+}

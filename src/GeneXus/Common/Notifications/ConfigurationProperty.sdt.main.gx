@@ -1,0 +1,17 @@
+SDT ConfigurationProperty
+{
+		ConfigurationProperty	{
+
+			PropertyName [ DataType = 'Character(100)' ]
+
+			PropertyValue [ DataType = 'Character(100)' ]
+
+		}
+
+	#Properties
+		Name = "ConfigurationProperty"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

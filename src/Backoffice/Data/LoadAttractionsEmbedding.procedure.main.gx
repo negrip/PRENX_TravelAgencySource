@@ -1,0 +1,30 @@
+Procedure LoadAttractionsEmbedding
+{
+		for each Attraction
+			if not AttractionEmbedding.IsEmpty()
+			  exit
+			else 
+				&txtEmbedding = format("%1 - %2 - %3 - %4 - %5", AttractionName , AttractionDescription , CategoryName, CountryName, CityName) 
+				AttractionEmbedding = AttractionEmbedding.GenerateEmbedding(&txtEmbedding, &Messages)
+			endif
+		endfor
+
+	#Variables
+			txtEmbedding [ DataType = 'VarChar(1K)' ]
+
+			Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+			file [ DataType = 'File' ]
+	#End
+
+	#Properties
+		Name = "LoadAttractionsEmbedding"
+
+		Description = "LoadAttractionsEmbedding"
+
+		MainProgram = "False"
+
+		StandardFunctions = "Allow non-standard functions"
+	#End
+
+}

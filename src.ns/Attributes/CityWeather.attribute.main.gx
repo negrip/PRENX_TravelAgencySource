@@ -1,0 +1,9 @@
+Attribute CityWeather
+{
+	#Properties
+		Name = "CityWeather"
+
+		BasedOn = "WeatherCondition"
+	#End
+
+}

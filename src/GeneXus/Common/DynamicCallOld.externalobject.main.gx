@@ -1,0 +1,79 @@
+ExternalObject DynamicCallOld
+{
+	#ExternalMethods
+		SetOption
+
+			[
+
+				Description = 'Sets the given CallOption\'s value to the given object name',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'setOption',
+
+				AndroidExternalName = 'setOption'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				ObjectName
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Qualified object name or link',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				CallOption
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Call option to assign',
+
+						BasedOn = 'DynamicCallOption, GeneXus.Common'
+
+					]
+
+		
+
+				Value
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'CallOption\'s value to assign',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "DynamicCallOld"
+
+		IosExternalName = "GXEODynamicCall"
+
+		AndroidExternalName = "DynamicCallAPIOffline"
+
+		ExternalPackageName = "com.genexus.android.core.externalobjects"
+	#End
+
+}

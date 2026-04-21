@@ -1,0 +1,73 @@
+ExternalObject ToolCall
+{
+	#ExternalProperties
+		Id
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'Id',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setId',
+
+				JavaExternalGetMethod = 'getId'
+
+			]
+
+		
+
+		Type
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'Type',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setType',
+
+				JavaExternalGetMethod = 'getType'
+
+			]
+
+		
+
+		Function
+
+			[
+
+				Type = 'Function, GeneXus.ArtificialIntelligence',
+
+				NetFrameworkExternalName = 'Function',
+
+				NetFrameworkExternalType = 'GeneXus.AI.Chat.Function',
+
+				JavaExternalType = 'Function',
+
+				JavaExternalSetMethod = 'setFunction',
+
+				JavaExternalGetMethod = 'getFunction'
+
+			]
+	#End
+
+	#Properties
+		Name = "ToolCall"
+
+		NetFrameworkExternalName = "GeneXus.AI.Chat.ToolCall"
+
+		JavaExternalName = "ToolCall"
+
+		ExternalPackageName = "com.genexus.util.saia.OpenAIResponse"
+	#End
+
+}

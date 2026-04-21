@@ -1,0 +1,11 @@
+SDPanel Chat
+{
+	<Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+
+	#Properties
+		Name = "Chat"
+
+		MainProgram = "False"
+	#End
+
+}

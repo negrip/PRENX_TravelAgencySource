@@ -1,0 +1,29 @@
+Procedure GxOnPendingEventFailed
+{
+	&Continue = true
+
+	#Rules
+		parm(in: &PendingEvent, in: &BCName, in: &BCJson, in: &EventResult, in:&GxSyncroInfo, out: &Continue);
+	#End
+
+	#Variables
+			PendingEvent [ DataType = 'SynchronizationEventList.SynchronizationEventListItem, GeneXus.SD.Synchronization' ]
+
+			BCName [ DataType = 'VarChar(128)' ]
+
+			BCJson [ DataType = 'EventData, GeneXus' ]
+
+			Continue [ DataType = 'Boolean' ]
+
+			EventResult [ DataType = 'SynchronizationEventResultList.SynchronizationEventResultListItem, GeneXus.SD.Synchronization' ]
+
+			GxSyncroInfo [ DataType = 'SynchronizationInfo, GeneXus.SD.Synchronization' ]
+	#End
+
+	#Properties
+		Name = "GxOnPendingEventFailed"
+
+		ConnectivitySupport = "Online"
+	#End
+
+}

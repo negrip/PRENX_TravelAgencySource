@@ -1,0 +1,229 @@
+WorkWith WorkWithWebCountry
+{
+	updateTransaction: Apply WW Style
+
+	instanceProperties:
+
+	- KBLanguage: English
+
+	  Version: 1.2
+
+	transaction:
+
+	- transaction: 1db606f2-af09-4cf9-a3b5-b481519d28f6-Country
+
+	level:
+
+	- id: 05b1c54f-5ab3-47b1-ab81-ee19ff5c58f6:1
+
+	  name: Country
+
+	  descriptionAttribute:
+
+	  - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	    description: Name
+
+	  selection:
+
+	  - description: Countries
+
+	    page: <default>
+
+	    modes:
+
+	    - {}
+
+	    attributes:
+
+	    - attribute:
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryId
+
+	        description: Id
+
+	        autolink: True
+
+	        visible: False
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	        description: Name
+
+	        autolink: True
+
+	        visible: True
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryLastCityId
+
+	        description: City Id
+
+	        autolink: True
+
+	        visible: False
+
+	    orders:
+
+	    - order:
+
+	      - name: Name
+
+	        attribute:
+
+	        - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	          description: Name
+
+	          ascending: True
+
+	    filter:
+
+	    - attributes:
+
+	      - filterAttribute:
+
+	        - name: CountryName
+
+	          description: Name
+
+	          default: ''
+
+	      conditions:
+
+	      - condition:
+
+	        - value: CountryName.ToLower() like &CountryName.ToLower() when not &CountryName.IsEmpty()
+
+	  view:
+
+	  - caption: CountryName.ToString()
+
+	    description: Country Information
+
+	    backToSelection: True
+
+	    masterPage: <default>
+
+	    parameters:
+
+	    - parameter:
+
+	      - name: CountryId
+
+	        null: True
+
+	    fixedData:
+
+	    - attributes:
+
+	      - attribute:
+
+	        - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	          description: Name
+
+	          autolink: True
+
+	          visible: True
+
+	    tabs:
+
+	    - tab:
+
+	      - name: General
+
+	        code: General
+
+	        description: Country Info
+
+	        type: Tabular
+
+	        wcname: CountryGeneral
+
+	        attributes:
+
+	        - attribute:
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryId
+
+	            description: Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	            description: Name
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryLastCityId
+
+	            description: City Id
+
+	            autolink: True
+
+	            visible: True
+
+	        actions:
+
+	        - action:
+
+	          - name: Update
+
+	          - name: Delete
+
+	      - name: City
+
+	        code: City
+
+	        type: Grid
+
+	        wcname: CountryCityWC
+
+	        page: <default>
+
+	        attributes:
+
+	        - attribute:
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityId
+
+	            description: Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityName
+
+	            description: Name
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityTemperature
+
+	            description: Temperature
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityWeatherCondition
+
+	            description: Weather Condition
+
+	            autolink: True
+
+	            visible: True
+
+	#Properties
+		Name = "WorkWithWebCountry"
+	#End
+
+}

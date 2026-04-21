@@ -1,0 +1,9 @@
+Attribute AttractionPhotoURL
+{
+	#Properties
+		Name = "AttractionPhotoURL"
+
+		BasedOn = "Url, GeneXus"
+	#End
+
+}

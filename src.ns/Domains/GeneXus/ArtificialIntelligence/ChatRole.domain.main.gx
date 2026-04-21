@@ -1,0 +1,13 @@
+Domain ChatRole
+{
+	#Properties
+		Name = "ChatRole"
+
+		Description = "ChatRole"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "Agent, Agent, assistant; User, User, user"
+	#End
+
+}

@@ -1,0 +1,15 @@
+Image selectRow
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>selectRow.png</Value></Property><Property><Name>Description</Name><Value>select Row.png</Value></Property><Property><Name>IsExternalImage</Name><Value>False</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>C:\Users\claudia\Downloads\Img_Pesobook_theme\selectRow.png</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "selectRow"
+	#End
+
+}

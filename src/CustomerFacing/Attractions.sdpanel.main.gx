@@ -1,0 +1,15 @@
+SDPanel Attractions
+{
+	<Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+
+	#Properties
+		Name = "Attractions"
+
+		Description = "Attractions"
+
+		MainProgram = "True"
+
+		MasterPanel = "TravelAgencyMaster"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass MatrixLineSeparator
+{
+	#Properties
+		Name = "MatrixLineSeparator"
+	#End
+
+}

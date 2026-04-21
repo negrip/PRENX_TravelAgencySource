@@ -1,0 +1,9 @@
+Attribute ClientImage
+{
+	#Properties
+		Name = "ClientImage"
+
+		DataType = "Image"
+	#End
+
+}

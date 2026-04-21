@@ -1,0 +1,21 @@
+Image Attractions_Hero
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>Attractions_Background.png</Value></Property><Property><Name>Description</Name><Value>Attractions_Background.png</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>Density</Name><Value>_1x</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>Attractions_Background.png</Value></Property></Properties></ImageItem>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>Attractions_Background@2x.png</Value></Property><Property><Name>Description</Name><Value>Attractions_Background@2x.png</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>Density</Name><Value>_2x</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>Attractions_Background@2x.png</Value></Property></Properties></ImageItem>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>Attractions_Background@3x.png</Value></Property><Property><Name>Description</Name><Value>Attractions_Background@3x.png</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>Density</Name><Value>_3x</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>Attractions_Background@3x.png</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "Attractions_Hero"
+
+		Description = "Attractions_Hero"
+	#End
+
+}

@@ -1,0 +1,7 @@
+Module General
+{
+	#Properties
+		Name = "General"
+	#End
+
+}

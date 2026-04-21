@@ -1,0 +1,7 @@
+ThemeClass ErrorMessages
+{
+	#Properties
+		Name = "ErrorMessages"
+	#End
+
+}

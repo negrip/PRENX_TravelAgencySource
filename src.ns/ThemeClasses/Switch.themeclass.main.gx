@@ -1,0 +1,7 @@
+ThemeClass Switch
+{
+	#Properties
+		Name = "Switch"
+	#End
+
+}

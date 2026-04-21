@@ -1,0 +1,21 @@
+Procedure GxBeforeEventReplicator
+{
+	#Rules
+		parm(inout:&GxPendingEvents, in:&GxSyncroInfo, inout:&EventResults);
+	#End
+
+	#Variables
+			EventResults [ DataType = 'SynchronizationEventResultList, GeneXus.SD.Synchronization' ]
+
+			GxPendingEvents [ DataType = 'SynchronizationEventList, GeneXus.SD.Synchronization' ]
+
+			GxSyncroInfo [ DataType = 'SynchronizationInfo, GeneXus.SD.Synchronization' ]
+	#End
+
+	#Properties
+		Name = "GxBeforeEventReplicator"
+
+		ConnectivitySupport = "Online"
+	#End
+
+}

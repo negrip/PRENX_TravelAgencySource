@@ -1,0 +1,168 @@
+DesignSystem TravelAgencyBase
+{
+	#DesignTokens
+		tokens TravelAgencyBase{
+		
+			#colors
+			{
+		        #region Primitive
+		            green100: #A7E491;
+		            green200: #73d94f;
+		            green300: #015547;
+		        #endregion
+		
+		        #region Neutral
+		            gray00: #FFFFFF;
+		            gray100: #F4F7F4;
+		            gray200: #C1C1C1;
+		            gray300: #C4C4C4;
+		            gray600: #616161;
+		            opacity: #19181933;
+		        #endregion
+		        
+		        #region Application
+		            primary: $colors.green200;
+		            secondary: $colors.green300;
+		            primary--highlighted: $colors.green100;
+		        #endregion
+		
+		        #region Background
+		            surface: $colors.gray00;
+		            surface--highlighted: $colors.gray100; 
+		        #endregion
+		
+		        #region OnColors
+		            title__on-surface: $colors.secondary;
+		            title__on-image: $colors.gray00;
+		            title__on-surface--highlighted: $colors.title__on-surface;
+		
+		            text__on-surface: $colors.gray600;
+		            text__on-surface--highlighted: $colors.text__on-surface;
+		            text__on-primary: $colors.secondary;
+		            text__on-secondary: $colors.gray200;
+		            text__on-image: $colors.gray00;
+		
+		        #endregion
+		        
+		        #region Menu
+		            menu__item: $colors.text__on-image;
+		        #endregion
+		
+			}
+		    
+			#fonts
+			{
+				primary: Heebo;
+		        secondary: Rubik;
+		        additional: Graphik;
+			}
+		}
+	#End
+
+	#DesignStyles
+		styles TravelAgencyBase
+		{
+		    @font-face
+		    {
+		        font-family: Heebo; 
+		        src: gx-file(Heebo-Bold_woff2);
+		        font-weight: 700;
+		    }
+		    @font-face
+		    {
+		        font-family: Heebo; 
+		        src: gx-file(Heebo-Regular_woff2);
+		        font-weight: 400;
+		    }
+		    @font-face
+		    {
+		        font-family: Heebo; 
+		        src: gx-file(Heebo-ExtraBold_woff2);
+		        font-weight: 800;
+		    }    
+		    @font-face
+		    {
+		        font-family: Rubik; 
+		        src: gx-file(Rubik-Regular_woff2);
+		        font-weight: 400;
+		    }
+		    @font-face
+		    {
+		        font-family: Rubik; 
+		        src: gx-file(Rubik-Medium_woff2);
+		        font-weight: 500;
+		    }    
+		    @font-face
+		    {
+		        font-family: Graphik; 
+		        src: gx-file(Graphik-Regular_woff2);
+		        font-weight: 400;
+		    }    
+		    @font-face
+		    {
+		        font-family: Graphik; 
+		        src: gx-file(Graphik-Semibold_woff2);
+		        font-weight: 600;
+		    }    
+		
+		    .Application{
+		        background-color: $colors.surface;
+		        font-family: $fonts.primary;
+		    }
+		
+		    .main__h1 {
+		        font-weight: 900;
+		        font-size: 100px;
+		        //leading-trim: NONE;
+		        line-height: 110px;
+		        letter-spacing: -1.45px;
+		        //text-align: center;
+		        color: $colors.title__on-image;
+		    }
+		    
+		    .main__h2 {
+		        font-weight: 800;
+		        font-size: 67px;
+		        line-height: 78px;
+		        color: $colors.title__on-surface;
+		    }  
+		
+		    .main__paragraph {
+		        font-weight: 400;
+		        font-size: 16px;
+		        line-height: 29px;
+		        color: $colors.text__on-surface;
+		    }
+		
+		    .paragraph-spacing {
+		        margin-block: 110px;
+		    }
+		
+		    .button__primary {
+		        font-weight: 800;
+		        font-size: 14px;
+		        line-height: 18px;
+		        color: $colors.text__on-primary;
+		        border-radius: 30px;
+		        background-color: $colors.Primary;
+		        max-inline-size: max-content;
+		        padding-inline: 15px;
+		        gx-highlighted-background-color: $colors.primary--highlighted;
+		        gx-button-hovered-class: button__primary--hovered;
+		        --gx-button-image-margin: 5px;
+		    }
+		
+		    .button__primary--hovered{
+		        background-color: $colors.primary--highlighted;
+		    }
+		
+		}
+	#End
+
+	#Properties
+		Name = "TravelAgencyBase"
+
+		Description = "TravelAgency_CF_Base"
+	#End
+
+}

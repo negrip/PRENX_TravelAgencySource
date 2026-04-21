@@ -1,0 +1,7 @@
+ThemeClass VideoAttribute
+{
+	#Properties
+		Name = "VideoAttribute"
+	#End
+
+}

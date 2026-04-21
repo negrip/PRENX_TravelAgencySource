@@ -1,0 +1,97 @@
+DesignSystem Dropdown
+{
+	#DesignStyles
+		styles Dropdown {
+		    @import GeneXusUnanimo.Unanimo;
+		
+		    .action-group::part(more-actions),
+		    .action-group-item,
+		    .dropdown,
+		    .dropdown-item {
+		        --separation: 1px;
+		    }
+		
+		    .action-group::part(more-actions-section),
+		    .action-group-item::part(section),
+		    .dropdown::part(section),
+		    .dropdown-item::part(section) {
+		        padding-block: 3px;
+		        background-color: $colors.un-surface--positive;
+		        border-radius: $radius.un-radius--l;
+		        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+		            0px 3px 3px -2px rgba(0, 0, 0, 0.12),
+		            0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+		        color: $colors.un-text__on-surface--positive;
+		    }
+		
+		    .dropdown::part(expandable-button) {
+		        padding-inline: $spacing.un-l;
+		        color: $colors.un-text__primary;
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--semibold;
+		        font-size: $fontSizes.un-s;
+		        letter-spacing: .25px;
+		    }
+		
+		    .dropdown-item::part(action) {
+		        min-width: max-content;
+		        padding-inline: $spacing.un-l;
+		        gap: $spacing.un-m;
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--regular;
+		        font-size: $fontSizes.un-s;
+		        letter-spacing: .25px;
+		        line-height: 28px;
+		    }
+		
+		    .dropdown-item::part(left-img) {
+		        width: 24px;
+		        height: 24px;
+		        min-width: 24px;
+		    }
+		
+		    .dropdown-item--logout::part(action)::before {
+		        content: "";
+		        width: 24px;
+		        height: 24px;
+		        min-width: 24px;
+		        background-color: $colors.un-accent__primary;
+		        -webkit-mask: gx-image(GeneXusUnanimo.sign_out) 50% 50%;
+		        -webkit-mask-repeat: no-repeat;
+		        -webkit-mask-size: 24px;
+		    }
+		
+		    .action-group::part(more-actions-button):hover,
+		    .action-group-item::part(action):hover,
+		    .dropdown-item::part(action):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		    }
+		
+		    .action-group-item::part(action):active,
+		    .dropdown-item::part(action):active {
+		        color: $colors.un-text__primary--active;
+		    }
+		
+		    .action-group::part(more-actions-button):focus-visible,
+		    .action-group-item::part(action):focus-visible,
+		    .dropdown::part(expandable-button):focus-visible,
+		    .dropdown-item::part(action):focus-visible {
+		        outline: $borders.un-width--s solid $colors.un-border-color__secondary;
+		        outline-offset: -2px;
+		    }
+		
+		    .action-group-item::part(expandable-action)::after,
+		    .dropdown-item::part(expandable-action)::after {
+		        content: "";
+		        border-block-start: 4px dashed $colors.un-border-color__primary;
+		        border-inline: 4px solid transparent;
+		        margin-inline-start: 4px;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Dropdown"
+	#End
+
+}

@@ -1,0 +1,11 @@
+PatternSettings WorkWithForWeb
+{
+	<PatternSettings Version="15.0.0"><Config><Template /><Objects /><Theme /><Labels /><Grid /><MasterPages /><StandardActions><Insert Caption="GXM_insert" Tooltip="GXM_insert" Image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionInsert" DisabledImage="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionDisabled" InGridClass="" /><Update Caption="GXM_update" Tooltip="GXM_update" DisabledClass="d52f9833-90c9-4096-8e42-27485741f78a-463" InGridClass="d52f9833-90c9-4096-8e42-27485741f78a-260 d52f9833-90c9-4096-8e42-27485741f78a-464" /><Delete Caption="GX_BtnDelete" Tooltip="GX_BtnDelete" DisabledClass="d52f9833-90c9-4096-8e42-27485741f78a-463" InGridClass="d52f9833-90c9-4096-8e42-27485741f78a-260 d52f9833-90c9-4096-8e42-27485741f78a-464" /><Display Caption="GXM_display" Tooltip="GXM_display" DefaultMode="False" DisabledClass="d52f9833-90c9-4096-8e42-27485741f78a-463" InGridClass="d52f9833-90c9-4096-8e42-27485741f78a-260 d52f9833-90c9-4096-8e42-27485741f78a-464" /><Export Caption="Export" Tooltip="Export to Excel" DefaultMode="False" Image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionExport" DisabledImage="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionDisabled" /><Search Caption="GX_BtnSearch" Tooltip="GX_BtnSearch" /></StandardActions><Context /><Security Check="84a12160-f59b-4ad7-a683-ea4481ac23e9-13" NotAuthorized="c9584656-94b6-4ccd-890f-332d11fc2c25-3"><Parameters /></Security></Config></PatternSettings>
+
+	#Properties
+		Name = "WorkWithForWeb"
+
+		Description = "Work With for Web"
+	#End
+
+}

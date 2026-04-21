@@ -1,0 +1,7 @@
+ThemeClass MapPolygon
+{
+	#Properties
+		Name = "MapPolygon"
+	#End
+
+}

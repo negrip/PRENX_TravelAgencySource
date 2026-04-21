@@ -1,0 +1,7 @@
+ThemeClass TabPageUnselected
+{
+	#Properties
+		Name = "TabPageUnselected"
+	#End
+
+}

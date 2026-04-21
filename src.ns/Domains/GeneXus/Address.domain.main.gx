@@ -1,0 +1,15 @@
+Domain Address
+{
+	#Properties
+		Name = "Address"
+
+		DataType = "VarChar(1K)"
+
+		Length = "1024"
+
+		MaximumLength = "1024"
+
+		AutoCorrection = "False"
+	#End
+
+}

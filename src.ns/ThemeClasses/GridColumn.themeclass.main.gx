@@ -1,0 +1,7 @@
+ThemeClass GridColumn
+{
+	#Properties
+		Name = "GridColumn"
+	#End
+
+}

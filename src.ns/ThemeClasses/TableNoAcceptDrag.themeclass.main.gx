@@ -1,0 +1,7 @@
+ThemeClass TableNoAcceptDrag
+{
+	#Properties
+		Name = "TableNoAcceptDrag"
+	#End
+
+}

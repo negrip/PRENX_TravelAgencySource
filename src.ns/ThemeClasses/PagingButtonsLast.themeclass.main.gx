@@ -1,0 +1,7 @@
+ThemeClass PagingButtonsLast
+{
+	#Properties
+		Name = "PagingButtonsLast"
+	#End
+
+}

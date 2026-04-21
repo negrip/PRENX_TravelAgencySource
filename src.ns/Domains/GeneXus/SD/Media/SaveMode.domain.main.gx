@@ -1,0 +1,9 @@
+Domain SaveMode
+{
+	#Properties
+		Name = "SaveMode"
+
+		EnumValues = "Rename, Rename, 1; Replace, Replace, 2; AskUser, Ask User, 3"
+	#End
+
+}

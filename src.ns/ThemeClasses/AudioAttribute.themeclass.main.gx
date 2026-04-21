@@ -1,0 +1,7 @@
+ThemeClass AudioAttribute
+{
+	#Properties
+		Name = "AudioAttribute"
+	#End
+
+}

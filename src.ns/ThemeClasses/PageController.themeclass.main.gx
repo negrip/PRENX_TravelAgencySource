@@ -1,0 +1,7 @@
+ThemeClass PageController
+{
+	#Properties
+		Name = "PageController"
+	#End
+
+}

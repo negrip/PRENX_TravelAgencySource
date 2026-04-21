@@ -1,0 +1,9 @@
+Domain StorePurchasePlatform
+{
+	#Properties
+		Name = "StorePurchasePlatform"
+
+		EnumValues = "GooglePlay, Google Play, 1; iTunes, iTunes, 2; AppGallery, Huawei AppGallery, 3"
+	#End
+
+}

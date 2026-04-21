@@ -1,0 +1,62 @@
+WebComponent CategoryGeneral
+{
+	#Rules
+		parm(in:CategoryId);
+	#End
+
+	#Events
+		Event Start
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Load
+		EndEvent
+		
+		Event 'DoUpdate'
+			Category(TrnMode.Update, CategoryId)
+		EndEvent
+		
+		Event 'DoDelete'
+			Category(TrnMode.Delete, CategoryId)
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = False
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Category"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"CategoryId"
+			&TrnContextAtt.AttributeValue = &CategoryId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+	#End
+
+	#Variables
+			IsAuthorized [ DataType = 'Boolean' ]
+
+			CategoryId [ DataType = 'Attribute:CategoryId' ]
+
+			TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+			TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+			Session [ DataType = 'WebSession' ]
+
+			HTTPRequest [ DataType = 'HttpRequest' ]
+	#End
+
+	#Properties
+		Name = "CategoryGeneral"
+
+		Type = "Component"
+	#End
+
+}

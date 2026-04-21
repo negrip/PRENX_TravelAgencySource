@@ -1,0 +1,7 @@
+ThemeClass GridNoDataText
+{
+	#Properties
+		Name = "GridNoDataText"
+	#End
+
+}

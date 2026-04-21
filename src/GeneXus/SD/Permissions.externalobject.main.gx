@@ -1,0 +1,143 @@
+ExternalObject Permissions
+{
+	#ExternalMethods
+		Request
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Permission
+
+					[
+
+						BasedOn = 'Permission, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Request
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Permission
+
+					[
+
+						BasedOn = 'Permission, GeneXus'
+
+					]
+
+		
+
+				Rationale
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		RequestMany
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Permission
+
+					[
+
+						BasedOn = 'Permission, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		GetStatus
+
+			[
+
+				BasedOn = 'APIAuthorizationStatus, GeneXus',
+
+				IsStatic = 'True',
+
+				AndroidExternalName = 'getStatus'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Permission
+
+					[
+
+						BasedOn = 'Permission, GeneXus'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Permissions"
+
+		AndroidExternalName = "PermissionsAPIOffline"
+
+		ExternalPackageName = "com.genexus.android.core.externalobjects"
+	#End
+
+}

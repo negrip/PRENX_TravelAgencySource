@@ -1,0 +1,57 @@
+Procedure ChatHandler
+{
+	&messagesUI.FromJson(&httpRequest.ToString())
+	
+	For &messageUI In &messagesUI
+		&message = New()
+		&message.Content = &messageUI.Content
+		&message.Role = ChatRole.Convert(&messageUI.Role)
+		&messages.Add(&message)
+	EndFor
+	
+	&chatResult = ChatAgent.Chat(&messages, &callResult)
+	
+	If &callResult.Success()
+		&messageUI = New()
+		Do While &chatResult.HasMoreData()	
+			&messageUI.Content = &chatResult.GetMoreData()
+			&httpResponse.AddString(&messageUI.ToJson() + Chr(10))
+		EndDo
+	Else
+		&callResultMessages = &callResult.GetMessages()
+		&httpResponse.AddString(&callResultMessages.Item(1).Description + Chr(10))
+	EndIf
+
+	#Variables
+			httpRequest [ DataType = 'HttpRequest' ]
+
+			httpResponse [ DataType = 'HttpResponse' ]
+
+			callResultMessages [ DataType = 'Messages, GeneXus.Common' ]
+
+			messagesUI [ DataType = 'MessageUI, GeneXusUIControls.Chat', Collection = 'True' ]
+
+			messageUI [ DataType = 'MessageUI, GeneXusUIControls.Chat' ]
+
+			callResult [ DataType = 'CallResult, GeneXus.Common' ]
+
+			message [ DataType = 'ChatMessage, GeneXus.ArtificialIntelligence' ]
+
+			messages [ DataType = 'ChatMessage, GeneXus.ArtificialIntelligence', Collection = 'True' ]
+
+			chatResult [ DataType = 'ChatResult, GeneXus.ArtificialIntelligence' ]
+	#End
+
+	#Properties
+		Name = "ChatHandler"
+
+		Description = "ChatHandler"
+
+		MainProgram = "True"
+
+		CallProtocol = "HTTP"
+
+		BufferResponse = "Disabled"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass ErrorAttribute
+{
+	#Properties
+		Name = "ErrorAttribute"
+	#End
+
+}

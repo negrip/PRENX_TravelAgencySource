@@ -1,0 +1,17 @@
+Image delete_light
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>delete_light.svg</Value></Property><Property><Name>Description</Name><Value>delete_light.svg</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>delete_light.svg</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "delete_light"
+
+		Description = "delete_light"
+	#End
+
+}

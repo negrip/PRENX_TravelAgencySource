@@ -1,0 +1,17 @@
+Table Category
+{
+		CategoryId*
+
+		CategoryName
+
+	#Indexes
+		ICategory
+	#End
+
+	#Properties
+		Name = "Category"
+
+		Description = "Category"
+	#End
+
+}

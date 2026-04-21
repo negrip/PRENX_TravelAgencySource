@@ -1,0 +1,351 @@
+ExternalObject DynamicCall
+{
+	#ExternalProperties
+		ObjectName
+
+			[
+
+				Description = 'Object to invoke',
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'ObjectName',
+
+				NetFrameworkExternalType = 'string',
+
+				NetExternalType = '',
+
+				JavaExternalName = 'ObjectName',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setObjectName',
+
+				JavaExternalGetMethod = 'getObjectName'
+
+			]
+
+		
+
+		Java
+
+			[
+
+				Description = 'Java Properties',
+
+				Type = 'DynamicCallPropertiesJava, GeneXus.Common',
+
+				NetFrameworkExternalName = '',
+
+				NetFrameworkExternalType = '',
+
+				NetExternalName = '',
+
+				NetExternalType = '',
+
+				JavaExternalName = '',
+
+				JavaExternalType = '',
+
+				JavaExternalSetMethod = 'setProperties',
+
+				JavaExternalGetMethod = 'getProperties'
+
+			]
+
+		
+
+		Net
+
+			[
+
+				Description = 'Net Properties',
+
+				Type = 'DynamicCallPropertiesNet, GeneXus.Common',
+
+				NetFrameworkExternalName = 'Properties',
+
+				NetFrameworkExternalType = ''
+
+			]
+	#End
+
+	#ExternalMethods
+		Execute
+
+			[
+
+				Description = 'Execute the default static method ',
+
+				IsStatic = 'False',
+
+				NetFrameworkExternalName = 'Execute',
+
+				JavaExternalName = 'execute'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Parameters
+
+					[
+
+						Description = 'Collection of parameters',
+
+						Type = 'AnyObject, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Collections.Generic.IList<object>',
+
+						JavaExternalType = 'java.util.Vector<Object>'
+
+					]
+
+		
+
+				Errors
+
+					[
+
+						AccessType = 'Out',
+
+						Description = 'Collection of errors',
+
+						Type = 'Messages, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Collections.Generic.IList<GeneXus.Utils.SdtMessages_Message>',
+
+						JavaExternalType = 'java.util.Vector<SdtMessages_Message>'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Execute
+
+			[
+
+				Description = 'Execute a specific method',
+
+				Type = 'AnyObject, GeneXus.Common',
+
+				NetFrameworkExternalName = 'Execute',
+
+				NetFrameworkExternalType = 'object',
+
+				JavaExternalName = 'execute',
+
+				JavaExternalType = 'Object'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Parameters
+
+					[
+
+						Description = 'Collection of parameters',
+
+						Type = 'AnyObject, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Collections.Generic.IList<object>',
+
+						JavaExternalType = 'java.util.Vector<Object>'
+
+					]
+
+		
+
+				MethodInfo
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Method information',
+
+						Type = 'DynamicCallMethodProperties, GeneXus.Common',
+
+						NetFrameworkExternalType = 'GeneXus.DynamicCall.GxDynCallMethodConf',
+
+						JavaExternalType = ''
+
+					]
+
+		
+
+				Errors
+
+					[
+
+						AccessType = 'Out',
+
+						Description = 'Collection of errors',
+
+						Type = 'Messages, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Collections.Generic.IList<GeneXus.Utils.SdtMessages_Message>',
+
+						JavaExternalType = 'java.util.Vector<SdtMessages_Message>'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Create
+
+			[
+
+				Description = 'Invoke the contructor of the object',
+
+				NetFrameworkExternalName = 'Create',
+
+				JavaExternalName = 'create',
+
+				JavaExternalType = ''
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Parameters
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Collection of parameters',
+
+						Type = 'AnyObject, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Collections.Generic.IList<object>',
+
+						JavaExternalType = 'java.util.Vector<Object>'
+
+					]
+
+		
+
+				Errors
+
+					[
+
+						AccessType = 'Out',
+
+						Description = 'Collection of errors',
+
+						Type = 'Messages, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Collections.Generic.IList<GeneXus.Utils.SdtMessages_Message>',
+
+						JavaExternalType = 'java.util.Vector<SdtMessages_Message>'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SetOption
+
+			[
+
+				Description = 'Sets the given CallOption\'s value to the given object name',
+
+				IosExternalName = 'setOption',
+
+				AndroidExternalName = 'setOption'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				ObjectName
+
+					[
+
+						Description = 'Qualified object name or link',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				CallOption
+
+					[
+
+						Description = 'Call option to assign',
+
+						BasedOn = 'DynamicCallOption, GeneXus.Common'
+
+					]
+
+		
+
+				Value
+
+					[
+
+						Description = 'CallOption\'s value to assign',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "DynamicCall"
+
+		Description = "Dynamic Call "
+
+		Namespace = "GeneXus.DynamicCall"
+
+		NetFrameworkExternalName = "GxDynamicCall"
+
+		NetFrameworkAssemblyName = ""
+
+		NetAssemblyName = ""
+
+		JavaExternalName = "GXDynamicCall"
+
+		ExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IosExternalName = "GXEODynamicCall"
+
+		AndroidExternalName = "DynamicCallAPIOffline"
+	#End
+
+}

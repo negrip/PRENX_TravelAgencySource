@@ -1,0 +1,20 @@
+DataProvider GetCategories
+{
+	Categories from Category
+	{
+		CategoriesItem
+		{
+			Id = CategoryId
+			Name = CategoryName
+		}
+	}
+
+	#Properties
+		Name = "GetCategories"
+
+		Description = "GetCategories"
+
+		Output = "Categories"
+	#End
+
+}

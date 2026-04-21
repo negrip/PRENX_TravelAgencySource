@@ -1,0 +1,42 @@
+DataProvider SidebarItemsDP
+{
+	SidebarItems
+	{
+	SidebarItem
+	 {
+		id = "1"
+		title = "Work with"
+		icon = favorite.Link()
+		hasSubItems = true
+		sidebarSubItems
+		{
+			/* Code managed by Work With Pattern [Start] - Load WW instances */
+			&wwProgramNames = ListPrograms()
+			
+			SubItem
+			
+			input &wwProgramName in &wwProgramNames
+			{
+				id = &wwProgramName.Name
+				title = &wwProgramName.Description
+				target = &wwProgramName.Link
+				hasSubItems = false
+			}
+			/* Code managed by Work With Pattern [End] - Load WW instances */
+		}
+	 }
+	  }
+
+	#Variables
+			wwProgramNames [ DataType = 'ProgramNames, General.UI' ]
+
+			wwProgramName [ DataType = 'ProgramNames.ProgramName, General.UI', Collection = 'False', ControlType = 'Edit' ]
+	#End
+
+	#Properties
+		Name = "SidebarItemsDP"
+
+		Output = "SidebarItems"
+	#End
+
+}

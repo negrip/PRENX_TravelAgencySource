@@ -1,0 +1,49 @@
+SDT Translations
+{
+		Translations	{
+
+			accessibleName		{
+
+				sendInput [ DataType = 'VarChar(50)' ]
+
+				sendButton [ DataType = 'VarChar(50)' ]
+
+				stopResponseButton [ DataType = 'VarChar(50)' ]
+
+			}
+
+	
+
+			placeholder		{
+
+				sendInput [ DataType = 'VarChar(50)' ]
+
+			}
+
+	
+
+			text		{
+
+				processing [ DataType = 'VarChar(50)' ]
+
+				stopped [ DataType = 'VarChar(50)' ]
+
+				stopResponseButton [ DataType = 'VarChar(50)' ]
+
+				error [ DataType = 'VarChar(100)' ]
+
+				sourceFiles [ DataType = 'VarChar(50)' ]
+
+			}
+
+	
+
+		}
+
+	#Properties
+		Name = "Translations"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

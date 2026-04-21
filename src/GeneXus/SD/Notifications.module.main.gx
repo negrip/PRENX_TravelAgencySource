@@ -1,0 +1,7 @@
+Module Notifications
+{
+	#Properties
+		Name = "Notifications"
+	#End
+
+}

@@ -1,0 +1,17 @@
+Image Chat_arrow_right
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>arrow-right.svg</Value></Property><Property><Name>Description</Name><Value>arrow-right.svg</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>arrow-right.svg</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "Chat_arrow_right"
+
+		Description = "Chat_arrow_right"
+	#End
+
+}

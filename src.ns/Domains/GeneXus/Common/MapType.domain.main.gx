@@ -1,0 +1,9 @@
+Domain MapType
+{
+	#Properties
+		Name = "MapType"
+
+		EnumValues = "Standard, Standard, 1; Satellite, Satellite, 2; Hybrid, Hybrid, 3"
+	#End
+
+}

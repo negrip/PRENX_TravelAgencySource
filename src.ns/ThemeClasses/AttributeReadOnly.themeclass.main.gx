@@ -1,0 +1,7 @@
+ThemeClass AttributeReadOnly
+{
+	#Properties
+		Name = "AttributeReadOnly"
+	#End
+
+}

@@ -1,0 +1,11 @@
+Domain ContentType
+{
+	#Properties
+		Name = "ContentType"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "Text, Text, text; ImageURL, Image URL, image_url"
+	#End
+
+}

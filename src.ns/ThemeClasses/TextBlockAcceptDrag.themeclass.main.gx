@@ -1,0 +1,7 @@
+ThemeClass TextBlockAcceptDrag
+{
+	#Properties
+		Name = "TextBlockAcceptDrag"
+	#End
+
+}

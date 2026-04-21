@@ -1,0 +1,13 @@
+Category Main Programs
+{
+	#Properties
+		Name = "Main Programs"
+
+		ShowInModelTree = "True"
+
+		Query = ""
+
+		Properties = "main_program=true"
+	#End
+
+}

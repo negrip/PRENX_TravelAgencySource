@@ -1,0 +1,53 @@
+Procedure DownloadImage
+{
+	&HttpClient = new ()
+	&HttpClient.AddHeader("User-Agent", "GxApp")
+	&url = &PhotoURL //"https://upload.wikimedia.org/wikipedia/commons/b/b0/Machu_picchu_grande.jpg"
+	&HttpClient.Execute(HttpMethod.Get, &url)
+	
+	if &HttpClient.StatusCode = 200 
+		&PrivateTempStorage = ConfigurationManager.GetValue("CS_BLOB_PATH")
+		&Directory.Source = &PrivateTempStorage
+		if (not &Directory.Exists())
+			&Directory.Create()
+		endif
+		&FileName = &PrivateTempStorage + &File.Separator + GUID.NewGuid().ToString() + '_' + &url.Substring(&url.LastIndexOf('/')+1)
+	   &HttpClient.ToFile(&FileName)  
+	   &File.Source=&FileName
+		&uri2 = &File.GetURI()
+		msg(&uri2,status)
+	endif
+
+	#Rules
+		parm(in:&PhotoURL, out:&uri2);
+	#End
+
+	#Variables
+			HttpClient [ DataType = 'HttpClient' ]
+
+			File [ DataType = 'File' ]
+
+			url [ DataType = 'Url, GeneXus' ]
+
+			PhotoURL [ DataType = 'Url, GeneXus' ]
+
+			uri [ DataType = 'VarChar(1000)' ]
+
+			FileName [ DataType = 'VarChar(256)', AverageLength = '0', Collection = 'False', ControlType = 'Edit' ]
+
+			uri2 [ DataType = 'VarChar(1000)' ]
+
+			PrivateTempStorage [ DataType = 'VarChar(1000)' ]
+
+			Directory [ DataType = 'Directory' ]
+	#End
+
+	#Properties
+		Name = "DownloadImage"
+
+		MainProgram = "True"
+
+		CallProtocol = "Command Line"
+	#End
+
+}

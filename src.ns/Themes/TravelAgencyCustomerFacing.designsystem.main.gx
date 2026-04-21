@@ -1,0 +1,25 @@
+DesignSystem TravelAgencyCustomerFacing
+{
+	#DesignTokens
+		tokens TravelAgencyCustomerFacing{
+		
+		}
+	#End
+
+	#DesignStyles
+		styles TravelAgencyCustomerFacing
+		{
+		    @import TravelAgencyChat;
+		    @import TravelAgencyMaster;
+		    @import Attractions;
+		    @import TravelAgencyBase;
+		}
+	#End
+
+	#Properties
+		Name = "TravelAgencyCustomerFacing"
+
+		Description = "TravelAgencyCustomerFacing"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass PagingButtons
+{
+	#Properties
+		Name = "PagingButtons"
+	#End
+
+}

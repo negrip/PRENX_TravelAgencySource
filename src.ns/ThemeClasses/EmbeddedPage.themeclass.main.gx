@@ -1,0 +1,7 @@
+ThemeClass EmbeddedPage
+{
+	#Properties
+		Name = "EmbeddedPage"
+	#End
+
+}

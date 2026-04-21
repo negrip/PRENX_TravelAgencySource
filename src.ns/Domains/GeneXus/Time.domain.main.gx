@@ -1,0 +1,15 @@
+Domain Time
+{
+	#Properties
+		Name = "Time"
+
+		DataType = "DateTime"
+
+		Length = "0"
+
+		MaximumLength = "5"
+
+		DateFormat = "None"
+	#End
+
+}

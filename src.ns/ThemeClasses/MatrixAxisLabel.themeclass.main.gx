@@ -1,0 +1,7 @@
+ThemeClass MatrixAxisLabel
+{
+	#Properties
+		Name = "MatrixAxisLabel"
+	#End
+
+}

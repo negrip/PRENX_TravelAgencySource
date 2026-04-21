@@ -1,0 +1,19 @@
+Domain Email
+{
+	#Properties
+		Name = "Email"
+
+		DataType = "VarChar(100)"
+
+		Length = "100"
+
+		MaximumLength = "100"
+
+		RegularExpression = "^((\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*)|(\\s*))$"
+
+		AutoCorrection = "False"
+
+		AutoCapitalization = "None"
+	#End
+
+}

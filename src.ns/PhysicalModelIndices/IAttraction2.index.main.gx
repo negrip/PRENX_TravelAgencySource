@@ -1,0 +1,16 @@
+Index IAttraction2
+{
+	CountryId
+	CityId
+
+	#Index
+		Source = "Automatic"
+
+		Type = "Duplicate"
+	#End
+
+	#Properties
+		Name = "IAttraction2"
+	#End
+
+}

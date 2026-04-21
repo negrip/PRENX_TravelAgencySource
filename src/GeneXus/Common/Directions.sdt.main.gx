@@ -1,0 +1,17 @@
+SDT Directions
+{
+		Directions	{
+
+			Routes [ DataType = 'Route, GeneXus.Common', Collection = 'True', CollectionItemName = 'Route' ]
+
+			Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+		}
+
+	#Properties
+		Name = "Directions"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

@@ -1,0 +1,15 @@
+Index ICountryCity1
+{
+	CountryId
+
+	#Index
+		Source = "Automatic"
+
+		Type = "Duplicate"
+	#End
+
+	#Properties
+		Name = "ICountryCity1"
+	#End
+
+}

@@ -1,0 +1,13 @@
+Domain Description
+{
+	#Properties
+		Name = "Description"
+
+		DataType = "VarChar(200)"
+
+		Length = "200"
+
+		MaximumLength = "200"
+	#End
+
+}

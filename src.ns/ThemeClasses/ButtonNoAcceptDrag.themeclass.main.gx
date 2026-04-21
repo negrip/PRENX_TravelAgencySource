@@ -1,0 +1,7 @@
+ThemeClass ButtonNoAcceptDrag
+{
+	#Properties
+		Name = "ButtonNoAcceptDrag"
+	#End
+
+}

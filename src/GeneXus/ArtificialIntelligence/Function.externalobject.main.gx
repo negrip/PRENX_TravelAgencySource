@@ -1,0 +1,53 @@
+ExternalObject Function
+{
+	#ExternalProperties
+		Name
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'Name',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setName',
+
+				JavaExternalGetMethod = 'getName'
+
+			]
+
+		
+
+		Arguments
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'Arguments',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setArguments',
+
+				JavaExternalGetMethod = 'getArguments'
+
+			]
+	#End
+
+	#Properties
+		Name = "Function"
+
+		NetFrameworkExternalName = "GeneXus.AI.Chat.Function"
+
+		JavaExternalName = "Function"
+
+		ExternalPackageName = "com.genexus.util.saia.OpenAIResponse"
+	#End
+
+}

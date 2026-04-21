@@ -1,0 +1,17 @@
+Domain CryptoEncryptAlgorithm
+{
+	#Properties
+		Name = "CryptoEncryptAlgorithm"
+
+		Description = "Crypto Algorithm Encrypt"
+
+		DataType = "Character(40)"
+
+		Length = "40"
+
+		MaximumLength = "40"
+
+		EnumValues = "Rijndael, Rijndael, Rijndael; DES, DES, DES; TripleDES, Triple DES, TripleDES"
+	#End
+
+}

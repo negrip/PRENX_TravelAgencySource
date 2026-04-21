@@ -1,0 +1,25 @@
+SDT AttractionCountryCityInfo
+{
+		AttractionCountryCityInfo	{
+
+			CountryId [ DataType = 'Attribute:CountryId' ]
+
+			CountryName [ DataType = 'Attribute:CountryName' ]
+
+			CityId [ DataType = 'Attribute:CityId' ]
+
+			CityName [ DataType = 'Attribute:CityName' ]
+
+			CityTemperature [ DataType = 'Attribute:CityTemperature' ]
+
+			CityWeather [ DataType = 'Attribute:CityWeather' ]
+
+		}
+
+	#Properties
+		Name = "AttractionCountryCityInfo"
+
+		Description = "AttractionCountryCityInfo"
+	#End
+
+}

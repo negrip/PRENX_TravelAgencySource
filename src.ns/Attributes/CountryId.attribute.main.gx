@@ -1,0 +1,9 @@
+Attribute CountryId
+{
+	#Properties
+		Name = "CountryId"
+
+		BasedOn = "Id"
+	#End
+
+}

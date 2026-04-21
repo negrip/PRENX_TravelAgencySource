@@ -1,0 +1,7 @@
+ThemeClass HorizontalLine
+{
+	#Properties
+		Name = "HorizontalLine"
+	#End
+
+}

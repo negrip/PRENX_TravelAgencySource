@@ -1,0 +1,28 @@
+DesignSystem UnanimoControls
+{
+	#DesignStyles
+		styles UnanimoControls
+		{
+		    @import GeneXusUnanimo.ActionGroup;
+		    @import GeneXusUnanimo.Dropdown;
+		    @import GeneXusUnanimo.Dropdown_Legacy;
+		    @import GeneXusUnanimo.Slider;
+		    @import GeneXusUnanimo.Switch;
+		    @import GeneXusUnanimo.Alert;
+		    @import GeneXusUnanimo.Select;
+		    @import GeneXusUnanimo.SidebarMenu;
+		    @import GeneXusUnanimo.TreeView;
+		    @import GeneXusUnanimo.Step;
+		    @import GeneXusUnanimo.TabularGrid;
+		    @import GeneXusUnanimo.Icon;
+		    @import GeneXusUnanimo.Sidebar;
+		    @import GeneXusUnanimo.ProgressIndicator;
+		    @import GeneXusUnanimo.Chat;
+		}
+	#End
+
+	#Properties
+		Name = "UnanimoControls"
+	#End
+
+}

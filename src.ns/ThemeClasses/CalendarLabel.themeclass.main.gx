@@ -1,0 +1,7 @@
+ThemeClass CalendarLabel
+{
+	#Properties
+		Name = "CalendarLabel"
+	#End
+
+}

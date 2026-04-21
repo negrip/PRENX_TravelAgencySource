@@ -1,0 +1,11 @@
+Domain FetchStatus
+{
+	#Properties
+		Name = "FetchStatus"
+
+		Signed = "True"
+
+		EnumValues = "None, None, -1; Success, Success, 0; Failure, Failure, 1"
+	#End
+
+}

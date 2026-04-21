@@ -1,0 +1,7 @@
+ThemeClass Application
+{
+	#Properties
+		Name = "Application"
+	#End
+
+}

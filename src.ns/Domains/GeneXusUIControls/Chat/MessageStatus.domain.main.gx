@@ -1,0 +1,17 @@
+Domain MessageStatus
+{
+	#Properties
+		Name = "MessageStatus"
+
+		Description = "Message Role"
+
+		DataType = "VarChar(20)"
+
+		Length = "20"
+
+		MaximumLength = "20"
+
+		EnumValues = "COMPLETE, Complete, complete; WAITING, Waiting, waiting; STREAMING, Streaming, streaming"
+	#End
+
+}

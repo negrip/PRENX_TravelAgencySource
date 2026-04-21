@@ -1,0 +1,57 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="body-container" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+			<row>
+				<cell name="GridCell" class="ww__grid-cell">
+					<responsive name="GridTable" class="container-fluid container-advanced" responsiveSizes="[]">
+						<row>
+							<cell>
+								<table name="TableTop" class="Flex ww__actions-container" tableType="Flex">
+									<row>
+										<cell class="ww__title-cell" flexGrow="1">
+											<label name="TitleText" caption="Categories" class="heading-01" />
+										</cell>
+										<cell class="ww__actions-cell" flexGrow="0">
+											<actiongroup name="Actions" />
+										</cell>
+										<cell class="ww__filter-cell" flexGrow="0">
+											<input attribute="&amp;CategoryName" labelPosition="None" class="attribute-search" inviteMessage="Name" />
+										</cell>
+									</row>
+								</table>
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<responsive name="GridContainer" class="ww__grid-container" responsiveSizes="[]">
+									<row>
+										<cell>
+											<tabularGrid name="Grid" class="ww__grid" order="CategoryName" maxRows="10" infiniteScrolling="One page at a time">
+												<input attribute="CategoryId" title="Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="False" />
+												<input attribute="CategoryName" title="Name" class="attribute-description" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" />
+												<input attribute="&amp;Update" title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" />
+												<input attribute="&amp;Delete" title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" />
+											</tabularGrid>
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions">
+				<item>
+					<action name="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" class="Button button-primary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

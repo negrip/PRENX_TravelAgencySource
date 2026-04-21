@@ -1,0 +1,161 @@
+DesignSystem Attractions
+{
+	#DesignTokens
+		tokens Attractions{
+		
+		}
+	#End
+
+	#DesignStyles
+		styles Attractions
+		{
+		    @import TravelAgencyBase;
+		
+		    
+		    #region Search
+		
+		        .main-data__table {
+		            margin-inline: 85px;
+		
+		        }
+		        .search__table {
+		            background-color: $colors.surface--highlighted;
+		            border-radius: 8px;
+		        }
+		
+		        .search__field-table {
+		            background-color: $colors.gray00;
+		            padding: 15px;
+		            border: 1px solid $colors.gray300;
+		            border-radius: 16px;
+		        }
+		
+		        .search__field-text {
+		            @include main__paragraph;
+		        }
+		
+		        .search__field-image {
+		            height: 48px;
+		            width: 48px;
+		        }
+		
+		        .search__category-table {
+		            height: 48px;
+		        }
+		
+		        .search__category-button {
+		            border-radius: 4px;
+		            border-width: 1px; 
+		            border: 1px solid $colors.gray300;
+		            color: $colors.text__on-surface--highlighted;
+		        }
+		
+		        .search__category-button--selected {
+		            color: $colors.title__on-surface--highlighted;
+		            background-color: $colors.primary--highlighted;
+		        }
+		
+		        .search__button {
+		            background-color: $colors.primary;
+		            width: 52;
+		            height: 48;
+		            padding-top: 15px;
+		            padding-right: 14px;
+		            padding-bottom: 15px;
+		            padding-left: 14px;
+		            border-radius: 30px;
+		            gx-button-hovered-class: button__primary--hovered;
+		        }
+		
+		    #endregion
+		
+		    #region DataGrid
+		
+		    .GridAttractions {
+		    }
+		
+		    .GridAttractions div[slot="grid-content"]  {
+		            gap: 20px;
+		    }
+		
+		    .data__search-results-table {
+		        min-width: calc(100vw - 182px);
+		    }
+		
+		    .data__not-found-text {
+		        color: $colors.title__on-surface;
+		        font-weight: 700;
+		        font-size: 24px;
+		        vertical-align: middle;
+		        text-align: center;
+		    }
+		
+		    .data__not-found-image {
+		        width: 521px;
+		        height: 199px;
+		        gx-content-mode: fill-keeping-aspect;
+		
+		    }
+		
+		    gx-grid-empty-indicator>.gx-empty-item {
+		        height: unset !important;
+		        width: unset !important; 
+		    }
+		
+		    .gx-empty-indicator[image-class="data__not-found-image"] {
+		       justify-content: center;
+		       display: flex;
+		    }
+		    #endregion
+		
+		    #region Card
+		        .card__image {
+		            gx-content-mode: fill-keeping-aspect;
+		            opacity: 1;
+		            border-radius: 12px;
+		        }
+		
+		        .card__h1 {
+		            font-weight: 700;
+		            font-size: 30px;
+		            color: $colors.title__on-surface;
+		        }
+		
+		        .card__wheather-text {
+		            font-weight: 500;
+		            font-size: 20px;
+		            color: $colors.text__on-surface;
+		
+		        }
+		
+		        .card__paragraph {
+		            font-weight: 400;
+		            font-size: 16px;
+		            overflow: hidden;
+		            text-overflow: ellipsis;
+		            color: $colors.text__on-surface;
+		        }
+		
+		        .card__weather-table
+		        {
+		            background-color: #ECF2F3;
+		            border-radius: 8px;
+		        }
+		        .card__weather-table--sunny
+		        {
+		            background-color: #FCF9EA;
+		            border-radius: 8px;
+		        }
+		
+		    #endregion
+		
+		}
+	#End
+
+	#Properties
+		Name = "Attractions"
+
+		Description = "Attractions"
+	#End
+
+}

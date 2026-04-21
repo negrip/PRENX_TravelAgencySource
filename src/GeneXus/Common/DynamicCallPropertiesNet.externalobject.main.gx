@@ -1,0 +1,71 @@
+ExternalObject DynamicCallPropertiesNet
+{
+	#ExternalProperties
+		ExternalName
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'ExternalName',
+
+				NetFrameworkExternalType = 'String',
+
+				NetExternalName = 'ExternalName',
+
+				NetExternalType = 'String',
+
+				JavaExternalName = '',
+
+				JavaExternalType = '',
+
+				JavaExternalSetMethod = '',
+
+				JavaExternalGetMethod = ''
+
+			]
+
+		
+
+		AssemblyName
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'AssemblyName',
+
+				NetFrameworkExternalType = 'String',
+
+				NetExternalName = 'AssemblyName',
+
+				NetExternalType = 'String',
+
+				JavaExternalName = '',
+
+				JavaExternalType = '',
+
+				JavaExternalSetMethod = '',
+
+				JavaExternalGetMethod = ''
+
+			]
+	#End
+
+	#Properties
+		Name = "DynamicCallPropertiesNet"
+
+		Description = "Dynamic Call Properties Net"
+
+		Namespace = "GeneXus.DynamicCall"
+
+		NetFrameworkExternalName = "GxDynCallProperties"
+
+		NetFrameworkAssemblyName = ""
+
+		JavaExternalName = ""
+
+		ExternalPackageName = ""
+	#End
+
+}

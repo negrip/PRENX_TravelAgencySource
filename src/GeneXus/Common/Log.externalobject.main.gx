@@ -1,0 +1,975 @@
+ExternalObject Log
+{
+	#ExternalMethods
+		Write
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Write',
+
+				JavaExternalName = 'write',
+
+				IosExternalName = 'write',
+
+				AndroidExternalName = 'write'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Write
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Write',
+
+				JavaExternalName = 'write',
+
+				IosExternalName = 'write',
+
+				AndroidExternalName = 'write'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				logLevel
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'LogLevel, GeneXus.Common'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Write
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Write',
+
+				JavaExternalName = 'write'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				logLevel
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'LogLevel, GeneXus.Common'
+
+					]
+
+		
+
+				data
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'AnyObject, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Object',
+
+						JavaExternalType = 'Object'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Write
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Write',
+
+				JavaExternalName = 'write'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				logLevel
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'LogLevel, GeneXus.Common'
+
+					]
+
+		
+
+				data
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'AnyObject, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Object',
+
+						JavaExternalType = 'Object'
+
+					]
+
+		
+
+				stackTrace
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Boolean'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Error
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Error',
+
+				JavaExternalName = 'error',
+
+				IosExternalName = 'error',
+
+				AndroidExternalName = 'error'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Error
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Error',
+
+				JavaExternalName = 'error',
+
+				IosExternalName = 'error',
+
+				AndroidExternalName = 'error'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Warning
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Warning',
+
+				JavaExternalName = 'warning',
+
+				IosExternalName = 'warning',
+
+				AndroidExternalName = 'warning'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Warning
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Warning',
+
+				JavaExternalName = 'warning',
+
+				IosExternalName = 'warning',
+
+				AndroidExternalName = 'warning'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Info
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Info',
+
+				JavaExternalName = 'info',
+
+				IosExternalName = 'info',
+
+				AndroidExternalName = 'info'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Info
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Info',
+
+				JavaExternalName = 'info',
+
+				IosExternalName = 'info',
+
+				AndroidExternalName = 'info'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Debug
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Debug',
+
+				JavaExternalName = 'debug',
+
+				IosExternalName = 'debug',
+
+				AndroidExternalName = 'debug'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Debug
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Debug',
+
+				JavaExternalName = 'debug',
+
+				IosExternalName = 'debug',
+
+				AndroidExternalName = 'debug'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Fatal
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Fatal',
+
+				JavaExternalName = 'fatal',
+
+				IosExternalName = 'fatal',
+
+				AndroidExternalName = 'fatal'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Fatal
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Fatal',
+
+				JavaExternalName = 'fatal',
+
+				IosExternalName = 'fatal',
+
+				AndroidExternalName = 'fatal'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		IsEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsEnabled',
+
+				JavaExternalName = 'isEnabled'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				logLevel
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'LogLevel, GeneXus.Common'
+
+					]
+
+			}
+
+		}
+
+		
+
+		IsEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsEnabled',
+
+				JavaExternalName = 'isEnabled'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				logLevel
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'LogLevel, GeneXus.Common'
+
+					]
+
+		
+
+				topic
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		IsFatalEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsFatalEnabled',
+
+				JavaExternalName = 'isFatalEnabled'
+
+			]
+
+		
+
+		IsErrorEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsErrorEnabled',
+
+				JavaExternalName = 'isErrorEnabled'
+
+			]
+
+		
+
+		IsWarningEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsWarnEnabled',
+
+				JavaExternalName = 'isWarnEnabled'
+
+			]
+
+		
+
+		IsInfoEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsInfoEnabled',
+
+				JavaExternalName = 'isInfoEnabled'
+
+			]
+
+		
+
+		IsDebugEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsDebugEnabled',
+
+				JavaExternalName = 'isDebugEnabled'
+
+			]
+
+		
+
+		IsTraceEnabled
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'IsTraceEnabled',
+
+				JavaExternalName = 'isTraceEnabled'
+
+			]
+
+		
+
+		SetContext
+
+			[
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'SetContext',
+
+				JavaExternalName = 'setContext'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				value
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'AnyObject, GeneXus.Common',
+
+						NetFrameworkExternalType = 'System.Object',
+
+						JavaExternalType = 'Object'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Log"
+
+		Description = "Allow to Log application events to the selected target log in the environment properties"
+
+		Namespace = "GeneXus.Diagnostics"
+
+		NetFrameworkExternalName = "Log"
+
+		JavaExternalName = "UserLog"
+
+		ExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IosExternalName = "GXEOLog"
+
+		AndroidExternalName = "LogAPIOffline"
+	#End
+
+}

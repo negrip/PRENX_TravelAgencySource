@@ -1,0 +1,7 @@
+ThemeClass ReadonlyBlobContentAttribute
+{
+	#Properties
+		Name = "ReadonlyBlobContentAttribute"
+	#End
+
+}

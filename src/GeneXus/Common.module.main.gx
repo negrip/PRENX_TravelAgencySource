@@ -1,0 +1,7 @@
+Module Common
+{
+	#Properties
+		Name = "Common"
+	#End
+
+}

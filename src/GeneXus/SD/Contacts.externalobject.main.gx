@@ -1,0 +1,317 @@
+ExternalObject Contacts
+{
+	#ExternalMethods
+		AddContact
+
+			[
+
+				Description = 'Adds a contact to the device\'s Address Book',
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				FirstName
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Contact First Name',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				LastName
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Contact Last Name',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				EMail
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Contact EMail',
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Phone
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Contact Phone',
+
+						BasedOn = 'Phone, GeneXus'
+
+					]
+
+		
+
+				CompanyName
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Contact Company Name',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				Photo
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Contact Photo',
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+		
+
+				Message
+
+					[
+
+						AccessType = 'Out',
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		RemoveContact
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				FirstName
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				LastName
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				EMail
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Phone
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Phone, GeneXus'
+
+					]
+
+		
+
+				Message
+
+					[
+
+						AccessType = 'Out',
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ViewContact
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				FirstName
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				LastName
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				EMail
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Phone
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Phone, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		GetAllContacts
+
+			[
+
+				Description = 'Returns a collection of all the contacts in the device\'s Address Book',
+
+				Type = 'ContactInfo, GeneXus.SD',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'getAllContacts'
+
+			]
+
+		
+
+		PickContact
+
+			[
+
+				Description = 'Pick contact from the device\'s Address Book',
+
+				Type = 'ContactInfo, GeneXus.SD',
+
+				IsStatic = 'True'
+
+			]
+
+		
+
+		PickContacts
+
+			[
+
+				Description = 'Pick a collection of contacts from the device\'s Address Book',
+
+				Type = 'ContactInfo, GeneXus.SD',
+
+				IsStatic = 'True'
+
+			]
+	#End
+
+	#Properties
+		Name = "Contacts"
+
+		IosExternalName = "GXEOAddressBook"
+	#End
+
+}

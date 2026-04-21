@@ -1,0 +1,13 @@
+Attribute AttractionPhotoUri
+{
+	#Properties
+		Name = "AttractionPhotoUri"
+
+		DataType = "VarChar(1000)"
+
+		Length = "1000"
+
+		MaximumLength = "1000"
+	#End
+
+}

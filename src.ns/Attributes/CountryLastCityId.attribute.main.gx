@@ -1,0 +1,11 @@
+Attribute CountryLastCityId
+{
+	#Properties
+		Name = "CountryLastCityId"
+
+		BasedOn = "Id"
+
+		Autonumber = "False"
+	#End
+
+}

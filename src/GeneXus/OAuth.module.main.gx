@@ -1,0 +1,7 @@
+Module OAuth
+{
+	#Properties
+		Name = "OAuth"
+	#End
+
+}

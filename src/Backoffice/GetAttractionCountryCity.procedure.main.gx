@@ -1,0 +1,112 @@
+Procedure GetAttractionCountryCity
+{
+	&AttractionCountryCityInfoJSON = &WebSession.Get(&AttractionName+"_HasCountry")
+	if &AttractionCountryCityInfoJSON.IsEmpty()
+		&answer = GetAttractionCountryAndCityAgent(&AttractionName,&ChatMessages,&CallResult)
+		&CountryCityProperties.FromJson(&answer)
+		&CountryId.FromString(&CountryCityProperties.Get(!"country_id"))
+		&CountryName = &CountryCityProperties.Get(!"country_name")
+		&CityId.FromString(&CountryCityProperties.Get(!"city_id"))
+		&CityName = &CountryCityProperties.Get(!"city_name")
+		&IsCountryCityInContext.FromString(&CountryCityProperties.Get(!"country_and_city_in_context"))
+		
+		if not &IsCountryCityInContext
+		
+			//Determine if only the country already exists
+			For each Country
+				Where CountryName = &CountryName
+				&CountryId = CountryId
+				Exit
+			Endfor
+	
+			if not &CountryId.IsEmpty()
+				//Create the city for the existing country			
+				&Country.Load(&CountryId)
+				&City.CityName = &CityName
+				&Country.City.Add(&City)
+				if &Country.Update()
+					Commit		
+					&AttractionCountryCityInfo.CountryId = &CountryId
+					&AttractionCountryCityInfo.CityId = &City.CityId	
+				else
+					for &onemessage in &Country.GetMessages()
+						msg(&onemessage.Description)
+					endfor
+				endif					
+			else
+				//Create country and city
+				&Country.CountryName = &CountryName
+				&City.CityName = &CityName
+				&Country.City.Add(&City)
+				if &Country.Insert()
+					Commit
+					&AttractionCountryCityInfo.CountryId = &Country.CountryId
+					&AttractionCountryCityInfo.CityId = &City.CityId
+				else
+					for &onemessage in &Country.GetMessages()
+						msg(&onemessage.Description)
+					endfor
+				endif
+			endif
+		else
+			&AttractionCountryCityInfo.CountryId = &CountryId
+			&AttractionCountryCityInfo.CityId = &CityId
+		endif
+		
+		&WebSession.Set(&AttractionName+"_HasCountry",&AttractionCountryCityInfo.ToJson())
+	else
+		&AttractionCountryCityInfo = New()
+		&WebSession.Clear()
+	endif
+
+	#Rules
+		parm(in:&AttractionName, out:&AttractionCountryCityInfo);
+	#End
+
+	#Variables
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			ChatMessages [ DataType = 'ChatMessage, GeneXus.ArtificialIntelligence', Collection = 'True' ]
+
+			CallResult [ DataType = 'CallResult, GeneXus.Common' ]
+
+			CountryId [ DataType = 'Attribute:CountryId' ]
+
+			CountryName [ DataType = 'Attribute:CountryName' ]
+
+			CityName [ DataType = 'Attribute:CityName' ]
+
+			CountryCityProperties [ DataType = 'Properties' ]
+
+			IsCountryCityInContext [ DataType = 'Boolean' ]
+
+			Country [ DataType = 'Country' ]
+
+			messages [ DataType = 'Messages, GeneXus.Common' ]
+
+			onemessage [ DataType = 'Messages.Message, GeneXus.Common' ]
+
+			City [ DataType = 'Country.City' ]
+
+			CityId [ DataType = 'Attribute:CityId' ]
+
+			Answer [ DataType = 'LongVarChar(2M)' ]
+
+			AttractionCountryCityInfo [ DataType = 'AttractionCountryCityInfo' ]
+
+			AttractionCountryCityInfoJSON [ DataType = 'VarChar(1000)' ]
+
+			WebSession [ DataType = 'WebSession' ]
+
+			mensaje [ DataType = 'VarChar(100)' ]
+	#End
+
+	#Properties
+		Name = "GetAttractionCountryCity"
+
+		Description = "GetAttractionCountryCity"
+
+		MainProgram = "True"
+	#End
+
+}

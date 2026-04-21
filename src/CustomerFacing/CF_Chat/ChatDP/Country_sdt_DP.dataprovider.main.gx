@@ -1,0 +1,29 @@
+DataProvider Country_sdt_DP
+{
+	Countries from Country
+	{
+		CountriesItem
+		{
+			CountryName = CountryName
+	
+			City
+			{
+				CityItem
+				{
+					CityName = CityName
+				}
+			}
+		}
+	}
+
+	#Properties
+		Name = "Country_sdt_DP"
+
+		Description = "Country_sdt_DP"
+
+		Output = "Countries"
+
+		Collection = "False"
+	#End
+
+}

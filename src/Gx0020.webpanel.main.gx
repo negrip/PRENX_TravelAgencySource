@@ -1,0 +1,83 @@
+WebPanel Gx0020
+{
+	#Rules
+		parm(out:&pCategoryId);
+		order(CategoryId);
+	#End
+
+	#Events
+		Event Start
+			Form.Caption = Format("GXSPC_SelectionList", "Category")
+			&ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>"
+		EndEvent
+		
+		Event 'Toggle'
+			if AdvancedContainer.Class = StyleClass:AdvancedContainer
+				AdvancedContainer.Class = StyleClass:AdvancedContainer + !" " + StyleClass:AdvancedContainerVisible
+				BtnToggle.Class += !" " + StyleClass:BtnToggleActive
+			else
+				AdvancedContainer.Class = StyleClass:AdvancedContainer
+				BtnToggle.Class = StyleClass:BtnToggle
+			endif
+		Endevent
+		
+		Event LblCategoryIdFilter.Click
+			if CategoryIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				CategoryIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cCategoryId.Visible = true
+			else
+				CategoryIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cCategoryId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblCategoryNameFilter.Click
+			if CategoryNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				CategoryNameFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cCategoryName.Visible = true
+			else
+				CategoryNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cCategoryName.Visible = false
+			endif
+		EndEvent
+		
+		Event Load
+			&LinkSelection.FromImage(selectRow)
+		EndEvent
+		
+		Event Enter
+			&pCategoryId = CategoryId
+			Return
+		EndEvent
+	#End
+
+	#Conditions
+		CategoryId >= &cCategoryId ;
+		CategoryName LIKE &cCategoryName when not &cCategoryName.IsEmpty();
+	#End
+
+	#Variables
+			LinkSelection [ DataType = 'Image' ]
+
+			cCategoryId [ Description = 'Category Id', DataType = 'Attribute:CategoryId' ]
+
+			cCategoryName [ Description = 'Category Name', DataType = 'Attribute:CategoryName' ]
+
+			pCategoryId [ Description = 'Category Id', DataType = 'Attribute:CategoryId' ]
+
+			ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+	#End
+
+	#Properties
+		Name = "Gx0020"
+
+		Description = "Selection List Category"
+
+		MasterPage = "(none)"
+
+		AssociatedTable = "Category"
+
+		FocusControl = "Browser dependent"
+	#End
+
+}

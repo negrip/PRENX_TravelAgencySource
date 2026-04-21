@@ -1,0 +1,25 @@
+SDT AttractionInfo
+{
+		AttractionInfo	{
+
+			AttractionId [ DataType = 'Attribute:AttractionId' ]
+
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			AttractionPhoto [ DataType = 'Attribute:AttractionPhoto' ]
+
+			AttractionDescription [ DataType = 'Attribute:AttractionDescription' ]
+
+			Weather [ DataType = 'WeatherCondition' ]
+
+			Temperature [ DataType = 'Character(4)' ]
+
+		}
+
+	#Properties
+		Name = "AttractionInfo"
+
+		Description = "AttractionInfo"
+	#End
+
+}

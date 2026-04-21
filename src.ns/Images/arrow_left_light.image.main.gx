@@ -1,0 +1,17 @@
+Image arrow_left_light
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>arrow_left_light.svg</Value></Property><Property><Name>Description</Name><Value>arrow_left_light.svg</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>arrow_left_light.svg</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "arrow_left_light"
+
+		Description = "arrow_left_light"
+	#End
+
+}

@@ -1,0 +1,39 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="ww__view__grid-table" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+			<row>
+				<cell name="GridCell" class="ww__grid-cell">
+					<responsive name="GridTable" responsiveSizes="[]">
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<responsive name="GridContainer" class="ww__grid-container" responsiveSizes="[]">
+									<row>
+										<cell>
+											<tabularGrid name="Grid" class="ViewGrid" order="">
+												<input attribute="CityId" title="Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="CityName" title="Name" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="CityTemperature" title="Temperature" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="CityWeatherCondition" title="Weather Condition" columnClass="column column-optional" visible="True" />
+											</tabularGrid>
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<input attribute="CountryId" labelPosition="None" inputType="Values" dataSourceFrom="Values" />
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups />
+	</view>
+</layout>

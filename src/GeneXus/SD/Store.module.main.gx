@@ -1,0 +1,7 @@
+Module Store
+{
+	#Properties
+		Name = "Store"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass ReadonlyImageAttribute
+{
+	#Properties
+		Name = "ReadonlyImageAttribute"
+	#End
+
+}

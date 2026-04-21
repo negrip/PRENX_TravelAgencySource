@@ -1,0 +1,17 @@
+Image TreviFountain
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>TreviFountain.jpg</Value></Property><Property><Name>Description</Name><Value>Trevi Fountain.jpg</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>TreviFountain.jpg</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "TreviFountain"
+
+		Description = "TreviFountain"
+	#End
+
+}

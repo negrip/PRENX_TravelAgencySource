@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ReportLayout>
+  <Properties />
+  <Bands>
+    <CTRL_PRINTBLOCK>
+      <Properties><Property><Name>RPT_TEXT_MODE</Name><Value>False</Value></Property><Property><Name>RPT_INTERNAL_NAME</Name><Value>printBlock1</Value></Property><Property><Name>RPT_ID</Name><Value>1</Value></Property><Property><Name>RPT_VISIBLE</Name><Value>True</Value></Property><Property><Name>RPT_TEXT</Name><Value>Text</Value></Property><Property><Name>RPT_X</Name><Value>0</Value></Property><Property><Name>RPT_Y</Name><Value>0</Value></Property><Property><Name>RPT_WIDTH</Name><Value>100</Value></Property><Property><Name>RPT_HEIGHT</Name><Value>100</Value></Property></Properties>
+    </CTRL_PRINTBLOCK>
+  </Bands>
+</ReportLayout>

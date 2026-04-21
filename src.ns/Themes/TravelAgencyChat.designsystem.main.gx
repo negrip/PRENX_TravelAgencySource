@@ -1,0 +1,172 @@
+DesignSystem TravelAgencyChat
+{
+	#DesignTokens
+		tokens MyChat {
+		
+			#colors
+			{	
+		/*
+		        un-surface--alternative: #f3f4f6;
+		
+		        un-text__on-surface--positive: $colors.un-color__negative;
+		        un-text__primary: #696ef2;
+		
+		        un-accent__primary: #696ef2;
+		        un-accent__destructive: #f02031;
+		        un-accent__disabled: #c3c4c8;
+		        
+		        un-color__purple--20: #696ef233;
+		        un-color__gray--500: #939498;
+		        un-color__positive: #fff;
+		        un-color__negative: #121212;*/
+		        un-border-color__mild: $colors.un-color__gray--300;
+		            
+			}
+		 
+			#fonts
+			{
+				un-font__family: $fonts.primary;
+			}
+		
+			#fontSizes
+			{
+				un-font__weight--regular: 400;
+			}
+		
+			#spacing
+			{
+				un-xxxl: 16px;
+			}
+		}
+	#End
+
+	#DesignStyles
+		styles MyChat {
+		    //@import GeneXusUnanimo.Unanimo;
+		    @import GeneXusUnanimo.Chat;
+		    @import TravelAgencyBase;
+		
+		    // CARD STENCIL CLASSES FROM UNANIMO 
+		        .card {
+		            background-color: #F4F7F4; //$colors.surface;
+		            border-radius: 12px; 
+		            border-color: #01554724;
+		            box-shadow: $shadows.s;
+		        }
+		        .card-heading {
+		            border-bottom: solid $borders.un-width--xs $colors.un-border-color__mild;
+		            padding: $spacing.un-l;
+		            font-family: $fonts.primary; //$fonts.un-font__family;
+		            font-weight: 700; //$fonts.un-font__weight--bold;
+		            font-size: 16px; //$fontSizes.un-s;
+		            letter-spacing: $spacing.letter-spacing-s;
+		            //color: $colors.un-text__on-surface--positive;
+		            color: $colors.title__on-surface--highlighted; 
+		        }        
+		        .card-body {
+		            padding: 15px; //$spacing.un-l;
+		        }
+		
+		    #region Travel Agency specific
+		 
+		    .card-title {
+		        color: $colors.title__on-surface--highlighted;
+		    }
+		
+		    .card-close-button {
+		        background-color: unset;
+		    }
+		    .chat__text {
+		        font-weight: 400;
+		        font-size: 16px;
+		        color: $colors.text__on-surface--highlighted;
+		    }
+		
+		    .chat__option-button {
+		        @include chat__text;
+		        width: fit-content;
+		        border-radius: 30px;
+		        background-color: $colors.primary--highlighted;
+		        padding-inline: 15px;
+		    }
+		    #endregion
+		
+		
+		    //From Unanimo Chat DSO
+		
+		    .chat {
+		        min-height: 500px;
+		    }
+		
+		    .chat::part(message) {
+		        color: $colors.text__on-surface; //$colors.un-text__on-surface--positive;
+		        font-family: $fonts.primary;//$fonts.un-font__family;
+		    }
+		
+		    /* User message icon */
+		    .chat::part(message user)::before {
+		        mask-image: gx-image(Chat_user_icon);
+		        background-color: $colors.primary; //$colors.un-accent__primary;
+		    }
+		    /* User message icon background */
+		    .chat::part(message user)::after {
+		        background-color: $colors.secondary; //$colors.un-color__purple--20;
+		        border-radius: 22px;
+		    }
+		
+		    #region Agent Message
+		    /* Agent message container */
+		    .chat::part(message assistant) {
+		        background-color: unset;
+		        padding: $spacing.un-l $spacing.un-xxxl;
+		    }
+		    /* Agent message icon */
+		    .chat::part(message assistant)::before {
+		        mask-image: gx-image(Chat_agent_icon);
+		        background-color: $colors.secondary;
+		    }
+		    /* Agent message icon background */
+		    .chat::part(message assistant)::after {
+		        background-color: $colors.primary--highlighted;
+		        border-radius: 22px;
+		    }
+		    #endregion
+		
+		
+		    .chat::part(send-button) {
+		        mask-image: gx-image(Chat_send_icon);
+		        background-color: $colors.secondary;
+		    }
+		
+		    .chat::part(send-button)::after {
+		        background-color: $colors.primary;        
+		    }
+		
+		    .chat::part(send-button):disabled {
+		        background-color: $colors.un-accent__disabled;
+		    }
+		    
+		    .chat::part(stop-response-button) {
+		        color: $colors.primary--highlighted;
+		    }
+		
+		    .chat::part(stop-response-button)::before {
+		        background-color: $colors.primary--highlighted;
+		    }
+		
+		
+		    .chat::part(send-input) {
+		        border: $borders.un-width--xs solid #C4C4C4;
+		        background-color: white;
+		    }
+		
+		}
+	#End
+
+	#Properties
+		Name = "TravelAgencyChat"
+
+		Description = "Travel Agency Chat"
+	#End
+
+}

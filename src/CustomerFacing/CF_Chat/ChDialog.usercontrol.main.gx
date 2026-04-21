@@ -1,0 +1,137 @@
+UserControl ChDialog
+{
+	#UserControlScreenTemplate
+		Sub-Template Angular
+			{{=<% %>=}}
+			<ch-dialog
+		      [caption]="Caption"
+		      [attr.class]="Class" 
+		      [closeButtonAccessibleName]="CloseButtonAccesibleName"
+		      [showHeader]="ShowHeader"
+			  [showFooter]="ShowFooter"
+			  [show]="Show"
+			  [closable]="Closable"
+			  [modal]="Modal"
+		     
+			  [attr.style]="BlockPosition + ' ' + InlinePosition"
+		    >
+				<%#ShowHeader%>
+				<div slot="header">
+					<slot name="header" />
+				</div>
+				<%/ShowHeader%>
+				
+				<div>
+					<slot name="content" />
+				</div>
+				
+				<%#ShowFooter%>
+				<div slot="footer">
+					<slot name="footer" />
+				</div>
+				<%/ShowFooter%>
+		    </ch-dialog>
+		EndSub
+		
+		Sub-Template Web
+			<ch-dialog
+		      caption="{{Caption}}"
+		      class="{{Class}}"
+		      close-button-accessible-name="{{CloseButtonAccesibleName}}"
+		      {{#ShowHeader}} show-header {{/ShowHeader}}
+			  {{#ShowFooter}} show-footer {{/ShowFooter}}
+			  {{#Show}} show {{/Show}}
+			  {{^Closable}} closable=false {{/Closable}}
+			  {{^Modal}} modal=false {{/Modal}}
+		      
+			  style="{{BlockPosition}}{{InlinePosition}}"
+		    >
+				{{#ShowHeader}}
+				<div slot="header">
+					<slot name="header" />
+				</div>
+				{{/ShowHeader}}
+				
+		    	<slot name="content" />
+				
+				{{#ShowFooter}}
+				<div slot="footer">
+					<slot name="footer" />
+				</div>
+				{{/ShowFooter}}
+		    </ch-dialog>
+		EndSub
+	#End
+
+	#UserControlProperties
+		<Definition version="2.0">
+			<Properties>
+				<Properties Name="Appearance">
+					<Property Name="Class" Type="class" Default="dialog dialog-primary" />
+					<Property Name="Caption" Type="string" Default="" />
+					<Property Name="Show" Type="boolean" Default="true" />
+					<Property Name="ShowHeader" Type="boolean" Default="false" />
+					<Property Name="ShowFooter" Type="boolean" Default="false" />
+					<Property Name="Modal" Type="boolean" Default="true" />
+					<Property Name="BlockSize" Type="string" Default="" />
+					<Property Name="InlineSize" Type="string" Default="" />
+					
+					<Property Name="BlockPosition" Type="string" Default="">
+						<Values>
+							<Value Description="Top">--ch-dialog-block-start: 0%;</Value>
+							<Value Description="Center">--ch-dialog-block-start: calc(50dvh - 50%);</Value>
+							<Value Description="Bottom">--ch-dialog-block-start: calc(100dvh - 100%);</Value>
+						</Values>
+					</Property>
+					
+					<Property Name="InlinePosition" Type="string" Default="">
+						<Values>
+							<Value Description="Left">--ch-dialog-inline-start: 0%;</Value>
+							<Value Description="Center">--ch-dialog-inline-start: calc(50dvw - 50%);</Value>
+							<Value Description="Right">--ch-dialog-inline-start: calc(100dvw - 100%);</Value>
+						</Values>
+					</Property>
+				</Properties>
+				
+				<Properties Name="Behavior">
+					<Property Name="Closable" Type="boolean" Default="true" />
+					<Property Name="Resizable" Type="boolean" Default="false" />
+					<Property Name="AdjustPositionAfterResize" Type="boolean" Default="false" />
+					<Property Name="CloseButtonAccesibleName" Type="string" Default="Close dialog" />
+					
+					<Property Name="AllowDrag" Type="string" Default="no">
+						<Values>
+							<Value Description="Box">box</Value>
+							<Value Description="Header">header</Value>
+							<Value Description="No">no</Value>
+						</Values>
+					</Property>
+				</Properties>
+			</Properties>
+			
+			<Platforms>
+				<Platform Name="Angular">
+					<ScreenTemplate Name="Angular" />
+					
+					<Dependencies>
+						<Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" />
+					</Dependencies>
+				</Platform>
+				
+				<Platform Name="Web">
+					<ScreenTemplate Name="Web" />
+					
+					<Dependencies>
+						<Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" />
+						<Dependency Type="shared-module" source="chameleon/chameleon.esm.js" />
+					</Dependencies>
+				</Platform>
+			</Platforms>
+		</Definition>
+	#End
+
+	#Properties
+		Name = "ChDialog"
+	#End
+
+}

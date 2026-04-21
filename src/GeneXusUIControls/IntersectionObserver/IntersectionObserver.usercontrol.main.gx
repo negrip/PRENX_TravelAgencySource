@@ -1,0 +1,47 @@
+UserControl IntersectionObserver
+{
+	#UserControlScreenTemplate
+		{{=<% %>=}}
+		<ch-intersection-observer
+		  [bottomMargin]="BottomRootMargin"
+		  [leftMargin]="LeftRootMargin"
+		  [rightMargin]="RightRootMargin"
+		  [threshold]="Threshold"
+		  [topMargin]="TopRootMargin"
+		  (intersectionUpdate)="
+		    IntersectionRatio = $event.detail.intersectionRatio * 100; handleIntersectionUpdate($event)
+		  "
+		>
+		  <slot name="content"/>
+		</ch-intersection-observer>
+		
+		<style>
+		  :host {
+		    display: contents;
+		  }
+		</style>
+	#End
+
+	#UserControlProperties
+		<Definition auto="false" target="Angular">
+			<Property Name="TopRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+		
+			<Property Name="RightRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+		
+			<Property Name="BottomRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+		
+			<Property Name="LeftRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+		
+			<Property Name="Threshold" Type="string" Scope="DesignTime"/>
+		
+			<Property Name="IntersectionRatio" Type="numeric" Scope="RunTime" Default="0"/>
+		
+			<Event Name="IntersectionUpdate" On="intersectionUpdate" />
+		</Definition>
+	#End
+
+	#Properties
+		Name = "IntersectionObserver"
+	#End
+
+}

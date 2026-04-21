@@ -1,0 +1,7 @@
+ThemeClass BlobContentAttribute
+{
+	#Properties
+		Name = "BlobContentAttribute"
+	#End
+
+}

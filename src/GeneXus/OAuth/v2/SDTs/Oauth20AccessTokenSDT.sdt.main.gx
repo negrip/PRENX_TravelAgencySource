@@ -1,0 +1,25 @@
+SDT Oauth20AccessTokenSDT
+{
+		Oauth20AccessTokenSDT	{
+
+			access_token [ DataType = 'LongVarChar(9K)', AverageLength = '3072' ]
+
+			token_type [ DataType = 'VarChar(40)' ]
+
+			expires_in [ DataType = 'Numeric(9.0)' ]
+
+			refresh_token [ DataType = 'VarChar(2000)', AverageLength = '900' ]
+
+			scope [ DataType = 'VarChar(2K)', AverageLength = '250' ]
+
+			user_guid [ DataType = 'Character(40)' ]
+
+		}
+
+	#Properties
+		Name = "Oauth20AccessTokenSDT"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

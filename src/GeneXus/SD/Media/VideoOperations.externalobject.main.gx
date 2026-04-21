@@ -1,0 +1,135 @@
+ExternalObject VideoOperations
+{
+	#ExternalMethods
+		ApplyConversions
+
+			[
+
+				Type = 'Video',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'applyconversions'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				video
+
+					[
+
+						Type = 'Video'
+
+					]
+
+		
+
+				convertions
+
+					[
+
+						Type = 'VideoConversionParameters, GeneXus.SD.Media'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ConvertFormat
+
+			[
+
+				Type = 'Video',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'convertformat'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				video
+
+					[
+
+						Type = 'Video'
+
+					]
+
+		
+
+				format
+
+					[
+
+						BasedOn = 'VideoFormat, GeneXus.SD.Media'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ReduceQuality
+
+			[
+
+				Type = 'Video',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'reducequality'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				video
+
+					[
+
+						Type = 'Video'
+
+					]
+
+		
+
+				quality
+
+					[
+
+						BasedOn = 'CameraAPIQuality, GeneXus'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "VideoOperations"
+
+		IosExternalName = "GXEOVideoOperations"
+	#End
+
+}

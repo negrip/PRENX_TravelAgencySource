@@ -1,0 +1,7 @@
+Module Media
+{
+	#Properties
+		Name = "Media"
+	#End
+
+}

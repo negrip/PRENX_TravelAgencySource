@@ -1,0 +1,17 @@
+WebPanel Home
+{
+	#Events
+		Event Start
+			LoadAttractionsEmbedding()
+		EndEvent
+	#End
+
+	#Properties
+		Name = "Home"
+
+		Description = "Home"
+
+		MainProgram = "True"
+	#End
+
+}

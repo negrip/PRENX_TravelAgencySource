@@ -1,0 +1,19 @@
+Attribute CategoryName
+{
+	#Properties
+		Name = "CategoryName"
+
+		BasedOn = "Name"
+
+		Collection = "False"
+
+		Autonumber = "False"
+
+		AutonumberStart = "1"
+
+		AutonumberStep = "1"
+
+		AutonumberForReplication = "True"
+	#End
+
+}

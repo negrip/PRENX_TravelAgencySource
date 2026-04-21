@@ -1,0 +1,15 @@
+Domain MessageRole
+{
+	#Properties
+		Name = "MessageRole"
+
+		DataType = "VarChar(20)"
+
+		Length = "20"
+
+		MaximumLength = "20"
+
+		EnumValues = "SYSTEM, System, system; USER, User, user; AGENT, Agent, assistant; ERROR, Error, error"
+	#End
+
+}

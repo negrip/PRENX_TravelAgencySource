@@ -1,0 +1,26 @@
+Agent CategoryMatcherAgent
+{
+	#AgentSourcePart
+		Determine the best matching category for the attraction description: "{{&AttractionDescription}}"
+		using the provided categories: $context
+		Return just the value of the Id of the category
+	#End
+
+	#Rules
+		parm(in:&AttractionDescription, out:&MatchedCategoryId);
+		context(GetCategories());
+	#End
+
+	#Variables
+			AttractionDescription [ DataType = 'Attribute:AttractionDescription' ]
+
+			MatchedCategoryId [ DataType = 'Attribute:CategoryId' ]
+	#End
+
+	#Properties
+		Name = "CategoryMatcherAgent"
+
+		Description = "CategoryMatcherAgent"
+	#End
+
+}

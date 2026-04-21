@@ -1,0 +1,26 @@
+Agent GetAttractionPhotoAgent
+{
+	#AgentSourcePart
+			{{Document:GetAttractionImage_prompt}}
+	#End
+
+	#Rules
+			parm(in:&AttractionName, &AttractionNameURL, &result);
+			use(ExternalTool:com.globant.geai.web_scraper);
+	#End
+
+	#Variables
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			result [ DataType = 'LongVarChar(2M)' ]
+
+			AttractionNameURL [ DataType = 'VarChar(1000)', AverageLength = '0', Collection = 'False', ControlType = 'Edit' ]
+	#End
+
+	#Properties
+		Name = "GetAttractionPhotoAgent"
+
+		Description = "GetAttractionPhoto"
+	#End
+
+}

@@ -1,0 +1,21 @@
+Procedure GxAfterEventReplicator
+{
+	#Rules
+		parm(in:&EventResults, in:&GxSynchroInfo);
+	#End
+
+	#Variables
+			EventResults [ DataType = 'SynchronizationEventResultList, GeneXus.SD.Synchronization' ]
+
+			GxSynchroInfo [ DataType = 'SynchronizationInfo, GeneXus.SD.Synchronization' ]
+	#End
+
+	#Properties
+		Name = "GxAfterEventReplicator"
+
+		ConnectivitySupport = "Online"
+
+		CommitOnExit = "No"
+	#End
+
+}

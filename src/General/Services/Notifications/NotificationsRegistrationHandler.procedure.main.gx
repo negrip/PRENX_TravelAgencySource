@@ -1,0 +1,52 @@
+Procedure NotificationsRegistrationHandler
+{
+	/* 
+	   Typical implementation of Notification Registration Handler
+	   Store Device Data in order to send notifications later.
+	*/
+	msg(&DeviceToken.ToString().Trim(), status)
+	/*
+	for each
+	   where DeviceType = &DeviceType // enum domain SmartDeviceType
+	   where DeviceId  = &DeviceId   // Character(128)
+	   DeviceToken = &DeviceToken    // Character(1000)
+	   DeviceName = &DeviceName       // Character(128)
+	when none
+	   new
+	      DeviceType  = &DeviceType
+	      DeviceId = &DeviceId
+	      DeviceToken = &DeviceToken
+	      DeviceName = &DeviceName
+	   endnew
+	endfor
+	*/
+
+	#Rules
+		parm(in: &DeviceType, in:&DeviceID, in:&DeviceToken, in:&DeviceName);
+		
+		//"Warning: Input Parameters definition (name, type) cannot be changed"
+	#End
+
+	#Variables
+			DeviceId [ DataType = 'Character(128)' ]
+
+			DeviceName [ DataType = 'Character(128)' ]
+
+			DeviceToken [ DataType = 'Character(1000)' ]
+
+			DeviceType [ DataType = 'SmartDeviceType, GeneXus' ]
+	#End
+
+	#Properties
+		Name = "NotificationsRegistrationHandler"
+
+		MainProgram = "True"
+
+		ExposeAsWebService = "True"
+
+		SoapProtocol = "False"
+
+		ConnectivitySupport = "Online"
+	#End
+
+}

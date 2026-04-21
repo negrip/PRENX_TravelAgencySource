@@ -1,0 +1,21 @@
+SDT StoreValidationConfig
+{
+		StoreValidationConfig	{
+
+			GooglePlayServiceAccount [ DataType = 'Character(200)', JsonName = 'googleServiceAccount' ]
+
+			GooglePlayCertificatePath [ DataType = 'Character(200)', JsonName = 'googleCertificate' ]
+
+			GooglePlayCertificatePassword [ DataType = 'Character(200)', JsonName = 'googleCertificatePassword' ]
+
+			AppleStoreSecretKey [ DataType = 'Character(200)', JsonName = 'appleKey' ]
+
+		}
+
+	#Properties
+		Name = "StoreValidationConfig"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

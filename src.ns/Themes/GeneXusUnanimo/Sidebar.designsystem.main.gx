@@ -1,0 +1,94 @@
+DesignSystem Sidebar
+{
+	#DesignStyles
+		styles Sidebar 
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .header {
+		        background-color: $colors.header-bg;
+		        border-block-end: 2px solid $colors.header-separator-bg;
+		        color: $colors.un-text__on-secondary;
+		        padding: $spacing.un-m;
+		        gap: $spacing.un-m;
+		    }
+		    .sidebar {
+		        --ch-sidebar-inline-size--collapsed: 42px;
+		        --ch-sidebar-inline-size--expanded: 300px;
+		        --ch-sidebar__chevron-size: 24px;
+		        --ch-sidebar__chevron-image-size: 14px;
+		        background-color: $colors.sidebar-bg;
+		        color: $colors.un-text__on-secondary;
+		    }
+		    .sidebar::part(expand-button) {
+		        padding: $spacing.un-m;
+		        border-block-start: 1px solid $colors.un-border-color__primary;
+		    }
+		    .sidebar-title {
+		        margin-block: $spacing.un-l $spacing.un-m;
+		        margin-inline: $spacing.un-l $spacing.un-m;
+		        color: $colors.un-text__on-secondary;
+		    }
+		    .navigation-list {
+		        --ch-navigation-list-item__tooltip-separation-x: $spacing.un-s;
+		        --ch-navigation-list-item-custom-padding-inline-start: 10px;
+		        --ch-navigation-list-item-gap: $spacing.un-m;
+		        --ch-navigation-list-item-expand-collapse-duration: 200ms;
+		        --ch-navigation-list-item__image-size: 24px;
+		        --ch-navigation-list-item__expandable-button-size: 24px;
+		        --ch-navigation-list-item__expandable-button-image-size: 14px;
+		        font-size: 14px;
+		        font-weight: 400;
+		        line-height: 18px;
+		        letter-spacing: 0.2px;
+		        scrollbar-width: thin;
+		        scrollbar-color: currentColor transparent;
+		    }
+		    .navigation-list::-webkit-scrollbar {
+		        width: 8px;
+		        height: 8px;
+		        background-color: transparent;
+		    }
+		    .navigation-list::-webkit-scrollbar-thumb {
+		        background-color: currentColor;
+		    }
+		    .navigation-list::part(item__action) {
+		        padding-block: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		    }
+		    .navigation-list::part(item__caption tooltip) {
+		        padding-block: $spacing.un-s;
+		        padding-inline: $spacing.un-m;
+		        background-color: $colors.un-color__gray--600;
+		        border-radius: $radius.un-radius--m;
+		        color: $colors.un-surface--alternative;
+		    }
+		    .navigation-list::part(item__action):focus-visible {
+		        outline: 1px solid;
+		        outline-offset: -1px;
+		    }
+		    .navigation-list::part(item__button):hover {
+		        color: color-mix(
+		            in srgb,
+		            $colors.un-text__on-secondary,
+		            $colors.un-accent__primary--hover 60%
+		        );
+		    }
+		    .navigation-list::part(item__link selected) {
+		        background-color: $colors.un-accent__secondary--active;
+		    }
+		    .navigation-list::part(item__link not-selected):hover {
+		        background-color: color-mix(
+		            in srgb,
+		            $colors.un-accent__secondary--active 30%,
+		            color-mix(in srgb, $colors.un-accent__secondary--hover 20%, transparent)
+		        );
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Sidebar"
+	#End
+
+}

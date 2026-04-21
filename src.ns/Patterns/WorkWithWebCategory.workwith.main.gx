@@ -1,0 +1,261 @@
+WorkWith WorkWithWebCategory
+{
+	updateTransaction: Apply WW Style
+
+	instanceProperties:
+
+	- KBLanguage: English
+
+	  Version: 1.2
+
+	transaction:
+
+	- transaction: 1db606f2-af09-4cf9-a3b5-b481519d28f6-Category
+
+	level:
+
+	- id: b23a279a-8f4d-4b85-a181-cf5ab5e99dc4:1
+
+	  name: Category
+
+	  descriptionAttribute:
+
+	  - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryName
+
+	    description: Name
+
+	  selection:
+
+	  - description: Categories
+
+	    page: <default>
+
+	    modes:
+
+	    - {}
+
+	    attributes:
+
+	    - attribute:
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryId
+
+	        description: Id
+
+	        autolink: True
+
+	        visible: False
+
+	      - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryName
+
+	        description: Name
+
+	        autolink: True
+
+	        visible: True
+
+	    orders:
+
+	    - order:
+
+	      - name: Name
+
+	        attribute:
+
+	        - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryName
+
+	          description: Name
+
+	          ascending: True
+
+	    filter:
+
+	    - attributes:
+
+	      - filterAttribute:
+
+	        - name: CategoryName
+
+	          description: Name
+
+	          default: ''
+
+	      conditions:
+
+	      - condition:
+
+	        - value: CategoryName.ToLower() like &CategoryName.ToLower() when not &CategoryName.IsEmpty()
+
+	  view:
+
+	  - caption: CategoryName.ToString()
+
+	    description: Category Information
+
+	    backToSelection: True
+
+	    masterPage: <default>
+
+	    parameters:
+
+	    - parameter:
+
+	      - name: CategoryId
+
+	        null: True
+
+	    fixedData:
+
+	    - attributes:
+
+	      - attribute:
+
+	        - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryName
+
+	          description: Name
+
+	          autolink: True
+
+	          visible: True
+
+	    tabs:
+
+	    - tab:
+
+	      - name: General
+
+	        code: General
+
+	        description: Category Info
+
+	        type: Tabular
+
+	        wcname: CategoryGeneral
+
+	        attributes:
+
+	        - attribute:
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryId
+
+	            description: Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CategoryName
+
+	            description: Name
+
+	            autolink: True
+
+	            visible: True
+
+	        actions:
+
+	        - action:
+
+	          - name: Update
+
+	          - name: Delete
+
+	      - name: Attraction
+
+	        code: Attraction
+
+	        type: Grid
+
+	        wcname: CategoryAttractionWC
+
+	        page: <default>
+
+	        transaction:
+
+	        - transaction: 1db606f2-af09-4cf9-a3b5-b481519d28f6-Attraction
+
+	        modes:
+
+	        - {}
+
+	        attributes:
+
+	        - attribute:
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionId
+
+	            description: Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionName
+
+	            description: Name
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionDescription
+
+	            description: Description
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionEmbedding
+
+	            description: Embedding
+
+	            autolink: True
+
+	            visible: False
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-AttractionPhoto
+
+	            description: Photo
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryId
+
+	            description: Country Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CountryName
+
+	            description: Country Name
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityId
+
+	            description: City Id
+
+	            autolink: True
+
+	            visible: True
+
+	          - attribute: adbb33c9-0906-4971-833c-998de27e0676-CityName
+
+	            description: City Name
+
+	            autolink: True
+
+	            visible: True
+
+	#Properties
+		Name = "WorkWithWebCategory"
+	#End
+
+}

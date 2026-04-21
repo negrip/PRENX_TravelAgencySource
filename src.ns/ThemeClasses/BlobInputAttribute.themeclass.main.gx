@@ -1,0 +1,7 @@
+ThemeClass BlobInputAttribute
+{
+	#Properties
+		Name = "BlobInputAttribute"
+	#End
+
+}

@@ -1,0 +1,7 @@
+Module Server
+{
+	#Properties
+		Name = "Server"
+	#End
+
+}

@@ -1,0 +1,15 @@
+Index ICategory
+{
+	CategoryId
+
+	#Index
+		Source = "Automatic"
+
+		Type = "Unique"
+	#End
+
+	#Properties
+		Name = "ICategory"
+	#End
+
+}

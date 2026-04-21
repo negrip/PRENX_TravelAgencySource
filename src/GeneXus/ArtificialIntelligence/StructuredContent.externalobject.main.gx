@@ -1,0 +1,27 @@
+ExternalObject StructuredContent
+{
+	#ExternalProperties
+		items
+
+			[
+
+				Type = 'StructuredContentItem, GeneXus.ArtificialIntelligence',
+
+				JavaExternalType = 'java.util.ArrayList<com.genexus.util.saia.OpenAIResponse.StructuredContentItem>',
+
+				JavaExternalSetMethod = 'setItems',
+
+				JavaExternalGetMethod = 'getItems'
+
+			]
+	#End
+
+	#Properties
+		Name = "StructuredContent"
+
+		JavaExternalName = "OpenAIResponse.StructuredContent"
+
+		ExternalPackageName = "com.genexus.util.saia"
+	#End
+
+}

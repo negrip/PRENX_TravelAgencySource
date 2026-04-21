@@ -1,0 +1,243 @@
+ExternalObject Navigation
+{
+	#ExternalMethods
+		ShowTarget
+
+			[
+
+				Description = 'Makes a target visible. For example, ShowTarget("Left") opens the Drawer in an app with Slide Navigation.',
+
+				IsStatic = 'True',
+
+				JavascriptExternalName = 'showTarget'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		HideTarget
+
+			[
+
+				IsStatic = 'True',
+
+				JavascriptExternalName = 'hideTarget'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ExpandTarget
+
+			[
+
+				IsStatic = 'True',
+
+				JavascriptExternalName = 'expandTarget'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		CollapseTarget
+
+			[
+
+				IsStatic = 'True',
+
+				JavascriptExternalName = 'collapseTarget'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#ExternalEvents
+		TargetShown
+
+			[
+
+				JavascriptExternalName = 'gx.targetshown'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		TargetHidden
+
+			[
+
+				JavascriptExternalName = 'gx.targethidden'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		TargetExpanded
+
+			[
+
+				JavascriptExternalName = 'gx.targetexpanded'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		TargetCollapsed
+
+			[
+
+				JavascriptExternalName = 'gx.targetcollapsed'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Navigation"
+
+		JavascriptExternalName = "gx.pO"
+	#End
+
+}

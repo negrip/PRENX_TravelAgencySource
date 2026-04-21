@@ -1,0 +1,9 @@
+DataProvider TranslationsProvider
+{
+	#Properties
+		Name = "TranslationsProvider"
+
+		Output = "Translations"
+	#End
+
+}

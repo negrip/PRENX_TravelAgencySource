@@ -1,0 +1,7 @@
+ThemeClass Calendar
+{
+	#Properties
+		Name = "Calendar"
+	#End
+
+}

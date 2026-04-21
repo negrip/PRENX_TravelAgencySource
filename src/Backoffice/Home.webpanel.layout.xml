@@ -1,0 +1,18 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable">
+			<row>
+				<cell>
+					<responsive name="ResponsiveTable1" class="container" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:58}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]">
+						<row>
+							<cell horizontalAlignment="Left" verticalAlignment="Middle">
+								<image name="Image1" image="TravelAgencyBanner" class="Image" height="780" width="1180" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups />
+	</view>
+</layout>

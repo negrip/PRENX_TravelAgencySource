@@ -1,0 +1,59 @@
+ExternalObject StructuredContentItem
+{
+	#ExternalProperties
+		Type
+
+			[
+
+				BasedOn = 'ContentType, GeneXus.ArtificialIntelligence',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setType',
+
+				JavaExternalGetMethod = 'getType'
+
+			]
+
+		
+
+		Text
+
+			[
+
+				Type = 'VarChar',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setText',
+
+				JavaExternalGetMethod = 'getText'
+
+			]
+
+		
+
+		ImageUrl
+
+			[
+
+				Type = 'ImageUrl, GeneXus.ArtificialIntelligence',
+
+				JavaExternalType = 'ImageUrl',
+
+				JavaExternalSetMethod = 'setImage_url',
+
+				JavaExternalGetMethod = 'getImage_url'
+
+			]
+	#End
+
+	#Properties
+		Name = "StructuredContentItem"
+
+		JavaExternalName = "OpenAIResponse.StructuredContentItem"
+
+		ExternalPackageName = "com.genexus.util.saia"
+	#End
+
+}

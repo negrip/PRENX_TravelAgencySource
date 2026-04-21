@@ -1,0 +1,76 @@
+WebPanel ViewCountry
+{
+	#Rules
+		parm(in:&CountryId, in:&TabCode);
+	#End
+
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			For each
+				Where CountryId = &CountryId
+				Form.Caption = CountryName.ToString()
+				ViewAll.Link = WWCountry.Link()
+				&Exists = True
+		
+			When none
+				Form.Caption = "Record not found"
+				ViewAll.Visible = false
+				&Exists = False
+			Endfor
+			&LoadAllTabs = false
+		
+			If &Exists
+				&SelectedTabCode = &TabCode
+				Tab.ActivePageControlName = &SelectedTabCode
+				Do 'Load Tab'
+			Endif
+		EndEvent
+		
+		Event Tab.TabChanged
+			&SelectedTabCode = Tab.ActivePageControlName
+			&LoadAllTabs = false
+			Do 'Load Tab'
+		EndEvent
+		
+		Sub 'Load Tab'
+			if &LoadAllTabs or &SelectedTabCode = '' or&SelectedTabCode = "General"
+				GeneralWC.Object = CountryGeneral.Create(&CountryId)
+			endif
+			if &LoadAllTabs or &SelectedTabCode = "City"
+				CityWC.Object = CountryCityWC.Create(&CountryId)
+			endif
+		EndSub
+	#End
+
+	#Conditions
+		CountryId = &CountryId;
+	#End
+
+	#Variables
+			IsAuthorized [ DataType = 'Boolean' ]
+
+			TabCode [ DataType = 'TabCode, General' ]
+
+			SelectedTabCode [ DataType = 'TabCode, General' ]
+
+			Tabs
+
+			Tab
+
+			Exists [ Description = 'Exists', DataType = 'Boolean' ]
+
+			LoadAllTabs [ Description = 'LoadAllTabs', DataType = 'Boolean' ]
+
+			CountryId [ DataType = 'Attribute:CountryId' ]
+	#End
+
+	#Properties
+		Name = "ViewCountry"
+	#End
+
+}

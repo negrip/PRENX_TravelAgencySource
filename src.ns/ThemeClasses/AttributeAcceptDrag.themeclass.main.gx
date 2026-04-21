@@ -1,0 +1,7 @@
+ThemeClass AttributeAcceptDrag
+{
+	#Properties
+		Name = "AttributeAcceptDrag"
+	#End
+
+}

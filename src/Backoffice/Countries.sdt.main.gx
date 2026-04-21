@@ -1,0 +1,27 @@
+SDT Countries
+{
+		Countries [ Collection = 'True' ]	{
+
+			CountryId [ DataType = 'Attribute:CountryId' ]
+
+			CountryName [ DataType = 'Attribute:CountryName' ]
+
+			City [ Collection = 'True' ]		{
+
+				CityId [ DataType = 'Attribute:CityId' ]
+
+				CityName [ DataType = 'Attribute:CityName' ]
+
+			}
+
+	
+
+		}
+
+	#Properties
+		Name = "Countries"
+
+		Description = "Countries"
+	#End
+
+}

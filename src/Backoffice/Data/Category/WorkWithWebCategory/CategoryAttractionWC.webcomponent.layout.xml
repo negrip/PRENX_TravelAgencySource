@@ -1,0 +1,63 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="ww__view__grid-table" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+			<row>
+				<cell name="GridCell" class="ww__grid-cell">
+					<responsive name="GridTable" responsiveSizes="[]">
+						<row>
+							<cell>
+								<table name="TableTop" class="Flex ww__actions-container" tableType="Flex">
+									<row>
+										<cell class="ww__view__grid__actions-cell" flexGrow="0">
+											<actiongroup name="Actions" />
+										</cell>
+									</row>
+								</table>
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<responsive name="GridContainer" class="ww__grid-container" responsiveSizes="[]">
+									<row>
+										<cell>
+											<tabularGrid name="Grid" class="ViewGrid" order="">
+												<input attribute="AttractionId" title="Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="AttractionName" title="Name" class="attribute-description" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" />
+												<input attribute="AttractionDescription" title="Description" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="AttractionEmbedding" title="Embedding" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="False" />
+												<input attribute="AttractionPhoto" title="Photo" columnClass="column column-optional" visible="True" />
+												<input attribute="CountryId" title="Country Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="CountryName" title="Country Name" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="CityId" title="City Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="CityName" title="City Name" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" />
+												<input attribute="&amp;Update" title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" />
+												<input attribute="&amp;Delete" title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" />
+											</tabularGrid>
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<input attribute="CategoryId" labelPosition="None" inputType="Values" dataSourceFrom="Values" />
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions" class="ww__view__actions">
+				<item>
+					<action name="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" class="Button button-primary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

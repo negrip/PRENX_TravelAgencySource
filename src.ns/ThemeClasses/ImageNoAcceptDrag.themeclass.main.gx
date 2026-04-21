@@ -1,0 +1,7 @@
+ThemeClass ImageNoAcceptDrag
+{
+	#Properties
+		Name = "ImageNoAcceptDrag"
+	#End
+
+}

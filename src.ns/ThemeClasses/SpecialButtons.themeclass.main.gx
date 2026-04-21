@@ -1,0 +1,7 @@
+ThemeClass SpecialButtons
+{
+	#Properties
+		Name = "SpecialButtons"
+	#End
+
+}

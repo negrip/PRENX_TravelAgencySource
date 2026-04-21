@@ -1,0 +1,7 @@
+ThemeClass AudioController
+{
+	#Properties
+		Name = "AudioController"
+	#End
+
+}

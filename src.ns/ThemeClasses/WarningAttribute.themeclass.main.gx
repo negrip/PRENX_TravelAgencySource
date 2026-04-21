@@ -1,0 +1,7 @@
+ThemeClass WarningAttribute
+{
+	#Properties
+		Name = "WarningAttribute"
+	#End
+
+}

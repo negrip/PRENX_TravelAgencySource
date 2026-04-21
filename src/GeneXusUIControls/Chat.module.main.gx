@@ -1,0 +1,7 @@
+Module Chat
+{
+	#Properties
+		Name = "Chat"
+	#End
+
+}

@@ -1,0 +1,23 @@
+Agent GetAttractionDescriptionAgent
+{
+	#AgentSourcePart
+		Expand the following short text: {{&AttractionName}} into a detailed description no longer than 200 characters.
+	#End
+
+	#Rules
+		parm(in:&AttractionName, out:&AttractionDescription);
+	#End
+
+	#Variables
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			AttractionDescription [ DataType = 'Attribute:AttractionDescription' ]
+	#End
+
+	#Properties
+		Name = "GetAttractionDescriptionAgent"
+
+		Description = "GetAttractionDescriptionAgent"
+	#End
+
+}

@@ -1,0 +1,9 @@
+Document GetAttractionCountryAndCity_prompt
+{
+	#Properties
+		Name = "GetAttractionCountryAndCity_prompt"
+
+		Description = "GetAttractionCountryAndCity_prompt"
+	#End
+
+}

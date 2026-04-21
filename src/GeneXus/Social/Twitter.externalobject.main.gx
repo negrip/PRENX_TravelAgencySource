@@ -1,0 +1,101 @@
+ExternalObject Twitter
+{
+	#ExternalMethods
+		Tweet
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				text
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Tweet
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				text
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				image
+
+					[
+
+						Type = 'Image'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Follow
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				userName
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Twitter"
+	#End
+
+}

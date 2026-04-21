@@ -1,0 +1,17 @@
+SDT AttractionCategoryInfo
+{
+		AttractionCategoryInfo	{
+
+			CategoryId [ DataType = 'Attribute:CategoryId' ]
+
+			CategoryName [ DataType = 'Attribute:CategoryName' ]
+
+		}
+
+	#Properties
+		Name = "AttractionCategoryInfo"
+
+		Description = "AttractionCategoryInfo"
+	#End
+
+}

@@ -1,0 +1,67 @@
+<layout type="Web">
+	<view>
+		<responsive name="Main" class="ContainerFluid PromptContainer" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]">
+			<row>
+				<cell class="PromptAdvancedBarCell">
+					<responsive name="AdvancedContainer" class="AdvancedContainerVisible" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+						<row>
+							<cell>
+								<responsive name="CountryIdFilterContainer" class="AdvancedContainerItem AdvancedContainerItemExpanded" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+									<row>
+										<cell>
+											<label name="LblCountryIdFilter" caption="=CountryId.Title" class="WWAdvancedLabel WWFilterLabel" gxFormat="HTML" />
+										</cell>
+									</row>
+									<row>
+										<cell class="WWFiltersCell">
+											<input attribute="&amp;cCountryId" labelPosition="None" />
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<responsive name="CountryNameFilterContainer" class="AdvancedContainerItem AdvancedContainerItemExpanded" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+									<row>
+										<cell>
+											<label name="LblCountryNameFilter" caption="=CountryName.Title" class="WWAdvancedLabel WWFilterLabel" gxFormat="HTML" />
+										</cell>
+									</row>
+									<row>
+										<cell class="WWFiltersCell">
+											<input attribute="&amp;cCountryName" labelPosition="None" />
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+				<cell class="WWGridCell">
+					<responsive name="GridTable" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]},{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}]]}]">
+						<row>
+							<cell class="ToggleCell">
+								<action name="BtnToggle" onClickEvent="'Toggle'" caption="|||" class="BtnToggle" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<tabularGrid name="Grid1" class="PromptGrid" maxRows="10">
+									<input attribute="&amp;LinkSelection" title="" class="SelectionAttribute" columnClass="WWActionColumn" returnOnClick="True" />
+									<input attribute="CountryId" title="=CountryId.ContextualTitle" columnClass="WWColumn" />
+									<input attribute="CountryName" title="=CountryName.ContextualTitle" class="DescriptionAttribute" columnClass="WWColumn" returnOnClick="True" readOnly="True" />
+								</tabularGrid>
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<action name="btn_cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnCancel" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

@@ -1,0 +1,11 @@
+Attribute CityId
+{
+	#Properties
+		Name = "CityId"
+
+		BasedOn = "Id"
+
+		Autonumber = "False"
+	#End
+
+}

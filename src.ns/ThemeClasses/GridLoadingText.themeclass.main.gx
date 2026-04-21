@@ -1,0 +1,7 @@
+ThemeClass GridLoadingText
+{
+	#Properties
+		Name = "GridLoadingText"
+	#End
+
+}

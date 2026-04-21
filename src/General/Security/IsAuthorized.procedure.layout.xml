@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ReportLayout>
+  <Properties />
+  <Bands>
+    <CTRL_PRINTBLOCK>
+      <Properties><Property><Name>RPT_INTERNAL_NAME</Name><Value>printBlock1</Value></Property><Property><Name>RPT_ID</Name><Value>1</Value></Property><Property><Name>RPT_HEIGHT</Name><Value>100</Value></Property></Properties>
+    </CTRL_PRINTBLOCK>
+  </Bands>
+</ReportLayout>

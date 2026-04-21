@@ -1,0 +1,17 @@
+Image SugarloafMountain
+{
+	<?xml version="1.0" encoding="utf-16"?>
+
+	<Images>
+
+	  <ImageItem><Properties><Property><Name>Name</Name><Value>SugarloafMountain.jpg</Value></Property><Property><Name>Description</Name><Value>Sugarloaf Mountain.jpg</Value></Property><Property><Name>ThemeReference</Name><Value>NULL</Value></Property><Property><Name>LanguageReference</Name><Value>NULL</Value></Property><Property><Name>ImageOriginalFullPath</Name><Value>SugarloafMountain.jpg</Value></Property></Properties></ImageItem>
+
+	</Images>
+
+	#Properties
+		Name = "SugarloafMountain"
+
+		Description = "SugarloafMountain"
+	#End
+
+}

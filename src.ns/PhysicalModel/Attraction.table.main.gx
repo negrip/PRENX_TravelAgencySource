@@ -1,0 +1,31 @@
+Table Attraction
+{
+		AttractionId*
+
+		AttractionName
+
+		AttractionDescription
+
+		AttractionEmbedding
+
+		AttractionPhoto
+
+		CategoryId?
+
+		CountryId
+
+		CityId
+
+	#Indexes
+		IAttraction
+		IAttraction1
+		IAttraction2
+	#End
+
+	#Properties
+		Name = "Attraction"
+
+		Description = "Attraction"
+	#End
+
+}

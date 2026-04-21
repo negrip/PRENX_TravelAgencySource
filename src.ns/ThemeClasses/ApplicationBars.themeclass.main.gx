@@ -1,0 +1,7 @@
+ThemeClass ApplicationBars
+{
+	#Properties
+		Name = "ApplicationBars"
+	#End
+
+}

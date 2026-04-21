@@ -1,0 +1,7 @@
+Module Client
+{
+	#Properties
+		Name = "Client"
+	#End
+
+}

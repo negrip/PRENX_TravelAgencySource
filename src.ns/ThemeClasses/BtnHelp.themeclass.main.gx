@@ -1,0 +1,7 @@
+ThemeClass BtnHelp
+{
+	#Properties
+		Name = "BtnHelp"
+	#End
+
+}

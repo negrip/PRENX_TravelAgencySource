@@ -1,0 +1,28 @@
+DataProvider GetCountries
+{
+	Countries
+	{
+		CountriesItem
+		{
+			CountryId
+			CountryName
+			City
+			{
+				CityItem
+				{
+					CityId
+					CityName
+				}
+			}
+		}
+	}
+
+	#Properties
+		Name = "GetCountries"
+
+		Description = "GetCountries"
+
+		Output = "Countries"
+	#End
+
+}

@@ -1,0 +1,15 @@
+Domain WeatherCondition
+{
+	#Properties
+		Name = "WeatherCondition"
+
+		DataType = "Character(1)"
+
+		Length = "1"
+
+		MaximumLength = "1"
+
+		EnumValues = "Sunny, Sunny, S; Cloudy, Cloudy, C; Rainy, Rainy, R; Windy, Windy, W"
+	#End
+
+}

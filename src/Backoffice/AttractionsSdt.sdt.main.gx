@@ -1,0 +1,25 @@
+SDT AttractionsSdt
+{
+		AttractionsSdt [ Collection = 'True' ]	{
+
+			AttractionName [ DataType = 'Attribute:AttractionName', Collection = 'False', ControlType = 'Edit' ]
+
+			AttractionDescription [ DataType = 'Attribute:AttractionDescription', Collection = 'False', ControlType = 'Edit' ]
+
+			AttractionPhoto [ DataType = 'Attribute:AttractionPhoto' ]
+
+			CategoryName [ DataType = 'Attribute:CategoryName' ]
+
+			CountryName [ DataType = 'Attribute:CountryName' ]
+
+			CityName [ DataType = 'Attribute:CityName' ]
+
+		}
+
+	#Properties
+		Name = "AttractionsSdt"
+
+		Description = "AttractionsSdt"
+	#End
+
+}

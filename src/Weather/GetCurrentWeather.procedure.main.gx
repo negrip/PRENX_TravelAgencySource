@@ -1,0 +1,72 @@
+Procedure GetCurrentWeather
+{
+	/* JSON retrieved by API:
+	{'location': {'name': 'Paris', 'region': 'Ile-de-France', 'country': 'France', 
+	'lat': 48.8667, 'lon': 2.3333, 'tz_id': 'Europe/Paris', 'localtime_epoch': 1759450775, 
+	'localtime': '2025-10-03 02:19'}, 'current': {'last_updated_epoch': 1759450500, 
+	'last_updated': '2025-10-03 02:15', 'temp_c': 13.2, 'temp_f': 55.8, 'is_day': 0, 
+	'condition': {'text': 'Partly Cloudy', 'icon': '//cdn.weatherapi.com/weather/64x64/night/116.png', 
+	'code': 1003}, 'wind_mph': 4.9, 'wind_kph': 7.9, 'wind_degree': 158, 'wind_dir': 'SSE', 
+	'pressure_mb': 1021, 'pressure_in': 30.15, 'precip_mm': 0, 'precip_in': 0, 'humidity': 62, 
+	'cloud': 0, 'feelslike_c': 12.8, 'feelslike_f': 55, 'windchill_c': 13.2, 'windchill_f': 55.7, 
+	'heatindex_c': 13.6, 'heatindex_f': 56.4, 'dewpoint_c': 2.3, 'dewpoint_f': 36.1, 'vis_km': 10, 
+	'vis_miles': 6, 'uv': 0, 'gust_mph': 7.9, 'gust_kph': 12.7}, 
+	'infoLink': 'https://weathergpt.vercel.app/Paris'}*/
+	
+	&httpclient.Host = "weathergpt.vercel.app"
+	&httpclient.Secure = 1
+	&httpclient.baseURl = "/api/"
+	&httpclient.Execute("GET","weather?location="+&CityName )
+	
+	&WeatherResponse.FromJson( &httpclient.ToString() ) 
+	&CityWeather.Temperature = &WeatherResponse.current.temp_c.ToString()
+	&CityWeather.WeatherText = &WeatherResponse.current.condition.text
+	&CityWeather.WeatherIconURL = &WeatherResponse.current.condition.icon
+	&CityWeather.Wind =  &WeatherResponse.current.wind_kph.ToString()
+	&wind = &WeatherResponse.current.wind_kph
+	&wt = &CityWeather.WeatherText
+	
+	Do Case
+		Case &wt = "Sunny" or &wt = "Clear"
+			&CityWeather.WeatherCondition = WeatherCondition.Sunny
+		Case &wt in ("Partly cloudy", "Mostly sunny","Mostly cloudy","Overcast","Cloudy","Patchy rain nearby")
+			&CityWeather.WeatherCondition = WeatherCondition.Cloudy
+		Case &wt in ("Light rain","Moderate rain","Heavy rain","Light drizzle","Patchy rain possible","Rain shower","Patchy light rain")
+			&CityWeather.WeatherCondition = WeatherCondition.Rainy
+		Case &wind >= 20
+			&CityWeather.WeatherCondition = WeatherCondition.Windy
+		Otherwise
+			&CityWeather.WeatherCondition = WeatherCondition.Cloudy
+	EndCase
+
+	#Rules
+		parm(in:&CityName, out:&CityWeather);
+	#End
+
+	#Variables
+			httpclient [ DataType = 'HttpClient' ]
+
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			WeatherResponse [ DataType = 'WeatherResponse' ]
+
+			CityWeather [ DataType = 'CityWeather' ]
+
+			wt [ DataType = 'VarChar(40)' ]
+
+			wind
+
+			CityName [ DataType = 'Attribute:CityName' ]
+	#End
+
+	#Properties
+		Name = "GetCurrentWeather"
+
+		Description = "GetCurrentWeather"
+
+		MainProgram = "False"
+
+		CallProtocol = "Command Line"
+	#End
+
+}

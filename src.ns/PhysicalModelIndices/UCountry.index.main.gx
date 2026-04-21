@@ -1,0 +1,15 @@
+Index UCountry
+{
+	CountryName
+
+	#Index
+		Source = "User"
+
+		Type = "Unique"
+	#End
+
+	#Properties
+		Name = "UCountry"
+	#End
+
+}

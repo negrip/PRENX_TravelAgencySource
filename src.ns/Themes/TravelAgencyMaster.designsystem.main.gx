@@ -1,0 +1,127 @@
+DesignSystem TravelAgencyMaster
+{
+	#DesignTokens
+		tokens TravelAgencyMaster{
+		
+		}
+	#End
+
+	#DesignStyles
+		styles TravelAgencyMaster
+		{
+		    @import TravelAgencyBase;
+		
+		    .header-image {
+		        gx-content-mode: fill-keeping-aspect;
+		    }
+		
+		    .header-mask {
+		        background-color: $colors.opacity;
+		    }
+		
+		    .menu-label {
+		        font-weight: 500;
+		        font-size: 20px;
+		        line-height: 29px;
+		        text-align: center;
+		        color: $colors.menu__item;
+		    }
+		
+		    .header-logo-title__travel {
+		        font-weight: 400;
+		        font-size: 15px;
+		        line-height: 22px;
+		        letter-spacing: 1px;
+		        color: $colors.gray00;
+		    }
+		
+		    .header-logo-title__agency {
+		        font-weight: 700;
+		    }
+		
+		    .menu-table {
+		        gap: 45px;
+		    }
+		
+		    .menu-button {
+		        border-block: 3px solid transparent;
+		    }
+		
+		    .menu-button--selected {
+		        border-block-end-color: $colors.primary;
+		    }
+		
+		    .banner-table
+		    {
+		        background-color: $colors.primary;
+		    }
+		
+		    .copyright-table
+		    {
+		        background-color: $colors.secondary;        
+		    }
+		
+		    .banner-h1 {
+		        font-family: $fonts.additional;
+		        font-weight: 600;
+		        font-size: 36px;
+		        color: $colors.text__on-primary;
+		    }
+		
+		    .banner-h2 {
+		        font-family: $fonts.secondary;
+		        font-weight: 500;
+		        font-size: 20px;
+		        color: $colors.text__on-primary;
+		        text-decoration: underline;
+		    }
+		
+		    .copyright {
+		        font-family: $fonts.secondary;
+		        font-weight: 400;
+		        font-size: 20px;
+		        color: $colors.gray200;
+		    }
+		
+		    .copyright-button {    
+		    }
+		
+		    #region Floating Chat
+		        .dialog::part(dialog) {
+		            z-index: 101;
+		            padding-inline-end: 20px;
+		        }
+		
+		        .dialog-custom::part(dialog){
+		            z-index: 101;
+		            //padding-inline-end: 58px; 
+		            //margin-block-end: 80px;
+		        }
+		
+		        .chat__button-primary {
+		            @include button__primary;
+		            font-size: 18px;
+		            line-height: 20px;
+		            --gx-button-image-margin: 8px;
+		            font-weight: 800;
+		            color: $colors.text__on-primary;
+		            border-radius: 30px;
+		            background-color: $colors.Primary;
+		            max-inline-size: max-content;
+		            padding-inline: 15px;
+		            gx-highlighted-background-color: $colors.primary--highlighted;
+		            gx-button-hovered-class: button__primary--hovered;
+		            }
+		    #endregion
+		
+		
+		}
+	#End
+
+	#Properties
+		Name = "TravelAgencyMaster"
+
+		Description = "TravelAgencyMaster"
+	#End
+
+}

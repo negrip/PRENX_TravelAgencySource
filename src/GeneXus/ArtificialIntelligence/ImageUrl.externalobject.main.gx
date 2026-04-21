@@ -1,0 +1,43 @@
+ExternalObject ImageUrl
+{
+	#ExternalProperties
+		Url
+
+			[
+
+				Type = 'VarChar',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setUrl',
+
+				JavaExternalGetMethod = 'getUrl'
+
+			]
+
+		
+
+		Detail
+
+			[
+
+				Type = 'VarChar',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setDetail',
+
+				JavaExternalGetMethod = 'getDetail'
+
+			]
+	#End
+
+	#Properties
+		Name = "ImageUrl"
+
+		JavaExternalName = "OpenAIResponse.StructuredContentItem.ImageUrl"
+
+		ExternalPackageName = "com.genexus.util.saia"
+	#End
+
+}

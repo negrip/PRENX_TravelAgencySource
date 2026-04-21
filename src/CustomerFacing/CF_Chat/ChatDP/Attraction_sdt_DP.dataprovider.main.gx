@@ -1,0 +1,26 @@
+DataProvider Attraction_sdt_DP
+{
+	AttractionsSdt from Attraction
+	{
+		AttractionsSdtItem
+		{
+			AttractionName = AttractionName
+			AttractionDescription = AttractionDescription
+			AttractionPhoto = AttractionPhoto
+			CategoryName = CategoryName
+			CountryName = CountryName
+			CityName = CityName
+		}
+	}
+
+	#Properties
+		Name = "Attraction_sdt_DP"
+
+		Description = "Attraction_sdt_DP"
+
+		Output = "AttractionsSdt"
+
+		Collection = "False"
+	#End
+
+}

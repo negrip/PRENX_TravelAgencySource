@@ -1,0 +1,25 @@
+SDT GeolocationProximityAlert
+{
+		GeolocationProximityAlert	{
+
+			Name [ DataType = 'Character(50)' ]
+
+			Description [ DataType = 'Character(50)' ]
+
+			GeoLocation [ DataType = 'Geolocation, GeneXus' ]
+
+			Radius
+
+			ExpirationTime [ DataType = 'DateTime', Collection = 'False', ControlType = 'Edit' ]
+
+			ActionName [ DataType = 'Character(50)' ]
+
+		}
+
+	#Properties
+		Name = "GeolocationProximityAlert"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

@@ -1,0 +1,9 @@
+Attribute AttractionDescription
+{
+	#Properties
+		Name = "AttractionDescription"
+
+		BasedOn = "Description, GeneXusUnanimo"
+	#End
+
+}

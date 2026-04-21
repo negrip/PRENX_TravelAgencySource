@@ -1,0 +1,55 @@
+Procedure ListPrograms
+{
+	
+	&ProgramNames = new()
+	
+	&name = !"WWAttraction"
+	&description = "Attractions"
+	&link = WWAttraction.Link()
+	Do 'AddProgram'
+	
+	&name = !"WWCategory"
+	&description = "Categories"
+	&link = WWCategory.Link()
+	Do 'AddProgram'
+	
+	&name = !"WWCountry"
+	&description = "Countries"
+	&link = WWCountry.Link()
+	Do 'AddProgram'
+	
+	Sub 'AddProgram'
+		&IsAuthorized = True
+		&IsAuthorized = IsAuthorized(&name)
+		If (&IsAuthorized)
+			&ProgramName = new ProgramNames.ProgramName()
+			&ProgramName.Name = &name
+			&ProgramName.Description = &description
+			&ProgramName.Link = &link
+			&ProgramNames.Add(&ProgramName)
+		Endif
+	EndSub
+
+	#Rules
+		parm(out:&ProgramNames);
+	#End
+
+	#Variables
+			IsAuthorized [ DataType = 'Boolean' ]
+
+			ProgramNames [ DataType = 'ProgramNames, General.UI' ]
+
+			ProgramName [ DataType = 'ProgramNames.ProgramName, General.UI' ]
+
+			name [ DataType = 'ObjectName, GeneXus' ]
+
+			description [ DataType = 'ObjectName, GeneXus' ]
+
+			link [ DataType = 'Url, GeneXus' ]
+	#End
+
+	#Properties
+		Name = "ListPrograms"
+	#End
+
+}

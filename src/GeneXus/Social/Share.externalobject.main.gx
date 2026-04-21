@@ -1,0 +1,211 @@
+ExternalObject Share
+{
+	#ExternalMethods
+		ShareText
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				text
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				url
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+		
+
+				title
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShareImage
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				image
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Image'
+
+					]
+
+		
+
+				text
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				url
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+		
+
+				title
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShareFile
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				uri
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+		
+
+				text
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				title
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShareFile
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				uri
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Share"
+	#End
+
+}

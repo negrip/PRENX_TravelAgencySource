@@ -1,0 +1,173 @@
+ExternalObject ExternalStorage
+{
+	#ExternalMethods
+		Create
+
+			[
+
+				Description = 'Instances a StorageProvider data type for a specific provider with a set of properties',
+
+				Type = 'Boolean',
+
+				NetFrameworkExternalName = 'Create',
+
+				NetFrameworkExternalType = 'System.Boolean',
+
+				JavaExternalName = 'create',
+
+				JavaExternalType = 'boolean'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				StorageType
+
+					[
+
+						AccessType = 'In',
+
+						BasedOn = 'StorageProviderType, GeneXus.Common.Configuration'
+
+					]
+
+		
+
+				Properties
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Properties'
+
+					]
+
+		
+
+				OutStorageProvider
+
+					[
+
+						AccessType = 'InOut',
+
+						Type = 'StorageProvider'
+
+					]
+
+		
+
+				OutMessages
+
+					[
+
+						AccessType = 'InOut',
+
+						Type = 'Messages, GeneXus.Common',
+
+						NetFrameworkExternalType = 'GXBaseCollection<SdtMessages_Message>',
+
+						JavaExternalType = 'GXBaseCollection<SdtMessages_Message>[]'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Connect
+
+			[
+
+				Type = 'Boolean',
+
+				NetFrameworkExternalName = 'Connect',
+
+				NetFrameworkExternalType = 'System.Boolean',
+
+				JavaExternalName = 'connect',
+
+				JavaExternalType = 'boolean'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				ProfileName
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				Properties
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Properties'
+
+					]
+
+		
+
+				OutStorageProvider
+
+					[
+
+						AccessType = 'InOut',
+
+						Type = 'StorageProvider'
+
+					]
+
+		
+
+				OutMessages
+
+					[
+
+						AccessType = 'InOut',
+
+						Type = 'Messages, GeneXus.Common',
+
+						NetFrameworkExternalType = 'GXBaseCollection<SdtMessages_Message>',
+
+						JavaExternalType = 'GXBaseCollection<SdtMessages_Message>[]'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "ExternalStorage"
+
+		Namespace = "GeneXus.Configuration"
+
+		NetFrameworkExternalName = "ExternalStorage"
+
+		JavaExternalName = "ExternalStorage"
+
+		ExternalPackageName = "com.genexus.configuration"
+	#End
+
+}

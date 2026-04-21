@@ -1,0 +1,11 @@
+MasterPanel TravelAgencyMaster
+{
+	<Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+
+	#Properties
+		Name = "TravelAgencyMaster"
+
+		Description = "Travel Agency Master"
+	#End
+
+}

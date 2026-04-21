@@ -1,0 +1,9 @@
+Attribute AttractionPhoto
+{
+	#Properties
+		Name = "AttractionPhoto"
+
+		DataType = "Image"
+	#End
+
+}

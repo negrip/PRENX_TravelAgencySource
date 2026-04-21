@@ -1,0 +1,52 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="Table" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100,&quot;offset&quot;:0}],[{&quot;width&quot;:100,&quot;offset&quot;:0}]]},{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[],[{&quot;width&quot;:100}],[{&quot;width&quot;:100,&quot;offset&quot;:0}]]}]">
+			<row>
+				<cell>
+					<responsive name="TableTop" class="ww__actions-container" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100,&quot;offset&quot;:0}]]}]">
+						<row>
+							<cell class="ww__view__button-back__cell">
+								<label name="ViewAll" caption="Countries" class="ww__view__button-back" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<table name="TableFixedData_1" class="Flex ww__view__title-table" tableType="Flex">
+						<row>
+							<cell flexGrow="0">
+								<input attribute="CountryName" labelPosition="None" labelCaption="Name" class="heading-01" inputType="Values" dataSourceFrom="Values" />
+							</cell>
+						</row>
+					</table>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<tab name="Tab" class="ww__view__tab" historyManagement="True">
+						<tabPage name="General" caption="General">
+							<responsive name="TableGeneral" class="ww__view__tab__form-container" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]">
+								<row>
+									<cell>
+										<component name="GeneralWC" />
+									</cell>
+								</row>
+							</responsive>
+						</tabPage>
+						<tabPage name="City" caption="City">
+							<responsive name="TableCity" class="ww__view__tab__form-container" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]">
+								<row>
+									<cell>
+										<component name="CityWC" />
+									</cell>
+								</row>
+							</responsive>
+						</tabPage>
+					</tab>
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

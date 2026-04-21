@@ -1,0 +1,7 @@
+ThemeClass FileUpload
+{
+	#Properties
+		Name = "FileUpload"
+	#End
+
+}

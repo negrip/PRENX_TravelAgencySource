@@ -1,0 +1,9 @@
+Attribute AttractionId
+{
+	#Properties
+		Name = "AttractionId"
+
+		BasedOn = "Id"
+	#End
+
+}

@@ -1,0 +1,9 @@
+Attribute AttractionAuxName
+{
+	#Properties
+		Name = "AttractionAuxName"
+
+		BasedOn = "Name"
+	#End
+
+}

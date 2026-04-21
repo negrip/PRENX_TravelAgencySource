@@ -1,0 +1,821 @@
+UserControl Chat
+{
+	#UserControlScreenTemplate
+		
+		Sub-Template Angular
+			{{=<% %>=}}
+			@defer (when translationsReady) {
+				<ch-theme
+					[avoidFlashOfUnstyledContent]="false"
+					[model]="themeModel"
+				>
+				</ch-theme>
+				<ch-chat
+					#chatComponent
+					[class]="Class" 
+					[translations]="Translations"
+					[items]="itemsProxy"
+					[loadingState] = "'all-records-loaded'"
+					[waitingResponse] = "WaitingResponse"
+					[sendButtonDisabled] = "WaitingResponse"
+					[showAdditionalContent]="ShowAdditionalContent"
+					[autoScroll]="AutoScroll"
+					[newUserMessageAlignment]="NewUserMessageAlignment"
+					[newUserMessageScrollBehavior]="NewUserMessageScrollBehavior"
+					[callbacks]="callbacks"
+					[sendContainerLayout]="sendContainerLayout"
+					[markdownTheme]="markdownTheme"
+				>
+					<%#ShowEmptyChatContent%>
+					<div slot="empty-chat">
+						<slot name="EmptyChat" />
+					</div>
+					<%/ShowEmptyChatContent%>
+					<%#ShowAdditionalContent%>
+					<div slot="additional-content">
+						<slot name="AdditionalContent" />
+					</div>
+					<%/ShowAdditionalContent%>
+				</ch-chat>
+			}
+		EndSub
+		
+		Sub-Template Web
+			<ch-theme avoid-flash-of-unstyled-content="false"></ch-theme>
+			<ch-chat
+				class="{{Class}}" 
+				show-additional-content="{{ShowAdditionalContent}}"
+				auto-scroll="{{AutoScroll}}"
+				new-user-message-alignment="{{NewUserMessageAlignment}}"
+				new-user-message-scroll-behavior="{{NewUserMessageScrollBehavior}}"
+			>
+				{{#ShowEmptyChatContent}}
+				<div slot="empty-chat">
+					<slot name="EmptyChat" />
+				</div>
+				{{/ShowEmptyChatContent}}
+				{{#ShowAdditionalContent}}
+				<div slot="additional-content">
+					<slot name="AdditionalContent" />
+				</div>
+				{{/ShowAdditionalContent}}
+			</ch-chat>
+		EndSub
+	#End
+
+	#UserControlProperties
+		<Definition version="2.0">
+			<Properties>
+				<Properties Name="Appearance">
+					<Property Name="Class" Type="class" Default="chat" />
+					<Property Name="MarkdownStyle" Type="KBObject" FilterType="DesignSystem" />
+					<Property Name="ShowEmptyChatContent" Type="boolean" Default="true" Scope="DesignTime" />
+					<Property Name="ShowAdditionalContent" Type="boolean" Default="false" Scope="DesignTime" />
+				</Properties>
+				
+				<Properties Name="Behavior">
+					<Property Name="WaitingResponse" Type="boolean" Default="false" Scope="Runtime" />
+				
+					<Property Name="AutoScroll" Type="string" Default="never">
+						<Values>
+							<Value Description="Never">never</Value>
+							<Value Description="At scroll end">at-scroll-end</Value>
+						</Values>
+					</Property>
+					
+					<Property Name="NewUserMessageAlignment" Type="string" Default="start">
+						<Values>
+							<Value Description="Start">start</Value>
+							<Value Description="End">end</Value>
+						</Values>
+					</Property>
+					
+					<Property Name="NewUserMessageScrollBehavior" Type="string" Default="smooth">
+						<Values>
+							<Value Description="Instant">instant</Value>
+							<Value Description="Smooth">smooth</Value>
+						</Values>
+					</Property>
+				</Properties>
+				
+				<Properties Name="Data Binding">
+					<Property Name="Messages" Type="variable" FilterType="UIControls.Chat.ChatMessageUI" />
+					<Property Name="Translations" Type="variable" FilterType="UIControls.Chat.Translations" />
+				</Properties>
+		
+				<Properties Name="Handlers">
+					<Property Name="SendHistoryMessages" Type="boolean" Default="true" />
+					<Property Name="SendMessageHandlerUrl" Type="string" Scope="Runtime" />
+					<Property Name="SendMessageHandlerObject" Type="KBObject" FilterType="Procedure" />
+				</Properties>
+			</Properties>
+		
+			<Methods>
+				<Method Name="Send">
+					<Parameters>
+						<Parameter Name="content" Type="string" />
+					</Parameters>
+				</Method>
+				<Method Name="StopResponse" />
+		
+				<Method Name="AddNewMessage">
+					<Parameters>
+						<Parameter Name="message" Type="sdt" />
+					</Parameters>
+				</Method>
+				<Method Name="UpdateLastMessage">
+					<Parameters>
+						<Parameter Name="message" Type="sdt" />
+						<Parameter Name="mode" Type="string" Optional="true" Description="'replace' | 'concat'" />
+					</Parameters>
+				</Method>
+			</Methods>
+			
+		  	<Events>
+				<Event Name="SendMessage" />
+				<Event Name="MessageSent" />
+				<Event Name="ResponseCompleted" />
+				<Event Name="ResponseStopped" />
+				<Event Name="ResponseError" />
+				<Event Name="ConnectionFailed" />
+			</Events>
+		  
+			<Settings>
+				<Toolbox>
+					<Name>Chat</Name>
+					<Categories>
+						<Category>GeneXusUIControls</Category>
+					</Categories>
+				</Toolbox>
+						
+				<Variables>
+					<Variable
+						Name="chatMessages"
+						Type="MessageUI, GeneXusUIControls.Chat"
+						Collection="true"
+						SetProperty="Messages"
+					/>
+					<Variable
+						Name="chatTranslations"
+						Type="Translations, GeneXusUIControls.Chat"
+						SetProperty="Translations"
+					/>
+				</Variables>
+				
+				<Properties>
+					<Property Name="MarkdownStyle" Value="GeneXusUnanimo.Markdown" />
+				</Properties>
+				
+				<Sources>
+					<Script type="code-snippet">
+						//Sub 'StartChat'
+						//	&chatTranslations = GeneXusUIControls.Chat.TranslationsProvider()
+						//EndSub
+					</Script>		
+				</Sources>
+			</Settings>
+			
+		 	<Platforms>
+				<Platform Name="Angular">
+					<ScreenTemplate Name="Angular" />
+					
+					<Dependencies>
+						<Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" />
+					</Dependencies>
+				
+					<Sources>
+						<Script Type="ng-component-import" Name="Imports">
+							import { ViewChild, ElementRef, SimpleChanges} from "@angular/core";
+							import { GeneXusSDNetwork } from '@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/network';
+							import { ChangeDetectorRef, inject} from "@angular/core";
+						</Script>
+						
+						<Script Type="ng-component-classbody" Name="Body">
+							@ViewChild('chatComponent', { static: false }) chatRef?: ElementRef;
+							protected cdr = inject(ChangeDetectorRef);
+							themeModel: any;
+							itemsProxy: any;
+							callbacks: any;
+							sendContainerLayout: any;
+							markdownTheme: string = null;
+							fetchController: AbortController; 
+							get translationsReady(): boolean {
+								return (
+									this.Translations.text && 
+									this.Translations.placeholder && 
+									this.Translations.accessibleName
+								);
+							}
+							
+							ngOnChanges(changes: SimpleChanges) {
+								if (changes['Messages'] && this.Messages) {
+									this.itemsProxy = this.#createProxy();
+								}
+							}
+							
+							#sendChat = () => {
+								if (this.SendMessageHandlerUrl) {
+									this.#sendChatHandler();
+								} else {
+									this.#sendChatEvent();
+								}
+							}
+							
+							#sendChatEvent = () => {
+								this.SendMessage();
+							}
+							
+							#sendChatHandler = async () => {
+								const messages = [...this.Messages];
+								const assistantMessage = {
+									id: messages.length.toString(),
+									role: "assistant",
+									status: "waiting",
+									content: this.Translations.text.processing
+								};
+								
+								this.WaitingResponse = true;
+								
+								await this.chatRef.nativeElement.addNewMessage(assistantMessage);
+								
+								this.fetchController = new AbortController();
+								const data = this.SendHistoryMessages ? messages : [messages.at(-1)];			
+								
+								try {
+									fetch(this.SendMessageHandlerUrl, {
+										method: 'POST',
+										headers: {
+											'Content-Type': 'application/json'
+										},
+										body: JSON.stringify(data),
+										signal: this.fetchController.signal
+									})
+									.then(async (response) => {
+										
+										if (!response.ok) {
+											throw new Error(`HTTP error! Status: ${response.status}`);
+										}
+										
+										await this.#sendChatHandlerResponse(assistantMessage, response);
+										
+										this.WaitingResponse = false;
+										
+										if (assistantMessage.role === 'error' && this.ResponseError) {
+											this.ResponseError();
+										} else if (this.ResponseCompleted) {
+											this.ResponseCompleted();
+										}
+									})
+									.catch(error => {
+										if (error.name !== 'AbortError') {
+											this.#error();
+										}
+									})
+									.finally(() => {
+										this.cdr.markForCheck();
+									});
+									
+									if (this.MessageSent) {
+										this.MessageSent();
+									}
+								} catch {
+									this.#error();
+								} finally {
+									this.cdr.markForCheck();
+								}
+							}
+							
+							#sendChatHandlerResponse = async (assistantMessage, response) => {
+								const reader = response.body.getReader();
+								const decoder = new TextDecoder();
+								let responseComplete = false;
+								let buffer = '';
+								
+								assistantMessage.content = "";
+								assistantMessage.status = "streaming"
+								this.chatRef.nativeElement.updateLastMessage(assistantMessage, "replace");
+							
+								do {
+									const { done, value } = await reader.read();
+									
+									buffer += decoder.decode(value, { stream: true });
+									
+									let boundary = this.#getNextBoundary(buffer, done);
+									while (buffer.length > 0 && boundary !== -1) {
+										const chunk = buffer.slice(0, boundary);
+										const jsonStartIndex = chunk.indexOf('{');
+										const jsonText = jsonStartIndex >= 0
+											? chunk.slice(jsonStartIndex)
+											: null;
+											
+										let chatResponse = null;
+										if (jsonText) {
+											try {
+												chatResponse = JSON.parse(jsonText);
+											} catch (e) {
+												chatResponse = null;
+											}
+										}
+									
+										const deltaMessage = this.#chatResponseToMessage(chatResponse);
+										if (deltaMessage) {
+											this.chatRef.nativeElement.updateLastMessage(
+												this.#updateAssistantMessage(assistantMessage, deltaMessage),
+												"replace"
+											);
+										}
+										
+										buffer = buffer.slice(boundary + 1);
+										boundary = this.#getNextBoundary(buffer, done);
+									}
+									
+									responseComplete = done;
+								} while (!responseComplete);
+									
+								assistantMessage.status = "complete"
+								this.chatRef.nativeElement.updateLastMessage(assistantMessage, "replace");
+							}
+			
+							#getNextBoundary = (str, done) => {
+								const index = str.indexOf('\n');
+								return index !== -1 ? index : (done ? str.length : -1);
+							}
+			
+							#chatResponseToMessage = (chatResponse) => {
+		
+								if (chatResponse && 'content' in chatResponse) {
+									return chatResponse;
+								}
+						
+								if (chatResponse?.choices || chatResponse?.data) {
+									const choice = chatResponse.choices?.at(0);
+									const content = choice?.delta?.content || choice?.message?.content;
+									const documents = chatResponse.data?.documents;
+									
+									return {
+										content,
+										sources: documents?.map(doc => {
+											let page = "";
+							
+											if (doc.metadata["loc.pageNumber"] && documents.filter(item => item.metadata.id === doc.metadata.id).length > 1) {
+												page = `#${doc.metadata["loc.pageNumber"]}`;
+											}
+										
+											return {
+												caption: `${doc.metadata.name}.${doc.metadata.extension}${page}`,
+												url:doc.metadata.source
+											};
+										})
+									};			
+								}
+							}
+							
+							#updateAssistantMessage = (assistant, delta) => {
+								assistant.content += delta.content ?? "";
+								(assistant.sources ??= []).push(...(delta.sources ?? []));
+								
+								if (delta.role === 'error') {
+									assistant.role = 'error';
+								}
+								if (delta.status) {
+									assistant.status = delta.status;
+								}
+		
+								return assistant;
+							}
+			
+							#stop = () => {
+								this.fetchController.abort();
+								this.WaitingResponse = false;
+								this.chatRef.nativeElement.updateLastMessage(
+									{
+										role: "assistant",
+										content: "",
+										status: "complete"
+									},
+									this.Messages.at(-1).status === "waiting" ? "replace" : "concat"
+								);
+								
+								if (this.ResponseStopped) {
+									this.ResponseStopped();
+								}
+							}
+							
+							#error = () => {
+								this.WaitingResponse = false;
+								this.chatRef.nativeElement.updateLastMessage(
+									{
+										role: "error",
+										content: this.Translations.text.error,
+										status: "complete"
+									},
+									"replace"
+								);
+								
+								if (this.ConnectionFailed) {
+									this.ConnectionFailed();
+								}
+							}
+								
+							#createProxy = () => {
+								return new Proxy(
+									this.Messages,
+									{
+										get(target, prop, receiver) {
+											const message = Reflect.get(target, prop, receiver);
+											
+											if (typeof prop !== "symbol" && Number.isInteger(Number(prop))) {
+												return {
+													id: message.id ? message.id : `auto-id-${prop}`,
+													role: message.role,
+													content: message.role === 'assistant' && message.sources ? 
+														{ message: message.content, sources: message.sources }
+														: message.content,
+													status: message.status ? message.status : 'complete'
+												}
+											}
+										
+											return message;
+										}
+									}
+								);
+							}
+						</Script>
+						
+						<Script Type="before-show" Name="init">
+							this.Messages ??= [];
+							this.itemsProxy = this.#createProxy();
+							
+							this.callbacks = {
+								sendChatMessages: this.#sendChat,
+								stopResponse: this.#stop
+							};
+							
+							if (this.SendMessageHandlerObject && !this.SendMessageHandlerUrl) {
+								this.SendMessageHandlerUrl =
+									GeneXusSDNetwork.applicationServerURL() + 
+									this.SendMessageHandlerObject
+										.slice(37)
+										.split('.')
+										.map((v, i, a) => i === a.length - 1 ? 'a' + v : v)
+										.join('.');
+							}
+							
+							this.themeModel = this.MarkdownStyle && {
+								name: "GeneXusUIControls.Chat.MarkdownStyle",
+								url: this.MarkdownStyle.substring(37) + ".css",
+								attachStyleSheet: false
+							};
+							this.markdownTheme = this.themeModel?.name ?? null;
+							this.sendContainerLayout = {
+								sendContainerBefore: ["stop-response-button"],
+								sendContainerAfter: ["send-button"]
+							};
+						</Script>
+						
+						<Script Type="method" Name="send" Async="true">
+							await this.chatRef.nativeElement.sendChatMessage({
+								id: "",
+								role: "user",
+								status: "complete",
+								content
+							});
+						</Script>
+						<Script Type="method" Name="stopResponse">
+							if (this.WaitingResponse) {
+								this.#stop();
+							}
+						</Script>
+						
+						<Script Type="method" Name="addNewMessage" Async="true">
+							await this.chatRef.nativeElement.addNewMessage(message);
+						</Script>
+						<Script Type="method" Name="updateLastMessage" Async="true">
+							const normalizedMessage = this.#chatResponseToMessage(message);
+							if (normalizedMessage) {
+								if (mode === "concat") {
+									await this.chatRef.nativeElement.updateLastMessage(
+										this.#updateAssistantMessage(this.Messages.at(-1), normalizedMessage),
+										"replace"
+									);					
+								} else {
+									await this.chatRef.nativeElement.updateLastMessage(normalizedMessage, "replace");
+								}						
+							}
+						</Script>
+					</Sources>
+				</Platform>
+				
+				<Platform Name="Web">
+					<ScreenTemplate Name="Web" />
+					
+					<Dependencies>
+						<Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" />
+						<Dependency Type="shared-module" source="chameleon/chameleon.esm.js" />
+					</Dependencies>
+					
+					<Sources>
+						<Script Type="method" Name="Send">
+							this.chatRef.addNewMessage({
+								id: "",
+								role: "user",
+								status: "complete",
+								content
+							}).then(() => {
+								this.sendChat();
+							});
+						</Script>
+						<Script Type="method" Name="StopResponse">
+							if (this.chatRef.waitingResponse) {
+								this.stop();
+							}
+						</Script>
+						<Script Type="method" Name="AddNewMessage">
+							this.chatRef.addNewMessage(message);
+						</Script>
+						<Script Type="method" Name="UpdateLastMessage">
+							const normalizedMessage = this.chatResponseToMessage(message);
+							if (normalizedMessage) {
+								if (mode === "concat") {
+									this.chatRef.updateLastMessage(
+										this.updateAssistantMessage(this.Messages.at(-1), normalizedMessage),
+										"replace"
+									);					
+								} else {
+									this.chatRef.updateLastMessage(normalizedMessage, "replace");
+								}						
+							}
+						</Script>
+						
+						<Script Type="before-show" Name="methods">
+							this.sendChat = () => {
+								if (this.SendMessageHandlerUrl) {
+									this.sendChatHandler();
+								} else {
+									this.sendChatEvent();
+								}
+							}
+							
+							this.sendChatEvent = () => {
+								if (this.SendMessage) {
+									this.SendMessage();
+								}
+							}
+							
+							this.sendChatHandler = () => {
+								const messages = [...this.Messages];
+								const assistantMessage = {
+									id: messages.length.toString(),
+									role: "assistant",
+									status: "waiting",
+									content: this.Translations.text.processing
+								};
+								
+								this.chatRef.waitingResponse = true;
+								this.chatRef.sendButtonDisabled = true;
+								this.chatRef.addNewMessage(assistantMessage);
+								
+								this.fetchController = new AbortController();
+								const data = this.SendHistoryMessages ? messages : [messages.at(-1)];			
+								
+								try {						
+									fetch(this.SendMessageHandlerUrl, {
+										method: 'POST',
+										headers: {
+											'Content-Type': 'application/json'
+										},
+										body: JSON.stringify(data),
+										signal: this.fetchController.signal
+									})
+									.then(async (response) => {
+										
+										if (!response.ok) {
+											throw new Error(`HTTP error! Status: ${response.status}`);
+										}
+										
+										await this.sendChatResponse(assistantMessage, response);
+										
+										this.chatRef.waitingResponse = false;
+										this.chatRef.sendButtonDisabled = false;
+										
+										if (assistantMessage.role === 'error' && this.ResponseError) {
+											this.ResponseError();
+											} else if (this.ResponseCompleted) {
+											this.ResponseCompleted();
+										}
+									})
+									.catch(error => {
+										if (error.name !== 'AbortError') {
+											this.error();
+										}
+									});
+									
+									if (this.MessageSent) {
+										this.MessageSent();
+									}
+									
+								} catch {
+									this.error();
+								}
+							}
+						
+							this.sendChatResponse = async (assistantMessage, response) => {
+								const reader = response.body.getReader();
+								const decoder = new TextDecoder();
+								let responseComplete = false;
+								let buffer = '';
+								
+								assistantMessage.content = "";
+								assistantMessage.status = "streaming"
+								this.chatRef.updateLastMessage(assistantMessage, "replace");
+							
+								do {
+									const { done, value } = await reader.read();
+									
+									buffer += decoder.decode(value, { stream: true });
+									
+									let boundary = this.getNextBoundary(buffer, done);
+									while (buffer.length > 0 && boundary !== -1) {
+										const chunk = buffer.slice(0, boundary);
+										const jsonStartIndex = chunk.indexOf('{');
+										const jsonText = jsonStartIndex >= 0
+											? chunk.slice(jsonStartIndex)
+											: null;
+											
+										let chatResponse = null;
+										if (jsonText) {
+											try {
+												chatResponse = JSON.parse(jsonText);
+											} catch (e) {
+												chatResponse = null;
+											}
+										}
+									
+										const deltaMessage = this.chatResponseToMessage(chatResponse);
+										if (deltaMessage) {
+											this.chatRef.updateLastMessage(
+												this.updateAssistantMessage(assistantMessage, deltaMessage),
+												"replace"
+											);					
+										}
+										
+										buffer = buffer.slice(boundary + 1);
+										boundary = this.getNextBoundary(buffer, done);
+									}
+									
+									responseComplete = done;
+								} while (!responseComplete);
+									
+								assistantMessage.status = "complete"
+								this.chatRef.updateLastMessage(assistantMessage, "replace");
+							}
+						
+							this.getNextBoundary = (str, done) => {
+								const index = str.indexOf('\n');
+								return index !== -1 ? index : (done ? str.length : -1);
+							}
+						
+							this.chatResponseToMessage = (chatResponse) => {
+						
+								if (chatResponse && 'content' in chatResponse) {
+									return chatResponse;
+								}
+						
+								if (chatResponse?.choices || chatResponse?.data) {
+									const choice = chatResponse.choices?.at(0);
+									const content = choice?.delta?.content || choice?.message?.content;
+									const documents = chatResponse.data?.documents;
+									
+									return {
+										content,
+										sources: documents?.map(doc => {
+											let page = "";
+							
+											if (doc.metadata["loc.pageNumber"] && documents.filter(item => item.metadata.id === doc.metadata.id).length > 1) {
+												page = `#${doc.metadata["loc.pageNumber"]}`;
+											}
+										
+											return {
+												caption: `${doc.metadata.name}.${doc.metadata.extension}${page}`,
+												url:doc.metadata.source
+											};
+										})
+									};			
+								}
+							}
+						
+							this.updateAssistantMessage = (assistant, delta) => {	
+								assistant.content += delta.content ?? "";
+								(assistant.sources ??= []).push(...(delta.sources ?? []));
+								
+								if (delta.role === 'error') {
+									assistant.role = 'error';
+								}
+								if (delta.status) {
+									assistant.status = delta.status;
+								}
+								
+								return assistant;
+							}
+						
+							this.stop = () => {
+								this.fetchController.abort();
+								this.chatRef.waitingResponse = false;
+								this.chatRef.sendButtonDisabled = false;
+								this.chatRef.updateLastMessage(
+									{
+										role: "assistant",
+										content: "",
+										status: "complete"
+									},
+									this.Messages.at(-1).status === "waiting" ? "replace" : "concat"
+								);
+								
+								if (this.ResponseStopped) {
+									this.ResponseStopped();
+								}
+							}
+						
+							this.error = () => {
+								this.chatRef.waitingResponse = false;
+								this.chatRef.sendButtonDisabled = false;
+								this.chatRef.updateLastMessage(
+									{
+										role: "error",
+										content: this.Translations.text.error,
+										status: "complete"
+									},
+									"replace"
+								);
+								
+								if (this.ConnectionFailed) {
+									this.ConnectionFailed();
+								}
+							}
+						</Script>
+						
+						<Script Type="after-show" Name="constructor">
+							const container = document.querySelector(`#${this.ContainerName}`);
+							const handlerObject = gx.fn.getHidden(`${this.ControlName.toUpperCase()}_Sendmessagehandlerobject`);
+							const markdownStyle = gx.fn.getHidden(`${this.ControlName.toUpperCase()}_Markdownstyle`);
+							
+							if (handlerObject && !this.SendMessageHandlerUrl) {
+								this.SendMessageHandlerUrl = gx.absoluteurl(handlerObject);
+							}
+							
+							this.themeRef = container.querySelector("ch-theme");
+							this.chatRef = container.querySelector("ch-chat");
+							
+							this.themeRef.model = markdownStyle && {
+								name: "GeneXusUIControls.Chat.MarkdownStyle",
+								url: gx.getThemeElement().href.replace(/[^/]+$/, `${markdownStyle}.css`),
+								attachStyleSheet: false
+							};
+							
+							this.chatRef.callbacks = {
+								sendChatMessages: this.sendChat,
+								stopResponse: this.stop
+							};
+							this.chatRef.waitingResponse = false;
+							this.chatRef.loadingState = "all-records-loaded";
+							this.chatRef.markdownTheme = this.themeRef.model?.name ?? null;
+							this.chatRef.items = new Proxy(
+								this.Messages,
+								{
+									get(target, prop, receiver) {
+										const message = Reflect.get(target, prop, receiver);
+										
+										if (typeof prop !== "symbol" && Number.isInteger(Number(prop))) {
+											return {
+												id: message.id ? message.id : `auto-id-${prop}`,
+												role: message.role,
+												content: message.role === 'assistant' && message.sources ? 
+													{ message: message.content, sources: message.sources }
+													: message.content,
+												status: message.status ? message.status : 'complete'
+											}
+										}
+									
+										return message;
+									}
+								}
+							);
+							this.chatRef.translations = this.Translations;
+							this.chatRef.sendContainerLayout = {
+								sendContainerBefore: ["stop-response-button"],
+								sendContainerAfter: ["send-button"]
+							};
+							
+							container.appendChild(this.chatRef);
+						</Script>
+					</Sources>
+				</Platform>
+			</Platforms>
+		</Definition>
+	#End
+
+	#Properties
+		Name = "Chat"
+	#End
+
+}

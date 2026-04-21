@@ -1,0 +1,65 @@
+WebComponent AttractionGeneral
+{
+	#Rules
+		parm(in:AttractionId);
+	#End
+
+	#Events
+		Event Start
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Load
+			CategoryName.Link = ViewCategory.Link(CategoryId, "")
+			CountryName.Link = ViewCountry.Link(CountryId, "")
+			AttractionEmbedding.Visible = False
+		EndEvent
+		
+		Event 'DoUpdate'
+			Attraction(TrnMode.Update, AttractionId)
+		EndEvent
+		
+		Event 'DoDelete'
+			Attraction(TrnMode.Delete, AttractionId)
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = False
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Attraction"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"AttractionId"
+			&TrnContextAtt.AttributeValue = &AttractionId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+	#End
+
+	#Variables
+			IsAuthorized [ DataType = 'Boolean' ]
+
+			AttractionId [ DataType = 'Attribute:AttractionId' ]
+
+			TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+			TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+			Session [ DataType = 'WebSession' ]
+
+			HTTPRequest [ DataType = 'HttpRequest' ]
+	#End
+
+	#Properties
+		Name = "AttractionGeneral"
+
+		Type = "Component"
+	#End
+
+}

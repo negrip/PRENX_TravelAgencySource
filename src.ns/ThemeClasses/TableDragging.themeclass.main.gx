@@ -1,0 +1,7 @@
+ThemeClass TableDragging
+{
+	#Properties
+		Name = "TableDragging"
+	#End
+
+}

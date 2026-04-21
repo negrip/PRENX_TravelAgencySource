@@ -1,0 +1,21 @@
+ExternalObject StoreInterop
+{
+	#ExternalMethods
+		AskForReview
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+	#End
+
+	#Properties
+		Name = "StoreInterop"
+
+		Namespace = "GX"
+	#End
+
+}

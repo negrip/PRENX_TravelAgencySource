@@ -1,0 +1,256 @@
+DesignSystem TravelAgencyNextSample
+{
+	#DesignTokens
+		tokens Unanimo (color-scheme:[light]|dark)
+		{
+		    //BORDER WIDTH
+		    #borders  {
+		        un-width--xs: 1px;
+		        un-width--s: 2px;
+		    }
+		    
+		    //BORDER RADIUS
+		    #radius  {
+		        un-radius--xs: 1px;
+		        un-radius--s: 2px;
+		        un-radius--m: 4px;
+		        un-radius--l: 8px;
+		        un-radius--xl: 16px;
+		        un-radius--xxl: 32px;
+		    }
+		    
+		    //COLORS 
+		    @color-scheme = light {
+		        #colors
+		        {
+		            #region Foundations
+		                un-color__white: #fff;
+		                un-color__black: #121212;
+		                un-color__positive: $colors.un-color__white;
+		                un-color__negative: $colors.un-color__black;
+		                un-color__green--100: #e1f3f1;
+		                un-color__green--200: #02a08b;
+		                un-color__orange--100: #ffe7e6;
+		                un-color__orange--200: #ff8000;
+		                un-color__red--100: #ffeaee;
+		                un-color__red--200: #f44336;
+		                un-color__red--300: #f02031;
+		                un-color__purple--10: #696ef21a;
+		                un-color__purple--20: #696ef233;
+		                un-color__purple--100: #696ef2;
+		                un-color__purple--200: #413cd4;
+		                un-color__purple--300: #3015b0;
+		                un-color__purple--400: #2a2c5f;
+		                un-color__purple--500: #202143;
+		                un-color__purple--600: #13142c;
+		                un-color__gray--100: #fafafa;
+		                un-color__gray--200: #f3f4f6;
+		                un-color__gray--300: #e0e0e0;
+		                un-color__gray--400: #c3c4c8;
+		                un-color__gray--500: #939498;
+		                un-color__gray--600: #575965;
+		                un-color__gray--700: #3e3e40;
+		                un-color__gray--800: #353537;
+		                un-color__gray--900: #2c2c2e;
+		                un-color__gray--1000: #242426;
+		            #endregion
+		
+		            #region Surfaces
+		                un-surface--positive: $colors.un-color__positive;
+		                un-surface--negative: $colors.un-color__negative;
+		                un-surface--alternative: $colors.un-color__gray--200;
+		            #endregion
+		
+		            #region Accents
+		                un-accent__primary: #73D94F;
+		                un-accent__primary--hover: #64C043;
+		                un-accent__primary-dim--hover: #73D94F;
+		                un-accent__primary--active: #73D94F;
+		                un-accent__secondary: #015547;
+		                un-accent__secondary--hover: #049B82;
+		                un-accent__secondary--active: #015547;
+		                un-accent__disabled: $colors.un-color__gray--400;
+		                un-accent__destructive: $colors.un-color__red--300;
+		            #endregion
+		
+		            #region Font_Colors
+		                un-text__on-surface--positive: #015547;
+		                un-text__on-surface--negative: #015547;
+		                un-text__on-surface--alternative: #015547;
+		                un-text__on-primary: #015547;
+		                un-text__on-secondary: $colors.un-color__white;
+		                un-text__on-disabled: $colors.un-color__gray--300;
+		                un-text__on-destructive: #015547;
+		                un-text__on-alert: #015547;
+		                un-text__primary: #015547;
+		                un-text__primary--hover: $colors.un-accent__primary--hover;
+		                un-text__primary--active: #015547;
+		                un-text__secondary: $colors.un-accent__secondary;
+		                un-text__secondary--hover: #73D94F;
+		                un-text__secondary--active: $colors.un-accent__secondary--active;
+		                un-text__disabled: $colors.un-color__gray--400;
+		                un-text__destructive: $colors.un-color__red--300;
+		                un-text__error: $colors.un-color__red--200;
+		                un-text__warning: $colors.un-color__orange--200;
+		                un-text__success: $colors.un-color__green--200;
+		                //Heading colors
+		                un-h1__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h1__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h2__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h2__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h3__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h3__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h4__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h4__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h5__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h5__font-color--negative: $colors.un-text__on-surface--negative;
+		                //Body text colors
+		                un-body__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-body__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-body__font-color--gray: $colors.un-color__gray--500;
+		                //Special text colors
+		                un-highlight__font-color--positive: #015547;
+		                un-highlight__font-color--negative: #015547;
+		                un-highlight__font-color--gray: $colors.un-color__gray--500;
+		                //Link colors
+		                un-link__font-color: $colors.un-text__primary;
+		                un-link__font-color--hover: #939498;
+		                un-link__font-color--active: $colors.un-text__primary--active;
+		                un-link__font-color--disabled: #015547;
+		            #endregion
+		
+		            #region Border_Colors
+		                un-border-color__primary: $colors.un-accent__primary;
+		                un-border-color__primary--hover: $colors.un-accent__primary--hover;
+		                un-border-color__primary--active: $colors.un-accent__primary--active;
+		                un-border-color__secondary: $colors.un-accent__secondary;
+		                un-border-color__secondary--hover: #73D94F;
+		                un-border-color__secondary--active: $colors.un-accent__secondary--active;
+		                un-border-color__disabled: $colors.un-accent__disabled;
+		                un-border-color__focused: $colors.un-accent__secondary;
+		                un-border-color__destructive: $colors.un-accent__destructive;
+		                un-border-color__error: $colors.un-color__red--200;
+		                un-border-color__warning: $colors.un-color__orange--200;
+		                un-border-color__success: $colors.un-color__green--200;
+		                un-border-color__mild: $colors.un-color__gray--300;
+		                un-border-color__strong: $colors.un-color__gray--600;
+		            #endregion
+		
+		            #region Elevations
+		                un-elevation--1: $colors.un-color__positive;
+		                un-elevation--2: $colors.un-color__positive;
+		                un-elevation--3: $colors.un-color__positive;
+		                un-elevation--4: $colors.un-color__positive;
+		            #endregion
+		
+		            #region Icons
+		                un-icon__on-surface--positive: #015547;
+		                un-icon__on-surface--negative: #015547;
+		                un-icon__on-surface--alternative: $colors.un-color__negative;
+		                un-icon__on-primary: #015547;
+		                un-icon__on-secondary: $colors.un-color__white;
+		                un-icon__on-disabled: $colors.un-accent__disabled;
+		                un-icon__on-destructive: $colors.un-color__positive;
+		                un-icon__on-alert: $colors.un-color__positive;
+		                un-icon__primary: #015547;
+		            #endregion
+		
+		            #region Background_Colors
+		                sidebar-bg: $colors.un-accent__secondary;
+		                item-hover: #73D94F; 
+		                item-active: $colors.un-accent__secondary--active;
+		                row-hover: $colors.un-color__gray--300;
+		                row-active: rgba(1, 85, 71, 1);
+		                header-bg: $colors.un-accent__secondary;
+		                header-separator-bg: $colors.un-accent__primary;
+		                form-container-bg: $colors.un-surface--positive;
+		                footer-actions-bg: $colors.un-surface--alternative;
+		                attribute-bg: $colors.un-surface--positive;
+		                attribute-select-bg: $colors.un-surface--positive;
+		                overlay-bg: $colors.un-surface--positive;
+		            #endregion
+		
+		            #region Auxiliary
+		                zebra-grid: #fafafa;
+		            #endregion
+		        }
+		    }
+		 }
+	#End
+
+	#DesignStyles
+		styles TravelAgencyNextSample {
+		@import GeneXusUnanimo.UnanimoWeb;
+		
+		.ww__button-filters--show
+		{
+		     background-image: gx-image(filter_light);
+		}
+		
+		.ww__button-search 
+		{
+		     background-image: gx-image(search_light);
+		}
+		.gx-prompt 
+		{
+		    content: gx-image(prompt_light);
+		}
+		.gx-multimedia-upload .change-action
+		{
+		    background-image: gx-image(edit_light);
+		}
+		.gx-multimedia-upload .clear-action 
+		{
+			background-image: gx-image(delete_light);
+		}
+		.Attribute[data-gx-readonly] > a[href] 
+		{
+		    @include link-enabled;
+		}
+		.ReadonlyResponsiveImageAttribute
+		 {
+		    height: 100%;
+		 }
+		 .gx-multimedia-upload .clear-action:hover 
+		 {
+		     background-color: #73D94F;
+		  }
+		 .gx-multimedia-upload .change-action:hover
+		 {
+		     background-color: #73D94F;
+		  }
+		  .ww__view__button-back
+		  {
+		     background-image: gx-image(arrow_left_light);
+		  }
+		  .ww__button-filters--applied
+		 {
+		     background-image: gx-image(filter_applied);
+		  }
+		.button-tertiary {
+		            background-color: transparent;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: #015547;
+		            text-transform: uppercase;
+		            border-style: solid;
+		            border-width: $borders.un-width--xs;
+		            border-color: #015547;
+		            gx-button-hovered-class: button-tertiary--hover;
+		            gx-button-focused-class: button-tertiary--focused;
+		            gx-button-highlighted-class: button-tertiary--active;
+		            gx-button-disabled-class: button-tertiary--disabled;
+		        }
+		        .button-tertiary--hover 
+		        {
+		            background-color: #049B82;
+		        }
+		}
+	#End
+
+	#Properties
+		Name = "TravelAgencyNextSample"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass TableHeaderText
+{
+	#Properties
+		Name = "TableHeaderText"
+	#End
+
+}

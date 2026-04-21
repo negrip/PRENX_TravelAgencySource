@@ -1,0 +1,58 @@
+DataProvider GetAttractions
+{
+	GetAttractions
+	{
+	
+	AttractionInfo where &search.IsEmpty()
+	{
+		AttractionId = AttractionId
+		AttractionName = AttractionName
+		AttractionPhoto = AttractionPhoto
+		AttractionDescription = AttractionDescription
+		Weather = CityWeatherCondition 
+		Temperature = CityTemperature  
+	}
+	
+	&AttractionEmbedding = AttractionEmbedding.GenerateEmbedding(&search, &Messages) if not &search.IsEmpty()
+	
+	AttractionInfo [Default] [Count=6]
+	order AttractionEmbedding.Distance(&AttractionEmbedding)// when not &search.IsEmpty()
+	//where AttractionEmbedding.Distance(&AttractionEmbedding) < 0.7 when not &search.isEmpty()
+	{
+		AttractionId = AttractionId
+		AttractionName = AttractionName
+		AttractionPhoto = AttractionPhoto
+		AttractionDescription = AttractionDescription
+		Weather = CityWeatherCondition 
+		Temperature = CityTemperature  
+	}
+	
+	}
+
+	#Rules
+		parm(in: &search);
+	#End
+
+	#Variables
+			search [ DataType = 'VarChar(300)' ]
+
+			Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+			AttractionEmbedding [ Description = 'Attraction Embedding', DataType = 'Attribute:AttractionEmbedding' ]
+
+			ChatMessages [ DataType = 'ChatMessage, GeneXus.ArtificialIntelligence', Collection = 'True' ]
+
+			CallResult [ DataType = 'CallResult, GeneXus.Common' ]
+	#End
+
+	#Properties
+		Name = "GetAttractions"
+
+		Description = "GetAttractions"
+
+		Output = "AttractionInfo"
+
+		Collection = "True"
+	#End
+
+}

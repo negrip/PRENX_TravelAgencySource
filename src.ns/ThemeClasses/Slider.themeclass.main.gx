@@ -1,0 +1,7 @@
+ThemeClass Slider
+{
+	#Properties
+		Name = "Slider"
+	#End
+
+}

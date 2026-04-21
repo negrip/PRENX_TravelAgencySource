@@ -1,0 +1,21 @@
+DataProvider Category_sdt_DP
+{
+	Categories from Category
+	{
+		CategoriesItem
+		{
+			Name = CategoryName
+		}
+	}
+
+	#Properties
+		Name = "Category_sdt_DP"
+
+		Description = "Category_sdt_DP"
+
+		Output = "Categories"
+
+		Collection = "False"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass QueryViewer
+{
+	#Properties
+		Name = "QueryViewer"
+	#End
+
+}

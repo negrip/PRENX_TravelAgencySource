@@ -1,0 +1,23 @@
+SDT AttractionDetailedInfo
+{
+		AttractionDetailedInfo	{
+
+			AttractionDescription [ DataType = 'Attribute:AttractionDescription' ]
+
+			AttractionPhotoURL [ DataType = 'Url, GeneXus' ]
+
+			AttractionCategoryId [ DataType = 'Attribute:CategoryId' ]
+
+			AttractionCountryId [ DataType = 'Attribute:CountryId' ]
+
+			AttractionCityId [ DataType = 'Attribute:CityId' ]
+
+		}
+
+	#Properties
+		Name = "AttractionDetailedInfo"
+
+		Description = "AttractionDetailedInfo"
+	#End
+
+}

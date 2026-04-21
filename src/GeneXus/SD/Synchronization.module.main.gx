@@ -1,0 +1,7 @@
+Module Synchronization
+{
+	#Properties
+		Name = "Synchronization"
+	#End
+
+}

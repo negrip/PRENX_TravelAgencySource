@@ -1,0 +1,9 @@
+Document GetAttractionImage_prompt
+{
+	#Properties
+		Name = "GetAttractionImage_prompt"
+
+		Description = "SearchWebSite_prompt"
+	#End
+
+}

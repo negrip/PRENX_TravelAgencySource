@@ -1,0 +1,285 @@
+ExternalObject Analytics
+{
+	#ExternalMethods
+		TrackView
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'trackView',
+
+				AndroidExternalName = 'trackView',
+
+				JavascriptExternalName = 'trackView'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				viewName
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		TrackEvent
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'trackEvent',
+
+				AndroidExternalName = 'trackEvent',
+
+				JavascriptExternalName = 'trackEvent'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				category
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				action
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				label
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				value
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Numeric',
+
+						JavaExternalType = 'java.math.BigDecimal',
+
+						AndroidExternalType = 'java.math.BigDecimal'
+
+					]
+
+			}
+
+		}
+
+		
+
+		TrackEvent
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'trackEvent',
+
+				AndroidExternalName = 'trackEvent'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				category
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				action
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				label
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+		
+
+				value
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Numeric',
+
+						JavaExternalType = 'java.math.BigDecimal',
+
+						AndroidExternalType = 'java.math.BigDecimal'
+
+					]
+
+		
+
+				customParameters
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'AnalyticsKeyValue, GeneXus.Common'
+
+					]
+
+			}
+
+		}
+
+		
+
+		TrackPurchase
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'trackPurchase',
+
+				AndroidExternalName = 'trackPurchase',
+
+				JavascriptExternalName = 'trackPurchase'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				purchaseInfo
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'AnalyticsPurchase, GeneXus.Common'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SetUserId
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'setUserId',
+
+				AndroidExternalName = 'setUserId',
+
+				JavascriptExternalName = 'setUserId'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				userId
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Analytics"
+
+		IosExternalName = "GXEOAnalytics"
+
+		AndroidExternalName = "AnalyticsAPIOffline"
+
+		ExternalPackageName = "com.genexus.android.core.externalobjects.analytics"
+
+		JavascriptExternalName = "gx.core.analytics"
+	#End
+
+}

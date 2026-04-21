@@ -1,0 +1,7 @@
+ThemeClass BtnPrevious
+{
+	#Properties
+		Name = "BtnPrevious"
+	#End
+
+}

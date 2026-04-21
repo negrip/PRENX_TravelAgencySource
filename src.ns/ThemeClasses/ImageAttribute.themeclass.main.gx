@@ -1,0 +1,7 @@
+ThemeClass ImageAttribute
+{
+	#Properties
+		Name = "ImageAttribute"
+	#End
+
+}

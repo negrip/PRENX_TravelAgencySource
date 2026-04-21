@@ -1,0 +1,24 @@
+Table CountryCity
+{
+		CountryId*
+
+		CityId*
+
+		CityName
+
+		CityWeatherCondition
+
+		CityTemperature
+
+	#Indexes
+		ICountryCity
+		ICountryCity1
+	#End
+
+	#Properties
+		Name = "CountryCity"
+
+		Description = "CountryCity"
+	#End
+
+}

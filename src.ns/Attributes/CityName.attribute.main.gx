@@ -1,0 +1,9 @@
+Attribute CityName
+{
+	#Properties
+		Name = "CityName"
+
+		BasedOn = "Name"
+	#End
+
+}

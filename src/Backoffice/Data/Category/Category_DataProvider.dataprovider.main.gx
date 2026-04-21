@@ -1,0 +1,38 @@
+DataProvider Category_DataProvider
+{
+	CategoryCollection{
+		
+		Category
+		where find(CategoryId, CategoryName="Museum",0) = 0
+		{
+			CategoryName = "Museum"
+		}
+		Category
+		where find(CategoryId, CategoryName="Historical Site",0) = 0
+		{
+			CategoryName = "Historical Site"
+		}
+		Category
+		where find(CategoryId, CategoryName="Landmark",0) = 0
+		{
+			CategoryName = "Landmark"
+		}
+		Category
+		where find(CategoryId, CategoryName="Natural Wonder",0) = 0
+		{
+			CategoryName = "Natural Wonder"
+		}
+		Category
+		where find(CategoryId, CategoryName="Theme Park",0) = 0
+		{
+			CategoryName = "Theme Park"
+		}
+	}
+
+	#Properties
+		Name = "Category_DataProvider"
+
+		MainProgram = "True"
+	#End
+
+}

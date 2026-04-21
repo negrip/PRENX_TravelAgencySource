@@ -1,0 +1,15 @@
+Domain LocationAccuracyAuthorization
+{
+	#Properties
+		Name = "LocationAccuracyAuthorization"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		MaximumLength = "1"
+
+		EnumValues = "Unknown, Unknown, 0; Reduced, Reduced, 1; Full, Full, 2"
+	#End
+
+}

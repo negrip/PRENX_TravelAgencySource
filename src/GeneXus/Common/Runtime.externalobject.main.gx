@@ -1,0 +1,185 @@
+ExternalObject Runtime
+{
+	#ExternalProperties
+		Environment
+
+			[
+
+				PropertyType = 'Read',
+
+				BasedOn = 'RuntimeEnvironment, GeneXus.Common',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'Environment',
+
+				NetFrameworkExternalType = 'short',
+
+				JavaExternalGetMethod = 'getEnvironment',
+
+				IosExternalName = 'environment',
+
+				AndroidExternalGetMethod = 'getEnvironment',
+
+				JavascriptExternalName = 'environment'
+
+			]
+
+		
+
+		ExitCode
+
+			[
+
+				Type = 'Numeric',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'ExitCode',
+
+				NetFrameworkExternalType = 'int',
+
+				JavaExternalSetMethod = 'setExitCode',
+
+				JavaExternalGetMethod = 'getExitCode',
+
+				IosExternalName = 'exitCode',
+
+				AndroidExternalName = 'ExitCode'
+
+			]
+	#End
+
+	#ExternalMethods
+		GetEnvironmentVariable
+
+			[
+
+				Description = 'Returns the value of the environment variable. If it doesn\'t exist, it returns null.',
+
+				Type = 'VarChar',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'GetEnvironmentVariable',
+
+				NetFrameworkExternalType = 'System.String',
+
+				JavaExternalName = 'GetEnvironmentVariable',
+
+				JavaExternalType = 'String'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				varName
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Environment variable name',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		HasEnvironmentVariable
+
+			[
+
+				Description = 'Returns TRUE if the environment variable exists.',
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'HasEnvironmentVariable',
+
+				NetFrameworkExternalType = 'bool',
+
+				JavaExternalName = 'HasEnvironmentVariable',
+
+				JavaExternalType = 'boolean'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				varName
+
+					[
+
+						AccessType = 'In',
+
+						Description = 'Environment variable name',
+
+						Type = 'VarChar',
+
+						NetFrameworkExternalType = 'System.String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		GetEnvironmentVariables
+
+			[
+
+				Description = 'Retrieves all environment variable names and their values from the current process.',
+
+				Type = 'Properties',
+
+				IsStatic = 'True',
+
+				NetFrameworkExternalName = 'GetEnvironmentVariables',
+
+				NetFrameworkExternalType = 'GXProperties',
+
+				JavaExternalName = 'GetEnvironmentVariables',
+
+				JavaExternalType = 'com.genexus.util.GXProperties'
+
+			]
+	#End
+
+	#Properties
+		Name = "Runtime"
+
+		Namespace = "GX"
+
+		NetFrameworkExternalName = "GXRuntime"
+
+		JavaExternalName = "GXRuntime"
+
+		ExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IosExternalName = "GXEORuntime"
+
+		AndroidExternalName = "RuntimeAPIOffline"
+
+		JavascriptExternalName = "gx.runtime"
+	#End
+
+}

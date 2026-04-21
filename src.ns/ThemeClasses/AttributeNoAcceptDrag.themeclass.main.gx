@@ -1,0 +1,7 @@
+ThemeClass AttributeNoAcceptDrag
+{
+	#Properties
+		Name = "AttributeNoAcceptDrag"
+	#End
+
+}

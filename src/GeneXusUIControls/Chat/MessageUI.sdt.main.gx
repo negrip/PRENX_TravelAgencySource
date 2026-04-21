@@ -1,0 +1,33 @@
+SDT MessageUI
+{
+		MessageUI	{
+
+			id [ DataType = 'Character(20)' ]
+
+			role [ DataType = 'MessageRole, GeneXusUIControls.Chat' ]
+
+			content [ DataType = 'Character(20)' ]
+
+			sources [ Collection = 'True', CollectionItemName = 'source' ]		{
+
+				url [ DataType = 'Url, GeneXus' ]
+
+				caption [ DataType = 'Character(20)' ]
+
+				accessibleName [ DataType = 'Character(20)' ]
+
+			}
+
+	
+
+			status [ DataType = 'MessageStatus, GeneXusUIControls.Chat' ]
+
+		}
+
+	#Properties
+		Name = "MessageUI"
+
+		ExposedNamespace = "GeneXus"
+	#End
+
+}

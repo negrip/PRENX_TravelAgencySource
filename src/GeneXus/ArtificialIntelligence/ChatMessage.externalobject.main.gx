@@ -1,0 +1,109 @@
+ExternalObject ChatMessage
+{
+	#ExternalProperties
+		Role
+
+			[
+
+				BasedOn = 'ChatRole, GeneXus.ArtificialIntelligence',
+
+				NetFrameworkExternalName = 'Role',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setRole',
+
+				JavaExternalGetMethod = 'getRole'
+
+			]
+
+		
+
+		Content
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'Content',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setStringContent',
+
+				JavaExternalGetMethod = 'getStringContent'
+
+			]
+
+		
+
+		ToolCalls
+
+			[
+
+				Type = 'ToolCall, GeneXus.ArtificialIntelligence',
+
+				NetFrameworkExternalName = 'ToolCalls',
+
+				NetFrameworkExternalType = 'System.Collections.Generic.List<GeneXus.AI.Chat.ToolCall>',
+
+				JavaExternalType = 'java.util.ArrayList<com.genexus.util.saia.OpenAIResponse.ToolCall>',
+
+				JavaExternalSetMethod = 'setToolCalls',
+
+				JavaExternalGetMethod = 'getToolCalls'
+
+			]
+
+		
+
+		ToolCallId
+
+			[
+
+				Type = 'VarChar',
+
+				NetFrameworkExternalName = 'ToolCallId',
+
+				NetFrameworkExternalType = 'string',
+
+				JavaExternalType = 'String',
+
+				JavaExternalSetMethod = 'setToolCallId',
+
+				JavaExternalGetMethod = 'getToolCallId'
+
+			]
+
+		
+
+		StrucuredContent
+
+			[
+
+				Type = 'StructuredContent, GeneXus.ArtificialIntelligence',
+
+				JavaExternalName = 'StructuredContent',
+
+				JavaExternalSetMethod = 'setStructuredContent',
+
+				JavaExternalGetMethod = 'getStructuredContent'
+
+			]
+	#End
+
+	#Properties
+		Name = "ChatMessage"
+
+		NetFrameworkExternalName = "GeneXus.AI.Chat.ChatMessage"
+
+		JavaExternalName = "Message"
+
+		ExternalPackageName = "com.genexus.util.saia.OpenAIResponse"
+	#End
+
+}

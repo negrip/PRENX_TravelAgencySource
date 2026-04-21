@@ -1,0 +1,7 @@
+ThemeClass DashboardViewer
+{
+	#Properties
+		Name = "DashboardViewer"
+	#End
+
+}

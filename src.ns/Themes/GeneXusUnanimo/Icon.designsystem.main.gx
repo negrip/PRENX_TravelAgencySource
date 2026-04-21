@@ -1,0 +1,16 @@
+DesignSystem Icon
+{
+	#DesignStyles
+		styles Icon
+		{
+		    .ch-icon {
+		        cursor: pointer;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Icon"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass TabPage
+{
+	#Properties
+		Name = "TabPage"
+	#End
+
+}

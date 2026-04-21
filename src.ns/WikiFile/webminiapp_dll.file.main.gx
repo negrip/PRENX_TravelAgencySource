@@ -1,0 +1,17 @@
+File webminiapp_dll
+{
+	#Properties
+		Name = "webminiapp_dll"
+
+		ExtractForJavaGenerator = "False"
+
+		ExtractForNetFrameworkGenerator = "True"
+
+		NetFrameworkGeneratorExtractionDirectory = ".\\bin"
+
+		ExtractForNetGenerator = "True"
+
+		NetGeneratorExtractionDirectory = ".\\bin\\extensiones"
+	#End
+
+}

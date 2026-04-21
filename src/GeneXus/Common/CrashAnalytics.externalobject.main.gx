@@ -1,0 +1,231 @@
+ExternalObject CrashAnalytics
+{
+	#ExternalProperties
+		Enabled
+
+			[
+
+				PropertyType = 'Read',
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				ExternalMemberType = 'Static',
+
+				IosExternalName = 'isEnabled',
+
+				AndroidExternalGetMethod = 'isEnabled'
+
+			]
+	#End
+
+	#ExternalMethods
+		DidCrashOnPreviousExecution
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'didCrashOnPreviousExecution',
+
+				AndroidExternalName = 'didCrashOnPreviousExecution'
+
+			]
+
+		
+
+		SetCustomKey
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'setCustomKey',
+
+				AndroidExternalName = 'setCustomKey'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				Value
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SetCustomKeys
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'setCustomKeys',
+
+				AndroidExternalName = 'setCustomKeys'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				CustomKeysAndValues
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'CrashAnalyticsKeyValue, GeneXus.Common'
+
+					]
+
+			}
+
+		}
+
+		
+
+		RemoveCustomKey
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'removeCustomKey',
+
+				AndroidExternalName = 'removeCustomKey'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SetUserId
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'setUserId',
+
+				AndroidExternalName = 'setUserId'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				UserId
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Log
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'log',
+
+				AndroidExternalName = 'log'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Message
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "CrashAnalytics"
+
+		IosExternalName = "GXEOCrashAnalytics"
+
+		AndroidExternalName = "CrashlyticsAPIOffline"
+
+		ExternalPackageName = "com.genexus.android.core.externalobjects.analytics.crashlytics"
+	#End
+
+}

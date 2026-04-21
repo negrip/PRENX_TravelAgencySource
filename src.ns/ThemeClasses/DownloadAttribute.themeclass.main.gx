@@ -1,0 +1,7 @@
+ThemeClass DownloadAttribute
+{
+	#Properties
+		Name = "DownloadAttribute"
+	#End
+
+}

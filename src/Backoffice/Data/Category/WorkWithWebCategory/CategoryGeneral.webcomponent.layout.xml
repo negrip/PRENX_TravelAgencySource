@@ -1,0 +1,37 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+			<row>
+				<cell class="ww__view__actions-cell" horizontalAlignment="Right">
+					<actiongroup name="Actions" />
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<responsive name="AttributesTable" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}],[{&quot;width&quot;:100}]]}]">
+						<row>
+							<cell class="form__cell">
+								<input attribute="CategoryId" labelCaption="Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell">
+								<input attribute="CategoryName" labelCaption="Name" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions" class="ww__view__actions">
+				<item>
+					<action name="BtnUpdate" onClickEvent="'DoUpdate'" caption="GXM_update" class="Button button-primary" />
+				</item>
+				<item>
+					<action name="BtnDelete" onClickEvent="'DoDelete'" caption="GX_BtnDelete" class="Button button-tertiary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

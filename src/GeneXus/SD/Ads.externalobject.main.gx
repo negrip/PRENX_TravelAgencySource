@@ -1,0 +1,221 @@
+ExternalObject Ads
+{
+	#ExternalMethods
+		RequestInterstitial
+
+			[
+
+				IsStatic = 'True',
+
+				IosExternalName = 'requestInterstitial',
+
+				AndroidExternalName = 'requestInterstitial'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						AndroidExternalType = 'String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		IsInterstitialReady
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'isInterstitialReady',
+
+				AndroidExternalName = 'isInterstitialReady',
+
+				AndroidExternalType = 'boolean'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						AndroidExternalType = 'String'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShowInterstitial
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True',
+
+				IosExternalName = 'showInterstitial',
+
+				AndroidExternalName = 'showInterstitial',
+
+				AndroidExternalType = 'boolean'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar',
+
+						AndroidExternalType = 'String'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#ExternalEvents
+		InterstitialLoaded
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		InterstitialFailedToLoad
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		InterstitialClicked
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		InterstitialClosed
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+					[
+
+						AccessType = 'In',
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+	#End
+
+	#Properties
+		Name = "Ads"
+
+		IosExternalName = "GXEOAds"
+
+		AndroidExternalName = "AdsAPIOffline"
+
+		ExternalPackageName = "com.genexus.android.ads"
+	#End
+
+}

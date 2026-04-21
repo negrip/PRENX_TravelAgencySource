@@ -1,0 +1,7 @@
+ThemeClass WarningMessages
+{
+	#Properties
+		Name = "WarningMessages"
+	#End
+
+}

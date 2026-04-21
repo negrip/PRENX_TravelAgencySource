@@ -1,0 +1,853 @@
+ExternalObject Interop
+{
+	#ExternalProperties
+		ApplicationState
+
+			[
+
+				PropertyType = 'Read',
+
+				Description = 'DEPRECATED. Use AppLifecycle.ApplicationState instead.',
+
+				BasedOn = 'ApplicationState, GeneXus',
+
+				IsStatic = 'True'
+
+			]
+
+		
+
+		ScreenBrightness
+
+			[
+
+				Description = 'Get or set the Brightness of the device Screen',
+
+				Type = 'Numeric',
+
+				IsStatic = 'True'
+
+			]
+	#End
+
+	#ExternalMethods
+		SendMessage
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				To
+
+					[
+
+						Type = 'Character'
+
+					]
+
+			}
+
+		}
+
+		
+
+		PlayVideo
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Video
+
+					[
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		PlayAudio
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Audio
+
+					[
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		PlaceCall
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Phone
+
+					[
+
+						BasedOn = 'Phone, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SendEmail
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				To
+
+					[
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Subject
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SendEmailAdvanced
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				To
+
+					[
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Cc
+
+					[
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Bcc
+
+					[
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Subject
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SendEmailAdvanced
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				To
+
+					[
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Cc
+
+					[
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Bcc
+
+					[
+
+						BasedOn = 'Email, GeneXus'
+
+					]
+
+		
+
+				Subject
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				Attachment
+
+					[
+
+						Type = 'BlobFile'
+
+					]
+
+			}
+
+		}
+
+		
+
+		SendSMS
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				To
+
+					[
+
+						BasedOn = 'Phone, GeneXus'
+
+					]
+
+		
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Msg
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Msg
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				OkButtonText
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Confirm
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Confirm
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Message
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				OkButtonText
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+		
+
+				CancelButtonText
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		OpenInBrowser
+
+			[
+
+				Description = 'Deprecated: use WebBrowser.Open instead',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+					[
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		CanOpen
+
+			[
+
+				Type = 'Boolean',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+					[
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		Open
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+					[
+
+						BasedOn = 'Url, GeneXus'
+
+					]
+
+			}
+
+		}
+
+		
+
+		OpenSettings
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Screen
+
+					[
+
+						BasedOn = 'MobileSettings, GeneXus.SD'
+
+					]
+
+			}
+
+		}
+
+		
+
+		OpenSettings
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Screen
+
+					[
+
+						BasedOn = 'MobileSettings, GeneXus.SD'
+
+					]
+
+		
+
+				Option
+
+					[
+
+						BasedOn = 'MobileSettingsOptions, GeneXus.SD'
+
+					]
+
+			}
+
+		}
+
+		
+
+		OpenSettingsUrl
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+					[
+
+						Type = 'VarChar'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ClearCache
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		
+
+		IOSSetBadgeNumber
+
+			[
+
+				Description = 'Deprecated: use Interop.SetBadgeNumber instead',
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				number
+
+			}
+
+		}
+
+		
+
+		SetBadgeNumber
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				number
+
+			}
+
+		}
+
+		
+
+		IOSSetBadgeTextToTabIndex
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				text
+
+					[
+
+						Type = 'Character'
+
+					]
+
+		
+
+				tabIndex
+
+					[
+
+						Type = 'Numeric'
+
+					]
+
+			}
+
+		}
+
+		
+
+		IOSSetSelectedTabIndex
+
+			[
+
+				IsStatic = 'True'
+
+			]
+
+		{
+
+			Parameters
+
+			{
+
+				tabIndex
+
+					[
+
+						Type = 'Numeric'
+
+					]
+
+			}
+
+		}
+
+		
+
+		ShowError
+
+			[
+
+				Type = 'Numeric',
+
+				IsStatic = 'True'
+
+			]
+	#End
+
+	#Properties
+		Name = "Interop"
+	#End
+
+}

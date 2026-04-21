@@ -1,0 +1,15 @@
+Index IAttraction
+{
+	AttractionId
+
+	#Index
+		Source = "Automatic"
+
+		Type = "Unique"
+	#End
+
+	#Properties
+		Name = "IAttraction"
+	#End
+
+}

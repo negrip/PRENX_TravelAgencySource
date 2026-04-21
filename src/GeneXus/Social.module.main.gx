@@ -1,0 +1,7 @@
+Module Social
+{
+	#Properties
+		Name = "Social"
+	#End
+
+}

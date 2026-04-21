@@ -1,0 +1,76 @@
+WebPanel ViewCategory
+{
+	#Rules
+		parm(in:&CategoryId, in:&TabCode);
+	#End
+
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			For each
+				Where CategoryId = &CategoryId
+				Form.Caption = CategoryName.ToString()
+				ViewAll.Link = WWCategory.Link()
+				&Exists = True
+		
+			When none
+				Form.Caption = "Record not found"
+				ViewAll.Visible = false
+				&Exists = False
+			Endfor
+			&LoadAllTabs = false
+		
+			If &Exists
+				&SelectedTabCode = &TabCode
+				Tab.ActivePageControlName = &SelectedTabCode
+				Do 'Load Tab'
+			Endif
+		EndEvent
+		
+		Event Tab.TabChanged
+			&SelectedTabCode = Tab.ActivePageControlName
+			&LoadAllTabs = false
+			Do 'Load Tab'
+		EndEvent
+		
+		Sub 'Load Tab'
+			if &LoadAllTabs or &SelectedTabCode = '' or&SelectedTabCode = "General"
+				GeneralWC.Object = CategoryGeneral.Create(&CategoryId)
+			endif
+			if &LoadAllTabs or &SelectedTabCode = "Attraction"
+				AttractionWC.Object = CategoryAttractionWC.Create(&CategoryId)
+			endif
+		EndSub
+	#End
+
+	#Conditions
+		CategoryId = &CategoryId;
+	#End
+
+	#Variables
+			IsAuthorized [ DataType = 'Boolean' ]
+
+			TabCode [ DataType = 'TabCode, General' ]
+
+			SelectedTabCode [ DataType = 'TabCode, General' ]
+
+			Tabs
+
+			Tab
+
+			Exists [ Description = 'Exists', DataType = 'Boolean' ]
+
+			LoadAllTabs [ Description = 'LoadAllTabs', DataType = 'Boolean' ]
+
+			CategoryId [ DataType = 'Attribute:CategoryId' ]
+	#End
+
+	#Properties
+		Name = "ViewCategory"
+	#End
+
+}

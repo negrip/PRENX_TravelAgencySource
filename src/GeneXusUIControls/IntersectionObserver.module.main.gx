@@ -1,0 +1,7 @@
+Module IntersectionObserver
+{
+	#Properties
+		Name = "IntersectionObserver"
+	#End
+
+}

@@ -1,0 +1,7 @@
+ThemeClass ReadonlyAudioAttribute
+{
+	#Properties
+		Name = "ReadonlyAudioAttribute"
+	#End
+
+}

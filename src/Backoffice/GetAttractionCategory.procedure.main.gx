@@ -1,0 +1,41 @@
+Procedure GetAttractionCategory
+{
+	&AttractionCategoryInfoJSON = &WebSession.Get(&AttractionName+"_HasCategory")
+	if &AttractionCategoryInfoJSON.IsEmpty()
+		&CategoryId = CategoryMatcherAgent(&AttractionName,&ChatMessages,&CallResult)
+		&AttractionCategoryInfo.CategoryId = &CategoryId
+		&WebSession.Set(&AttractionName+"_HasCategory",&AttractionCategoryInfo.ToJson())
+	else
+		&AttractionCategoryInfo = New()
+		&WebSession.Clear()
+	endif
+
+	#Rules
+		parm(in:&AttractionName, out:&AttractionCategoryInfo);
+	#End
+
+	#Variables
+			AttractionName [ DataType = 'Attribute:AttractionName' ]
+
+			ChatMessages [ DataType = 'ChatMessage, GeneXus.ArtificialIntelligence', Collection = 'True' ]
+
+			CallResult [ DataType = 'CallResult, GeneXus.Common' ]
+
+			CategoryId [ DataType = 'Attribute:CategoryId' ]
+
+			LoadedCategoryId [ DataType = 'Attribute:CategoryId' ]
+
+			AttractionCategoryInfo [ DataType = 'AttractionCategoryInfo' ]
+
+			WebSession [ DataType = 'WebSession' ]
+
+			AttractionCategoryInfoJSON [ DataType = 'VarChar(1000)' ]
+	#End
+
+	#Properties
+		Name = "GetAttractionCategory"
+
+		Description = "GetAttractionCategory"
+	#End
+
+}

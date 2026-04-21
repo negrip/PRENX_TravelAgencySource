@@ -1,0 +1,7 @@
+ThemeClass BtnRefresh
+{
+	#Properties
+		Name = "BtnRefresh"
+	#End
+
+}

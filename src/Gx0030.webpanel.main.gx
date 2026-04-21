@@ -1,0 +1,83 @@
+WebPanel Gx0030
+{
+	#Rules
+		parm(out:&pCountryId);
+		order(CountryId);
+	#End
+
+	#Events
+		Event Start
+			Form.Caption = Format("GXSPC_SelectionList", "Country")
+			&ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>"
+		EndEvent
+		
+		Event 'Toggle'
+			if AdvancedContainer.Class = StyleClass:AdvancedContainer
+				AdvancedContainer.Class = StyleClass:AdvancedContainer + !" " + StyleClass:AdvancedContainerVisible
+				BtnToggle.Class += !" " + StyleClass:BtnToggleActive
+			else
+				AdvancedContainer.Class = StyleClass:AdvancedContainer
+				BtnToggle.Class = StyleClass:BtnToggle
+			endif
+		Endevent
+		
+		Event LblCountryIdFilter.Click
+			if CountryIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				CountryIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cCountryId.Visible = true
+			else
+				CountryIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cCountryId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblCountryNameFilter.Click
+			if CountryNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				CountryNameFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cCountryName.Visible = true
+			else
+				CountryNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cCountryName.Visible = false
+			endif
+		EndEvent
+		
+		Event Load
+			&LinkSelection.FromImage(selectRow)
+		EndEvent
+		
+		Event Enter
+			&pCountryId = CountryId
+			Return
+		EndEvent
+	#End
+
+	#Conditions
+		CountryId >= &cCountryId ;
+		CountryName LIKE &cCountryName when not &cCountryName.IsEmpty();
+	#End
+
+	#Variables
+			LinkSelection [ DataType = 'Image' ]
+
+			cCountryId [ Description = 'Country Id', DataType = 'Attribute:CountryId' ]
+
+			cCountryName [ Description = 'Country Name', DataType = 'Attribute:CountryName' ]
+
+			pCountryId [ Description = 'Country Id', DataType = 'Attribute:CountryId' ]
+
+			ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+	#End
+
+	#Properties
+		Name = "Gx0030"
+
+		Description = "Selection List Country"
+
+		MasterPage = "(none)"
+
+		AssociatedTable = "Country"
+
+		FocusControl = "Browser dependent"
+	#End
+
+}

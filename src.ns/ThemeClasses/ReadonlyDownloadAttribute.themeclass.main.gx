@@ -1,0 +1,7 @@
+ThemeClass ReadonlyDownloadAttribute
+{
+	#Properties
+		Name = "ReadonlyDownloadAttribute"
+	#End
+
+}

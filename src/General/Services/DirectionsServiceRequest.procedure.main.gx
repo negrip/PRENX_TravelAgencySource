@@ -1,0 +1,42 @@
+Procedure DirectionsServiceRequest
+{
+	
+	Do Case
+		Case &DirectionsServiceProvider = DirectionsServiceProviders.Google
+			GeneXus.Common.GoogleDirectionsServiceRequest.Call(&DirectionsRequestParameters, &Routes, &errorMessages)
+		
+		Otherwise
+		&errorMessage.Description = "Unknown Error"
+		&errorMessage.Type = MessageTypes.Error
+		&errorMessages.Add(&errorMessage)
+	Endcase
+
+	#Rules
+		Parm(in: &DirectionsServiceProvider,
+			 in: &DirectionsRequestParameters,
+			 out: &Routes, out: &errorMessages);
+	#End
+
+	#Variables
+			DirectionsRequestParameters [ DataType = 'DirectionsRequestParameters, GeneXus.Common' ]
+
+			DirectionsServiceProvider [ DataType = 'DirectionsServiceProviders, GeneXus.Common' ]
+
+			errorMessage [ DataType = 'Messages.Message, GeneXus.Common' ]
+
+			errorMessages [ DataType = 'Messages, GeneXus.Common' ]
+
+			Routes [ DataType = 'Route, GeneXus.Common', Collection = 'True' ]
+	#End
+
+	#Properties
+		Name = "DirectionsServiceRequest"
+
+		Description = "Directions Service Request"
+
+		ExposeAsWebService = "True"
+
+		ConnectivitySupport = "Online"
+	#End
+
+}

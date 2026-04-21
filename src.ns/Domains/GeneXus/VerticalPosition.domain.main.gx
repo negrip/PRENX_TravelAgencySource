@@ -1,0 +1,11 @@
+Domain VerticalPosition
+{
+	#Properties
+		Name = "VerticalPosition"
+
+		DataType = "Character(20)"
+
+		EnumValues = "Top, Top, top; Middle, Middle, middle; Bottom, Bottom, bottom"
+	#End
+
+}

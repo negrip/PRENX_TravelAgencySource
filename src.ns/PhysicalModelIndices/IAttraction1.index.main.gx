@@ -1,0 +1,15 @@
+Index IAttraction1
+{
+	CategoryId
+
+	#Index
+		Source = "Automatic"
+
+		Type = "Duplicate"
+	#End
+
+	#Properties
+		Name = "IAttraction1"
+	#End
+
+}
